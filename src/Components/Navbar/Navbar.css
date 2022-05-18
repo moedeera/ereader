@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;300;400;500;600;700&display=swap");
+
+.navbar-container {
+  display: flex;
+
+  justify-content: space-between;
+  font-family: "Lato", sans-serif;
+}
+.logo {
+  display: flex;
+
+  align-items: center;
+  justify-content: flex-start;
+  gap: -10px;
+}
+.logo h2 {
+  font-weight: 700;
+  font-family: "Fira Sans", sans-serif;
+}
+.navbar-menu ul {
+  padding: 0;
+  list-style: none;
+  display: flex;
+
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  text-align: center;
+  color: black;
+}
+.navbar-menu li {
+  display: table-cell;
+  position: relative;
+  padding: 15px 0;
+}
+.navbar-menu a {
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  color: black;
+  font-weight: 700;
+  display: inline-block;
+  padding: 15px 20px;
+  position: relative;
+}
+a:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: black;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+a:hover:after {
+  width: 100%;
+  left: 0;
+}
+@media screen and (max-height: 300px) {
+  ul {
+    margin-top: 40px;
+  }
+}

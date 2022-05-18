@@ -1,0 +1,41 @@
+.homepage-container {
+  margin-top: 50px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.info-section {
+  height: 100%;
+  padding: 50px 0;
+  /* border: 2px solid green; */
+  display: grid;
+  grid-template-rows: 5fr 1fr;
+}
+.info-section-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  gap: 10px;
+  line-height: 1.8em;
+  letter-spacing: 1.5px;
+}
+.info-section-text h1 {
+  font-weight: bolder;
+  color: var(--color-primary);
+  font-family: "Fira Sans", sans-serif;
+}
+.info-section-text p {
+  color: grey;
+  font-size: 20px;
+  font-weight: 700;
+}
+.image {
+  padding: 20px;
+
+  border-radius: 5px;
+}
+.image img {
+  width: 90%;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
