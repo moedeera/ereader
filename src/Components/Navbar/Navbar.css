@@ -5,6 +5,9 @@
 
   justify-content: space-between;
   font-family: "Lato", sans-serif;
+  width: 100%;
+  max-width: 1300px;
+  padding: 0 10px;
 }
 .logo {
   display: flex;
@@ -59,8 +62,9 @@ a:hover:after {
   width: 100%;
   left: 0;
 }
-@media screen and (max-height: 300px) {
-  ul {
-    margin-top: 40px;
+
+@media only screen and (max-width: 900px) {
+  .navbar-container {
+    display: none;
   }
 }

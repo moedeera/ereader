@@ -19,7 +19,9 @@ export const Navbar = () => {
               <a href="/">About</a>
             </li>
             <li>
-              <a href="/">Support</a>
+              <a href="/" className="menu-md">
+                Support
+              </a>
             </li>
             <li>
               <button className="btn btn-primary">Login</button>

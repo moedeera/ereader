@@ -57,7 +57,7 @@ html {
   font-weight: 700;
   font-family: "Lato", sans-serif;
   border-radius: 5px;
-  font-size: 18px;
+  font-size: 14px;
   text-transform: uppercase;
   cursor: pointer;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
@@ -74,4 +74,12 @@ html {
   box-shadow: 0px 15px 20px rgba(46, 104, 229, 0.4);
   color: #fff;
   transform: translateY(-7px);
+}
+
+@media screen and (max-width: 900px) {
+  .btn {
+    font-size: 12px;
+    width: 100%;
+    text-align: center;
+  }
 }
