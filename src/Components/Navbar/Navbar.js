@@ -29,6 +29,15 @@ export const Navbar = () => {
           </ul>
         </div>
       </div>
+      <div className="navbar-container-sm">
+        <div className="logo">
+          <img src={icon} alt="" />
+          <h2>Librum-Reader</h2>
+        </div>
+        <div style={{ color: "black" }}>
+          <i className="fas fa-bars fa-2x"></i>
+        </div>
+      </div>
     </div>
   );
 };

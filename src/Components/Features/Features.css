@@ -1,0 +1,108 @@
+.features-sm-container {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.features-sm-container h2,
+.features-lg-container h2 {
+  color: var(--color-primary);
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+.features-sm-container p,
+.features-lg-container p {
+  color: rgba(0, 0, 0, 0.773);
+  letter-spacing: 1px;
+  line-height: 1.6em;
+}
+.feature-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.feature-icon img {
+  width: 33%;
+  max-width: 90px;
+}
+@media only screen and (min-width: 600px) {
+  .feature-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .feature-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .feature-icon img {
+    width: 90px;
+  }
+}
+.features-lg-container {
+  display: none;
+}
+@media only screen and (min-width: 901px) {
+  .features-sm-container {
+    display: none;
+  }
+  .features-lg-container {
+    margin-top: 10px;
+    display: block;
+    padding: 15px;
+  }
+  .features-slide {
+    /* border: 2px solid green; */
+    width: 80%;
+    margin: 0 auto;
+  }
+  .slide-selection {
+    /* border: 1px solid crimson; */
+    padding: 20px 0;
+  }
+  .featured-selection {
+    font-size: 18px;
+    color: var(--color-alternate);
+  }
+  .featured-selection h3 {
+    cursor: pointer;
+  }
+  .slide-selection-menu {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .slide-selection-menu > div {
+    /* border: 2px solid orange; */
+    width: 33.33%;
+  }
+  .features-lg-container p,
+  .features-lg-container h2 {
+    padding-bottom: 20px;
+  }
+  .slide-selection-bar {
+    margin: 10px 0;
+    height: 0.25rem;
+    width: 33.33%;
+    transition: 500ms ease-in-out;
+    transform: translateX(0%);
+    background: steelblue;
+  }
+  .slide-image {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: var(--color-primary);
+    height: 400px;
+    transition: 500ms smooth;
+  }
+  .slide-image p {
+    /* border: 2px solid red; */
+    padding-top: 30px;
+  }
+  .slide-image img {
+    width: 100%;
+    padding: 20px;
+  }
+}

@@ -33,6 +33,7 @@ html {
   --bg-light: #fcfcfc;
   --bg-dark: black;
   --color-primary: #256eff;
+  --color-alternate: #bb342f;
   --color-secondary: #46237a;
   --color-white: white;
   --color-light: rgba(255, 255, 255, 0.6);
@@ -65,7 +66,7 @@ html {
 }
 
 .btn-primary {
-  background-color: #bb342f;
+  background-color: var(--color-alternate);
   color: #fcfcfc;
 }
 
