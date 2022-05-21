@@ -9,7 +9,7 @@ export const Showcase = ({ image1 }) => {
       </div>
       <div className="info-section">
         <div className="info-section-text">
-          <h1>A Simple Effective Reader App</h1>
+          <h1>A Simple Cross-Platform Reader</h1>
           <p>
             A clean and simple way to read ebooks on tablets, cellphones and
             desktops without worrying about cross-platform synchronization
