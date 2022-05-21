@@ -20,6 +20,9 @@
   font-weight: 700;
   font-family: "Fira Sans", sans-serif;
 }
+.logo img {
+  width: 70px;
+}
 .navbar-menu ul {
   padding: 0;
   list-style: none;

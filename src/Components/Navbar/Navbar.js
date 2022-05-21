@@ -1,6 +1,6 @@
 import React from "react";
 import "./Navbar.css";
-import icon from "./ereader.png";
+import icon from "./ereader1.png";
 
 export const Navbar = () => {
   return (

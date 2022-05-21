@@ -3,9 +3,9 @@ import "./Features.css";
 import icon1 from "./icon1.png";
 import icon2 from "./icon2.png";
 import icon3 from "./icon3.png";
-import svg1 from "./svg1.svg";
-import svg2 from "./svg2.svg";
-import svg3 from "./svg3.svg";
+import svg1 from "./svg01.svg";
+import svg2 from "./svg02.svg";
+import svg3 from "./svg03.svg";
 
 export const Features = () => {
   const [slide, setSLide] = useState(1);

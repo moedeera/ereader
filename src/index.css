@@ -32,7 +32,8 @@ html {
 :root {
   --bg-light: #fcfcfc;
   --bg-dark: black;
-  --color-primary: #256eff;
+  --color-primary1: #256eff;
+  --color-primary: #946bde;
   --color-alternate: #bb342f;
   --color-secondary: #46237a;
   --color-white: white;
