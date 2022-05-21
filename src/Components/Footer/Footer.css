@@ -95,10 +95,11 @@
   }
   .footer-social {
     display: flex;
-    width: 60px;
+    width: 10%;
+    max-width: 100px;
     justify-content: space-between;
-    padding: 5px;
-    font-size: 20px;
+    padding: 5px 15px;
+    font-size: 25px;
     align-items: center;
   }
 }
