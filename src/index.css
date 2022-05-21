@@ -70,18 +70,30 @@ html {
   background-color: var(--color-alternate);
   color: #fcfcfc;
 }
-
-.btn-primary:hover {
-  background-color: var(--color-primary);
-  box-shadow: 0px 15px 20px rgba(46, 104, 229, 0.4);
-  color: #fff;
-  transform: translateY(-7px);
+.btn-secondary {
+  background-color: var(--color-primary1);
+  color: #fcfcfc;
 }
 
 @media screen and (max-width: 900px) {
   .btn {
-    font-size: 12px;
+    font-size: 13px;
     width: 100%;
+    min-width: 12rem;
     text-align: center;
+  }
+}
+@media screen and (min-width: 900px) {
+  .btn-primary:hover {
+    background-color: var(--color-primary);
+    box-shadow: 0px 15px 20px rgba(46, 104, 229, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+  .btn-secondary:hover {
+    background-color: var(--color-alternate);
+    box-shadow: 0px 15px 20px rgba(46, 104, 229, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
   }
 }
