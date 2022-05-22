@@ -13,13 +13,13 @@ export const Navbar = () => {
         <div className="navbar-menu">
           <ul>
             <li>
-              <a href="/">Features</a>
+              <a href="#features">Features</a>
             </li>
             <li>
-              <a href="/">About</a>
+              <a href="#about">About</a>
             </li>
             <li>
-              <a href="/" className="menu-md">
+              <a href="#footer" className="menu-md">
                 Support
               </a>
             </li>

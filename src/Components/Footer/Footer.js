@@ -4,7 +4,7 @@ import image1 from "./ereader1.png";
 
 export const Footer = ({ image }) => {
   return (
-    <div className="footer">
+    <div className="footer" id="footer">
       <div className="container">
         <div className="footer-container">
           <div className="footer-upper">

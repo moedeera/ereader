@@ -10,7 +10,7 @@ import svg3 from "./svg03.svg";
 export const Features = () => {
   const [slide, setSLide] = useState(1);
   return (
-    <div className="container">
+    <div className="container" id="features">
       <div className="features-sm-container">
         <h2>Features</h2>
 
@@ -70,10 +70,9 @@ export const Features = () => {
           {slide === 1 && (
             <div className="slide-image">
               <p>
-                Our Aim is to make it easier for you to read and keep track of
-                books you are interested in. Librum reader allows you to sync
-                all the books you are interested in in one application for more
-                convenient reads.
+                Whether its on your Laptop, Tablet or Cellphone. This app is
+                always ready to facilitating a good read. Start
+                cross-synchronization today once you download and install.
               </p>
               <img src={svg1} alt="" />
             </div>
@@ -81,10 +80,9 @@ export const Features = () => {
           {slide === 2 && (
             <div className="slide-image">
               <p>
-                Our Aim is to make it easier for you to read and keep track of
-                books you are interested in. Librum reader allows you to sync
-                all the books you are interested in in one application for more
-                convenient reads.
+                Design for all Operating Systems, you don't have to worry about
+                what system you are on. We have a support network for Windows
+                10, Apple, Android and Linux.
               </p>
               <img src={svg2} alt="" style={{ height: "350px" }} />
             </div>
@@ -92,10 +90,8 @@ export const Features = () => {
           {slide === 3 && (
             <div className="slide-image">
               <p>
-                Our Aim is to make it easier for you to read and keep track of
-                books you are interested in. Librum reader allows you to sync
-                all the books you are interested in in one application for more
-                convenient reads.
+                No need for constant updates or a live connection. While you
+                have to ability to cross synchronize online, its not required.
               </p>
               <img src={svg3} alt="" />
             </div>
