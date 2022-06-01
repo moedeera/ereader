@@ -5,7 +5,7 @@ export const LoginForm = () => {
   return (
     <div className="container">
       <div className="login-form-container">
-        <form className="login-form">
+        <div className="login-form">
           <h1>Login</h1>
           <div>
             {" "}
@@ -21,7 +21,7 @@ export const LoginForm = () => {
           <button className="btn btn-alternate">Login</button>
           <h3>or</h3>
           <button className="btn btn-alternate2">Register</button>
-        </form>
+        </div>
       </div>
     </div>
   );
