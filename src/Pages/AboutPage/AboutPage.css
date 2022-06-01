@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;300;400;500;600;700&display=swap");
+
+.aboutPage-container {
+  font-family: "Fira Sans", sans-serif;
+  margin-top: 50px;
+}
+.header {
+  color: var(--color-primary);
+}
+.header h1 {
+  font-size: 38px;
+}
+.header p {
+  width: 300px;
+  margin: 0 auto;
+  line-height: 1.8em;
+  color: black;
+}
+.about-reasons {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  margin: 80px auto;
+  width: 100%;
+
+  height: max-content;
+}
+.reason {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  max-width: 1300px;
+  padding: 10px 20px;
+  margin: 20px auto;
+}
+.reason:nth-child(even) {
+  flex-direction: column-reverse;
+}
+.reason-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+}
+.reason-image img {
+  width: 100%;
+  max-width: 300px;
+}
+.reason-text {
+  width: 100%;
+
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.reason-text h2 {
+  color: var(--color-primary);
+  letter-spacing: 1px;
+}
+.reason-text p {
+  padding: 5px 15px;
+  letter-spacing: 1.25px;
+  line-height: 1.8em;
+  width: 100%;
+  max-width: 500px;
+}
+@media only screen and (min-width: 600px) {
+  .reason {
+    display: grid;
+    grid-template-columns: 1.05fr 2fr;
+  }
+  .reason:nth-child(even) {
+    grid-template-columns: 2fr 1.05fr;
+  }
+}

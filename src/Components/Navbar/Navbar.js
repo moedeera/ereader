@@ -1,6 +1,7 @@
 import React from "react";
 import "./Navbar.css";
 import icon from "./ereader1.png";
+import { Link } from "react-router-dom";
 
 export const Navbar = () => {
   return (
@@ -13,15 +14,19 @@ export const Navbar = () => {
         <div className="navbar-menu">
           <ul>
             <li>
-              <a href="#features">Features</a>
+              <Link to={"./"}>
+                <p>Home</p>
+              </Link>
             </li>
             <li>
-              <a href="#about">About</a>
+              <Link to={"./about"}>
+                <p>About</p>
+              </Link>
             </li>
             <li>
-              <a href="#footer" className="menu-md">
-                Support
-              </a>
+              <Link to={"./"}>
+                <p>Features</p>
+              </Link>
             </li>
             <li>
               <button className="btn btn-primary">Login</button>
