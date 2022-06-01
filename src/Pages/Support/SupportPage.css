@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;300;400;500;600;700&display=swap");
 
-.aboutPage-container {
+.supportPage-container {
   font-family: "Fira Sans", sans-serif;
   margin-top: 50px;
 }
@@ -18,17 +18,17 @@
   font-weight: 700;
   letter-spacing: 1px;
 }
-.about-reasons {
+.support-reasons {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   margin: 80px auto;
   width: 100%;
 
-  height: max-content;
+  height: 200vh;
 }
-.reason {
+.support {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -36,26 +36,24 @@
   max-width: 1300px;
   padding: 10px 20px;
   margin: 20px auto;
-  animation: fade-in-right 1700ms ease-in-out;
+  animation: fade-in 1200ms ease-in-out;
 }
-.reason:nth-child(even) {
-  flex-direction: column-reverse;
-  animation: fade-in-left 1700ms ease-in-out;
-}
-.reason-image {
+
+.support-image {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  gap: 30px;
+  gap: 20px;
   width: 100%;
-  height: 100%;
 }
-.reason-image img {
+.support-image img {
   width: 100%;
   max-width: 400px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(128, 128, 128, 0.248);
 }
-.reason-text {
+.support-text {
   width: 100%;
 
   height: 100%;
@@ -63,12 +61,15 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  align-items: center;
 }
-.reason-text h2 {
+.support-text h2 {
   color: var(--color-primary);
   letter-spacing: 1px;
+  width: 100%;
+  max-width: 500px;
 }
-.reason-text p {
+.support-text p {
   padding: 5px 15px;
   letter-spacing: 1.25px;
   line-height: 1.8em;
@@ -76,55 +77,28 @@
   max-width: 500px;
 }
 @media only screen and (min-width: 600px) {
-  .reason {
+  .support-reasons {
+    height: 100vh;
+  }
+  .support {
     display: grid;
     grid-template-columns: 1.05fr 2fr;
   }
-  .reason:nth-child(even) {
-    grid-template-columns: 2fr 1.05fr;
-  }
-  .reason-text {
-    margin: 0 auto;
-  }
-  .reason-text h2 {
+  .support-text h2,
+  .support-text p {
     text-align: left;
-    padding: 10px 15px;
-
-    width: 100%;
-    max-width: 500px;
-  }
-  .reason-text p {
     padding: 5px 15px;
-    letter-spacing: 1.25px;
-    line-height: 1.8em;
-    width: 100%;
-    max-width: 900px;
-    text-align: left;
-  }
-  .reason-text:nth-child(odd) p {
-    max-width: 500px;
   }
 }
 
-@keyframes fade-in-left {
-  0% {
-    opacity: 0;
-    transform: translateX(-10%);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0%);
-  }
-}
-
-@keyframes fade-in-right {
+@keyframes fade-in {
   0% {
     opacity: 0;
     transform: translateX(10%);
   }
+
   100% {
     opacity: 1;
-    transform: translateX(0%);
+    transform: translateX(0);
   }
 }

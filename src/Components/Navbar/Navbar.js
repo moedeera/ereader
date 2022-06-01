@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Navbar.css";
 import icon from "./ereader1.png";
 import { Link } from "react-router-dom";
 
 export const Navbar = () => {
+  const [selected, setSelected] = useState(1);
   return (
     <div className="container">
       <div className="navbar-container">
@@ -14,22 +15,48 @@ export const Navbar = () => {
         <div className="navbar-menu">
           <ul>
             <li>
-              <Link to={"./"}>
-                <p>Home</p>
+              <Link
+                to={"./"}
+                onClick={() => {
+                  setSelected(1);
+                }}
+              >
+                <p style={selected === 1 ? { color: "crimson" } : {}}>Home</p>
               </Link>
             </li>
             <li>
-              <Link to={"./about"}>
-                <p>About</p>
+              <Link
+                to={"./support"}
+                onClick={() => {
+                  setSelected(2);
+                }}
+              >
+                <p style={selected === 2 ? { color: "crimson" } : {}}>
+                  Support
+                </p>
               </Link>
             </li>
+
             <li>
-              <Link to={"./"}>
-                <p>Features</p>
+              <Link
+                to={"./about"}
+                onClick={() => {
+                  setSelected(3);
+                }}
+              >
+                <p style={selected === 3 ? { color: "crimson" } : {}}>About</p>
               </Link>
             </li>
+
             <li>
-              <button className="btn btn-primary">Login</button>
+              <Link
+                to={"./login"}
+                onClick={() => {
+                  setSelected(0);
+                }}
+              >
+                <button className="btn btn-primary">Login</button>
+              </Link>
             </li>
           </ul>
         </div>

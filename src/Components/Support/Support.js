@@ -5,7 +5,7 @@ export const Support = () => {
   return (
     <div className="container">
       <div className="support-container">
-        <h2>Support</h2>
+        <h2>Free and Open Source</h2>
 
         <p>
           Our code is open source so feel free to propose a new feature or

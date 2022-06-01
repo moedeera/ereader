@@ -9,7 +9,7 @@ export const AboutPage = () => {
     <div className="aboutPage-container">
       <section className="header">
         <h1>Why librum Reader?</h1>
-        <p>There are many reasons to use the Librum-Reader</p>
+        <p>Glad you asked...</p>
       </section>
       <section className="about-reasons">
         <div className="reason">
@@ -55,7 +55,10 @@ export const AboutPage = () => {
             </p>
           </div>
         </div>
-        <div className="reason-text">
+        <div
+          className="reason-text"
+          style={{ width: "100%", maxWidth: "500px" }}
+        >
           <h2>Have ideas for more features?</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a
