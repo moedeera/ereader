@@ -15,6 +15,8 @@
   margin: 0 auto;
   line-height: 1.8em;
   color: black;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 .about-reasons {
   display: grid;
@@ -34,9 +36,11 @@
   max-width: 1300px;
   padding: 10px 20px;
   margin: 20px auto;
+  animation: fade-in-right 1700ms ease-in-out;
 }
 .reason:nth-child(even) {
   flex-direction: column-reverse;
+  animation: fade-in-left 1700ms ease-in-out;
 }
 .reason-image {
   display: flex;
@@ -79,5 +83,28 @@
   }
   .reason:nth-child(even) {
     grid-template-columns: 2fr 1.05fr;
+  }
+}
+
+@keyframes fade-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
