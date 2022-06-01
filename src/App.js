@@ -5,12 +5,14 @@ import { Navbar } from "./Components/Navbar/Navbar";
 import { Footer } from "./Components/Footer/Footer";
 import { SupportPage } from "./Pages/Support/SupportPage";
 import { LoginPage } from "./Pages/LoginPage/LoginPage";
+
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 function App() {
   return (
     <div className="App">
       <Router>
         <Navbar />
+
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/about" element={<AboutPage />} />

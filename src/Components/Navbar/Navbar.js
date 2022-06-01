@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import "./Navbar.css";
 import icon from "./ereader1.png";
 import { Link } from "react-router-dom";
+import { Menu } from "../Menu/Menu";
 
 export const Navbar = () => {
+  const [show, setShow] = useState(false);
   const [selected, setSelected] = useState(1);
   return (
     <div className="container">
@@ -67,9 +69,15 @@ export const Navbar = () => {
           <h2>Librum-Reader</h2>
         </div>
         <div style={{ color: "black" }}>
-          <i className="fas fa-bars fa-2x"></i>
+          <i
+            className="fas fa-bars fa-2x"
+            onClick={() => {
+              setShow(true);
+            }}
+          ></i>
         </div>
       </div>
+      {show && <Menu setShow={setShow} />}
     </div>
   );
 };
