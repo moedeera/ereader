@@ -78,6 +78,10 @@ html {
   background-color: var(--color-alternate);
   color: #fcfcfc;
 }
+.btn-alternate2 {
+  background-color: var(--color-primary1);
+  color: #fcfcfc;
+}
 @media screen and (max-width: 900px) {
   .btn {
     font-size: 13px;
@@ -100,9 +104,15 @@ html {
     transform: translateY(-7px);
   }
   .btn-alternate:hover {
-    background-color: var(--color-primary1);
+    background-color: white;
     box-shadow: 0px 15px 20px rgba(46, 104, 229, 0.4);
-    color: #fff;
+    color: var(--color-alternate);
+    transform: translateY(-7px);
+  }
+  .btn-alternate2:hover {
+    background-color: white;
+    box-shadow: 0px 15px 20px rgba(46, 104, 229, 0.4);
+    color: var(--color-primary1);
     transform: translateY(-7px);
   }
 }

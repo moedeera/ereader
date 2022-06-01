@@ -19,6 +19,8 @@ export const LoginForm = () => {
           </div>
 
           <button className="btn btn-alternate">Login</button>
+          <h3>or</h3>
+          <button className="btn btn-alternate2">Register</button>
         </form>
       </div>
     </div>
