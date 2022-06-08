@@ -1,6 +1,6 @@
 .showcase-container {
   margin-top: 50px;
-
+  height: 75vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
   /* border: 1px solid crimson; */

@@ -54,6 +54,7 @@ html {
   border: none;
   width: 100%;
   max-width: 15rem;
+  max-height: 4rem;
   letter-spacing: 2.5px;
   padding: 15px 25px;
   font-weight: 700;
