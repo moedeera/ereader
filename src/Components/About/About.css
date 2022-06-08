@@ -52,6 +52,7 @@
   align-items: center;
   border-radius: 4px;
   background-color: var(--color-alternate);
+  animation: fade-in-right 600ms ease-in-out;
 }
 
 .about-platforms i {
