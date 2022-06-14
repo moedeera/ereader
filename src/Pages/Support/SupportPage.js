@@ -112,9 +112,9 @@ export const SupportPage = () => {
               <h2>We aim to help a generation expand its knowledge</h2>
               <p>
                 There was a time where reading was the norm. There were'nt as
-                much options to watch on television and the internet was not a
-                thing as of yet. Those days went away but we can use technology
-                to instill the love of reading back.
+                much options to watch on television and the internet was not
+                something people had access to. Those days went away but we can
+                use technology to instill the love of reading back.
               </p>
               <br />
               <p className="extended">
