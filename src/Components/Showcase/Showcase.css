@@ -103,4 +103,7 @@
   .lg {
     display: none;
   }
+  .image {
+    height: fit-content;
+  }
 }
