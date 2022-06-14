@@ -45,11 +45,7 @@ export const Navbar = () => {
                     setSelected(2);
                   }}
                 >
-                  <p
-                    style={
-                      window.location.href === 2 ? { color: "crimson" } : {}
-                    }
-                  >
+                  <p style={selected === 2 ? { color: "crimson" } : {}}>
                     Support
                   </p>
                 </Link>
