@@ -122,13 +122,17 @@ export const SupportPage = () => {
                 into reading, Whether it be on the tablets, desktops or laptops.
                 The Librum Reader Offers a fun and rewarding experience.
               </p>
+              <p className="extended">
+                This design will be an easy way to get into reading, Whether it
+                be for informational, curiosity or amusement reasons. The Librum
+                Reader Offers a fun and rewarding experience.
+              </p>
             </div>
 
             <div className="extended">
               {" "}
               <button className="btn btn-secondary">Sign up</button>
             </div>
-            <div className="extended"></div>
           </div>
         </section>
       </Fade>

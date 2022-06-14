@@ -134,12 +134,14 @@
     overflow-y: hidden;
   }
   .support-text {
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
 
     background-color: var(--color-primary);
     color: white;
     text-align: left;
-    padding: 0 20px;
+    padding: 20px;
+    overflow-y: hidden;
   }
   .support-text h2 {
     text-align: left;
