@@ -2,10 +2,19 @@
 
 .supportPage-container {
   font-family: "Fira Sans", sans-serif;
-  margin-top: 50px;
+  margin-top: 0px;
+}
+.header-container {
+  padding-top: 50px;
+  background-color: #2892d7;
 }
 .header {
   color: var(--color-primary);
+  color: var(--color-secondary);
+
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
 }
 .header h1 {
   font-size: 38px;
@@ -17,6 +26,19 @@
   color: black;
   font-weight: 700;
   letter-spacing: 1px;
+}
+.header-info {
+  display: flex;
+}
+.header-image {
+  width: 100%;
+  align-items: center;
+  margin: 0 auto;
+  overflow-y: hidden;
+}
+.header-image img {
+  width: 250px;
+  padding: 10px;
 }
 .support-reasons {
   display: grid;
@@ -77,6 +99,11 @@
   max-width: 500px;
 }
 @media only screen and (min-width: 600px) {
+  .header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
   .support-reasons {
     height: 100vh;
   }
