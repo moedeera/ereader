@@ -1,7 +1,21 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+
+import Lottie from "lottie-web";
 import "./Showcase.css";
 
 export const Showcase = ({ image1 }) => {
+  const container = useRef(null);
+
+  useEffect(() => {
+    Lottie.loadAnimation({
+      container: container.current,
+      renderer: "svg",
+      loop: true,
+      autoplay: true,
+      animationData: require("./reading.json"),
+    });
+  }, []);
+
   return (
     <div className="showcase-container">
       <div className="image sm">
@@ -19,8 +33,8 @@ export const Showcase = ({ image1 }) => {
           <button className="btn btn-primary">Download </button>
         </div>
       </div>
-      <div className="image lg">
-        <img src={image1} alt="" />
+      <div className="image lg" ref={container}>
+        {/* <img src={image1} alt="" /> */}
       </div>
     </div>
   );
