@@ -10,7 +10,12 @@ export const Navbar = () => {
   return (
     <div
       style={
-        selected === 2
+        selected === 2 ||
+        window.location.href === "http://localhost:3000/support" ||
+        window.location.href === "https://librumreader.netlify.app/support" ||
+        selected === 3 ||
+        window.location.href === "http://localhost:3000/about" ||
+        window.location.href === "https://librumreader.netlify.app/about"
           ? { backgroundColor: "#2892D7" }
           : { backgroundColor: "white" }
       }
@@ -40,7 +45,11 @@ export const Navbar = () => {
                     setSelected(2);
                   }}
                 >
-                  <p style={selected === 2 ? { color: "crimson" } : {}}>
+                  <p
+                    style={
+                      window.location.href === 2 ? { color: "crimson" } : {}
+                    }
+                  >
                     Support
                   </p>
                 </Link>

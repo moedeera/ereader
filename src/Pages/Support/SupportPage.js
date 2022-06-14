@@ -12,6 +12,7 @@ import Lottie from "lottie-web";
 import banner from "./stars.svg";
 
 export const SupportPage = () => {
+  console.log(window.location.href);
   const container = useRef(null);
   useEffect(() => {
     Lottie.loadAnimation({
@@ -103,32 +104,34 @@ export const SupportPage = () => {
           </Fade>
         </div>
       </section>
-      <section className="support-reasons">
-        <div className="support-image" ref={container}></div>
-        <div className="support-text">
-          <div>
-            <h2>We aim to help a generation expand its knowledge</h2>
-            <p>
-              There was a time where reading was the norm. There were'nt as much
-              options to watch on television and the internet was not a thing as
-              of yet. Those days went away but we can use technology to instill
-              the love of reading back.
-            </p>
-            <br />
-            <p className="extended">
-              The Librum Reader will create an easy way to get the fun back into
-              reading, Whether it be on the tablets, desktops or laptops. The
-              Librum Reader Offers a fun and rewarding experience.
-            </p>
-          </div>
+      <Fade left>
+        <section className="support-reasons">
+          <div className="support-image" ref={container}></div>
+          <div className="support-text">
+            <div>
+              <h2>We aim to help a generation expand its knowledge</h2>
+              <p>
+                There was a time where reading was the norm. There were'nt as
+                much options to watch on television and the internet was not a
+                thing as of yet. Those days went away but we can use technology
+                to instill the love of reading back.
+              </p>
+              <br />
+              <p className="extended">
+                The Librum Reader will create an easy way to get the fun back
+                into reading, Whether it be on the tablets, desktops or laptops.
+                The Librum Reader Offers a fun and rewarding experience.
+              </p>
+            </div>
 
-          <div className="extended">
-            {" "}
-            <button className="btn btn-secondary">Sign up</button>
+            <div className="extended">
+              {" "}
+              <button className="btn btn-secondary">Sign up</button>
+            </div>
+            <div className="extended"></div>
           </div>
-          <div className="extended"></div>
-        </div>
-      </section>
+        </section>
+      </Fade>
     </div>
   );
 };

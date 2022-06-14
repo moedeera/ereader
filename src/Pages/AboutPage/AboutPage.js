@@ -7,7 +7,30 @@ import pic3 from "./pic3.svg";
 export const AboutPage = () => {
   return (
     <div className="aboutPage-container">
+      <div className="header-container-2">
+        <section className="header-2">
+          <div className="header-info-2">
+            <div>
+              {" "}
+              <h1>About </h1>
+              <p>
+                Home{" "}
+                <i
+                  className="fa fa-circle"
+                  style={{ fontSize: "12px", color: "purple" }}
+                ></i>{" "}
+                About
+              </p>
+            </div>
+          </div>
+          <div className="header-image-2">
+            <img src={pic2} alt="" />
+          </div>
+        </section>
+      </div>
       <section className="header">
+        <div className="header-container-x"></div>
+
         <h1>Why librum Reader?</h1>
         <p>Glad you asked...</p>
       </section>

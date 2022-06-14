@@ -37,7 +37,7 @@
   overflow-y: hidden;
 }
 .header-image img {
-  width: 250px;
+  height: 150px;
   padding: 10px;
 }
 .support-reasons {
@@ -135,7 +135,7 @@
   }
   .support-text {
     justify-content: space-evenly;
-    border: 1px solid var(--color-alternate);
+
     background-color: var(--color-primary);
     color: white;
     text-align: left;
