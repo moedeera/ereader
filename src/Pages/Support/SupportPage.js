@@ -19,7 +19,7 @@ export const SupportPage = () => {
       renderer: "svg",
       loop: true,
       autoplay: true,
-      animationData: require("./SupportPageLottie.json"),
+      animationData: require("./SL2.json"),
     });
   }, []);
 
@@ -50,23 +50,25 @@ export const SupportPage = () => {
       <section className="support-ways">
         <div className="support-way-container">
           <div className="support-ways-header">
-            <h1>3 Ways to support us</h1>
+            <h1 className="larger-Header" style={{ color: "purple" }}>
+              SUPPORTING THE COMMUNITY
+            </h1>
+            <h1 style={{ margin: "50px" }}>Ways to support us</h1>
           </div>
 
           <Fade right>
             <div className="support-ways-text">
-              <div className="support-ways-unit">
+              <div className="support-ways-unit sd1" id="sd-1">
                 <div className="sw-image">
                   {" "}
-                  <img src={reason1} alt="" />
+                  <img src={reason1} alt="" className="im1" />
                 </div>
                 <h2>Create an account Today</h2>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Praesent a diam eu augue interdum tincidunt non hendrerit est.
-                  Nulla pharetra mauris dolor, vel pretium tellus luctus at.
-                  Nunc iaculis ullamcorper ligula, at pharetra lorem suscipit
-                  eget. Vestibulum
+                  Create and account and sign up for a news letter. That way you
+                  can keep up to date with the latest news regarding the release
+                  of the Librum-Reader application. Keep up to date and never
+                  miss any news.
                 </p>
               </div>
               <div className="support-ways-unit">
@@ -75,13 +77,12 @@ export const SupportPage = () => {
                   <img src={reason2} alt="" />
                 </div>
 
-                <h2>Create an account Today</h2>
+                <h2>Join the Community</h2>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Praesent a diam eu augue interdum tincidunt non hendrerit est.
-                  Nulla pharetra mauris dolor, vel pretium tellus luctus at.
-                  Nunc iaculis ullamcorper ligula, at pharetra lorem suscipit
-                  eget. Vestibulum
+                  Get involved by posting on the forum, reporting any bugs, and
+                  liking our facebook and social media posts.If you have any
+                  experience with marketing feel free to spread our message
+                  across.
                 </p>
               </div>
 
@@ -90,13 +91,12 @@ export const SupportPage = () => {
                   {" "}
                   <img src={reason3} alt="" />
                 </div>
-                <h2>Create an account Today</h2>
+                <h2>Contribute</h2>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Praesent a diam eu augue interdum tincidunt non hendrerit est.
-                  Nulla pharetra mauris dolor, vel pretium tellus luctus at.
-                  Nunc iaculis ullamcorper ligula, at pharetra lorem suscipit
-                  eget. Vestibulum
+                  If you have experience, feel free to contribute to our code
+                  which is open source. We are always looking for ways to
+                  improve the application and any suggestions are welcome. if
+                  you want to take it a step further donate to us on payPal.
                 </p>
               </div>
             </div>
@@ -104,35 +104,29 @@ export const SupportPage = () => {
         </div>
       </section>
       <section className="support-reasons">
-        <div className="support">
-          <div className="support-image">
-            <img src={pic2} alt="" />
-            <img src={pic1} alt="" />
-            <img src={pic3} alt="" />
-          </div>
-          <div className="support-text">
-            <h2>Create an account Today</h2>
+        <div className="support-image" ref={container}></div>
+        <div className="support-text">
+          <div>
+            <h2>We aim to for a better reading experience</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-              a diam eu augue interdum tincidunt non hendrerit est. Nulla
-              pharetra mauris dolor, vel pretium tellus luctus at. Nunc iaculis
-              ullamcorper ligula, at pharetra lorem suscipit eget. Vestibulum
+              There was a time where reading was the norm. There were'nt as much
+              options to watch on television and the internet was not a thing as
+              of yet. Those days went away but we can use technology to instill
+              the love of reading back.
             </p>
-            <h2>Join our forum</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-              a diam eu augue interdum tincidunt non hendrerit est. Nulla
-              pharetra mauris dolor, vel pretium tellus luctus at. Nunc iaculis
-              ullamcorper ligula, at pharetra lorem suscipit eget. Vestibulum
-            </p>
-            <h2>Submit bug-reports and suggestions</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-              a diam eu augue interdum tincidunt non hendrerit est. Nulla
-              pharetra mauris dolor, vel pretium tellus luctus at. Nunc iaculis
-              ullamcorper ligula, at pharetra lorem suscipit eget. Vestibulum
+            <br />
+            <p className="extended">
+              The Librum Reader will create an easy way to get the fun back into
+              reading, Whether it be on the tablets, desktops or laptops. The
+              Librum Reader Offers a fun and rewarding experience.
             </p>
           </div>
+
+          <div className="extended">
+            {" "}
+            <button className="btn btn-secondary">Sign up</button>
+          </div>
+          <div className="extended"></div>
         </div>
       </section>
     </div>
