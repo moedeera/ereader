@@ -98,6 +98,15 @@
   width: 100%;
   max-width: 500px;
 }
+.support-ways {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.support-ways-text {
+  display: flex;
+  flex-direction: column;
+}
+
 @media only screen and (min-width: 600px) {
   .header {
     display: grid;
@@ -115,6 +124,24 @@
   .support-text p {
     text-align: left;
     padding: 5px 15px;
+  }
+  .support-ways {
+    border: 2px solid red;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+  .support-ways-text {
+    display: flex;
+    flex-direction: row;
+  }
+  .support-ways-unit {
+    padding: 30px 40px;
+    line-height: 1.8em;
+    letter-spacing: 1px;
+  }
+  .support-ways-unit img {
+    height: 74px;
+    width: 74px;
   }
 }
 
