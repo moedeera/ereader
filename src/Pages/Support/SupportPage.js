@@ -107,7 +107,7 @@ export const SupportPage = () => {
         <div className="support-image" ref={container}></div>
         <div className="support-text">
           <div>
-            <h2>We aim to for a better reading experience</h2>
+            <h2>We aim to help a generation expand its knowledge</h2>
             <p>
               There was a time where reading was the norm. There were'nt as much
               options to watch on television and the internet was not a thing as
