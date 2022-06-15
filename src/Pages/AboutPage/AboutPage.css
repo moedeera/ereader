@@ -119,7 +119,9 @@
 }
 .about-intro-container {
   margin: 30px 0;
+  animation: fade-in-left 600ms ease-in-out;
 }
+
 .about-intro {
   text-align: left;
   display: flex;

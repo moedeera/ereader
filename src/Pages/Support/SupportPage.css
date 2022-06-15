@@ -41,9 +41,8 @@
   padding: 10px;
 }
 .support-reasons {
-  border: 1px solid var(--color-alternate);
   border-radius: 4px;
-  box-shadow: 0px 5px 10px rgba(46, 104, 229, 0.4);
+
   display: grid;
   grid-template-rows: 1fr 1fr;
   height: 600px;
@@ -138,6 +137,7 @@
     grid-template-rows: 1fr 2fr 1fr;
 
     background-color: var(--color-primary);
+    box-shadow: 0px 5px 10px rgba(46, 104, 229, 0.4);
     color: white;
     text-align: left;
     padding: 20px;

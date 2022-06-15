@@ -1,8 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import "./SupportPage.css";
-import pic1 from "./pic1.png";
-import pic2 from "./pic2.png";
-import pic3 from "./pic3.png";
+
 import reason1 from "./reasons1.png";
 import reason2 from "./reasons2.png";
 import reason3 from "./reasons3.png";
@@ -122,6 +120,12 @@ export const SupportPage = () => {
                 into reading, Whether it be on the tablets, desktops or laptops.
                 The Librum Reader Offers a fun and rewarding experience.
               </p>
+              <p className="extended">
+                This design will be an easy way to get into reading, Whether it
+                be for informational, curiosity or amusement reasons. The Librum
+                Reader Offers a fun and rewarding experience.
+              </p>
+              <br />
               <p className="extended">
                 This design will be an easy way to get into reading, Whether it
                 be for informational, curiosity or amusement reasons. The Librum
