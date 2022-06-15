@@ -24,10 +24,11 @@ body {
 }
 html {
   scroll-behavior: smooth;
+  overflow-y: auto;
 }
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   display: none;
-}
+} */
 
 :root {
   --bg-light: #fcfcfc;
