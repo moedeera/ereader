@@ -3,7 +3,8 @@ import "./AboutPage.css";
 import pic1 from "./pic1.svg";
 import pic2 from "./pic2.svg";
 import pic3 from "./pic3.svg";
-
+import about1 from "./about-intro-image.svg";
+import about2 from "./about-intro-image2.svg";
 export const AboutPage = () => {
   return (
     <div className="aboutPage-container">
@@ -28,12 +29,111 @@ export const AboutPage = () => {
           </div>
         </section>
       </div>
-      <section className="header">
-        <div className="header-container-x"></div>
-
-        <h1>Why librum Reader?</h1>
-        <p>Glad you asked...</p>
+      <section className="header" style={{ marginBottom: "30px" }}>
+        <h1>About librum-Reader </h1>
       </section>
+
+      <section className="about-intro-container">
+        <div className="about-intro sm">
+          <div className="about-intro-text">
+            <h3 id="spe">
+              <i class="fa fa-circle"></i>
+
+              <span style={{ margin: "0 3px" }}>WHEN</span>
+
+              <i class="fa fa-circle"></i>
+            </h3>
+            <h1>When will Librum-Reader launch?</h1>
+            <p>
+              Librum-Reader is set to launch on August 1st and is currently in
+              the final stages of development. After that stage is done we will
+              start a round of testing to make sure there are'nt any bugs . If
+              the first phase of testing goes well, we will launch a beta
+              version of the application for our users to tryout. In the
+              meanwhile you can keep up to date with us on our social media
+              feeds to see whats new. Below our some of the features we plan to
+              include.
+            </p>
+            <ul>
+              <li>
+                {" "}
+                <i className="fa fa-circle"></i>
+                Snippets, this feature allows user to summarize and save
+                chapters of any book they are reading into a public summary
+                post.
+              </li>
+              <li>
+                <i className="fa fa-circle"></i>
+                Chapter rating system, this allows you to rate and discuss
+                chapters you enjoyed or did not like.
+              </li>
+              <li>
+                <i className="fa fa-circle"></i>A MyStory section that allows
+                you to write your own stories
+              </li>
+            </ul>
+            <button className="btn btn-about">
+              Follow us
+              <i class="fa fa-facebook"></i>
+            </button>
+          </div>
+          <div className="about-intro-image">
+            <img src={about1} alt="" />
+          </div>
+        </div>
+      </section>
+
+      <section className="about-intro-container">
+        <div className="about-intro sm2">
+          <div className="about-intro-image">
+            <img src={about2} alt="" />
+          </div>
+
+          <div className="about-intro-text">
+            <h3 id="spe">
+              <i class="fa fa-circle"></i>
+
+              <span style={{ margin: "0 3px" }}>WHY</span>
+
+              <i class="fa fa-circle"></i>
+            </h3>
+            <h1>Why use Librum-Reader as oppose to similiar apps?</h1>
+            <p>
+              Librum-Reader is set to launch on August 1st and is currently in
+              the final stages of development. After that stage is done we will
+              start a round of testing to make sure there are'nt any bugs . If
+              the first phase of testing goes well, we will launch a beta
+              version of the application for our users to tryout. In the
+              meanwhile you can keep up to date with us on our social media
+              feeds to see whats new. Below our some of the features we plan to
+              include.
+            </p>
+            <ul>
+              <li>
+                {" "}
+                <i className="fa fa-circle"></i>
+                Snippets, this feature allows user to summarize and save
+                chapters of any book they are reading into a public summary
+                post.
+              </li>
+              <li>
+                <i className="fa fa-circle"></i>
+                Chapter rating system, this allows you to rate and discuss
+                chapters you enjoyed or did not like.
+              </li>
+              <li>
+                <i className="fa fa-circle"></i>A MyStory section that allows
+                you to write your own stories
+              </li>
+            </ul>
+            <button className="btn btn-about">
+              Learn more
+              <i class="fa fa-chevron-circle-right"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
       <section className="about-reasons">
         <div className="reason">
           <div className="reason-image">
