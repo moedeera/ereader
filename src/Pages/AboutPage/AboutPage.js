@@ -99,16 +99,20 @@ export const AboutPage = () => {
             </h3>
             <h1>Why use Librum-Reader as oppose to similiar apps?</h1>
             <p>
-              Librum-Reader is set to launch on August 1st and is currently in
-              the final stages of development. After that stage is done we will
-              start a round of testing to make sure there are'nt any bugs . If
-              the first phase of testing goes well, we will launch a beta
-              version of the application for our users to tryout. In the
-              meanwhile you can keep up to date with us on our social media
-              feeds to see whats new. Below our some of the features we plan to
-              include.
+              Librum-Reader is convenient and easy to use. But ultimately its
+              the custom features and open source nature that will have it stick
+              out. The app is meant to be the go to place for readers and
+              writers alike. The purpose is the give the experience a more
+              interactive feel.
             </p>
-            <ul>
+            <p>
+              Librum-Reader is convenient and easy to use. But ultimately its
+              the custom features and open source nature that will have it stick
+              out. The app is meant to be the go to place for readers and
+              writers alike. The purpose is the give the experience a more
+              interactive feel.
+            </p>
+            {/* <ul>
               <li>
                 {" "}
                 <i className="fa fa-circle"></i>
@@ -125,7 +129,7 @@ export const AboutPage = () => {
                 <i className="fa fa-circle"></i>A MyStory section that allows
                 you to write your own stories
               </li>
-            </ul>
+            </ul> */}
             <button className="btn btn-about">
               Learn more
               <i class="fa fa-chevron-circle-right"></i>
