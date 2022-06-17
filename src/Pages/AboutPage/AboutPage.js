@@ -5,6 +5,7 @@ import pic2 from "./pic2.svg";
 import pic3 from "./pic3.svg";
 import about1 from "./about-intro-image.svg";
 import about2 from "./about-intro-image2.svg";
+import { Fade } from "react-reveal";
 export const AboutPage = () => {
   return (
     <div className="aboutPage-container">
@@ -33,86 +34,88 @@ export const AboutPage = () => {
         <h1>About librum-Reader </h1>
       </section>
 
-      <section className="about-intro-container">
-        <div className="about-intro sm">
-          <div className="about-intro-text">
-            <h3 id="spe">
-              <i class="fa fa-circle"></i>
+      <Fade right>
+        <section className="about-intro-container">
+          <div className="about-intro sm">
+            <div className="about-intro-text">
+              <h3 id="spe">
+                <i class="fa fa-circle"></i>
 
-              <span style={{ margin: "0 3px" }}>WHEN</span>
+                <span style={{ margin: "0 3px" }}>WHEN</span>
 
-              <i class="fa fa-circle"></i>
-            </h3>
-            <h1>When will Librum-Reader launch?</h1>
-            <p>
-              Librum-Reader is set to launch on August 1st and is currently in
-              the final stages of development. After that stage is done we will
-              start a round of testing to make sure there are'nt any bugs . If
-              the first phase of testing goes well, we will launch a beta
-              version of the application for our users to tryout. In the
-              meanwhile you can keep up to date with us on our social media
-              feeds to see whats new. Below our some of the features we plan to
-              include.
-            </p>
-            <ul>
-              <li>
-                {" "}
-                <i className="fa fa-circle"></i>
-                Snippets, this feature allows user to summarize and save
-                chapters of any book they are reading into a public summary
-                post.
-              </li>
-              <li>
-                <i className="fa fa-circle"></i>
-                Chapter rating system, this allows you to rate and discuss
-                chapters you enjoyed or did not like.
-              </li>
-              <li>
-                <i className="fa fa-circle"></i>A MyStory section that allows
-                you to write your own stories
-              </li>
-            </ul>
-            <button className="btn btn-about">
-              Follow us
-              <i class="fa fa-facebook"></i>
-            </button>
+                <i class="fa fa-circle"></i>
+              </h3>
+              <h1>When will Librum-Reader launch?</h1>
+              <p>
+                Librum-Reader is set to launch on August 1st and is currently in
+                the final stages of development. After that stage is done we
+                will start a round of testing to make sure there are'nt any bugs
+                . If the first phase of testing goes well, we will launch a beta
+                version of the application for our users to tryout. In the
+                meanwhile you can keep up to date with us on our social media
+                feeds to see whats new. Below our some of the features we plan
+                to include.
+              </p>
+              <ul>
+                <li>
+                  {" "}
+                  <i className="fa fa-circle"></i>
+                  Snippets, this feature allows user to summarize and save
+                  chapters of any book they are reading into a public summary
+                  post.
+                </li>
+                <li>
+                  <i className="fa fa-circle"></i>
+                  Chapter rating system, this allows you to rate and discuss
+                  chapters you enjoyed or did not like.
+                </li>
+                <li>
+                  <i className="fa fa-circle"></i>A MyStory section that allows
+                  you to write your own stories
+                </li>
+              </ul>
+              <button className="btn btn-about">
+                Follow us
+                <i class="fa fa-facebook"></i>
+              </button>
+            </div>
+            <div className="about-intro-image">
+              <img src={about1} alt="" />
+            </div>
           </div>
-          <div className="about-intro-image">
-            <img src={about1} alt="" />
-          </div>
-        </div>
-      </section>
+        </section>{" "}
+      </Fade>
+      <Fade left>
+        <section className="about-intro-container">
+          <div className="about-intro sm2">
+            <div className="about-intro-image">
+              <img src={about2} alt="" />
+            </div>
 
-      <section className="about-intro-container">
-        <div className="about-intro sm2">
-          <div className="about-intro-image">
-            <img src={about2} alt="" />
-          </div>
+            <div className="about-intro-text">
+              <h3 id="spe">
+                <i class="fa fa-circle"></i>
 
-          <div className="about-intro-text">
-            <h3 id="spe">
-              <i class="fa fa-circle"></i>
+                <span style={{ margin: "0 3px" }}>WHY</span>
 
-              <span style={{ margin: "0 3px" }}>WHY</span>
-
-              <i class="fa fa-circle"></i>
-            </h3>
-            <h1>Why use Librum-Reader as oppose to similiar apps?</h1>
-            <p>
-              Librum-Reader is convenient and easy to use. But ultimately its
-              the custom features and open source nature that will have it stick
-              out. The app is meant to be the go to place for readers and
-              writers alike. The purpose is the give the experience a more
-              interactive feel.
-            </p>
-            <p>
-              Librum-Reader is convenient and easy to use. But ultimately its
-              the custom features and open source nature that will have it stick
-              out. The app is meant to be the go to place for readers and
-              writers alike. The purpose is the give the experience a more
-              interactive feel.
-            </p>
-            {/* <ul>
+                <i class="fa fa-circle"></i>
+              </h3>
+              <h1>Why use Librum-Reader as oppose to similiar apps?</h1>
+              <p>
+                Librum-Reader is convenient and easy to use. But ultimately its
+                the custom features and open source nature that will have it
+                stick out. The app is meant to be the go to place for readers
+                and writers alike. The purpose is the give the experience a more
+                interactive feel.
+              </p>
+              <p>
+                Librum-Reader is convenient and easy to use. But ultimately its
+                the custom features and open source nature that will have it
+                stick out. The app is meant to be the go to place for readers
+                and writers alike. The purpose is the give the experience a more
+                interactive feel.
+              </p>
+              {/* <ul>
               <li>
                 {" "}
                 <i className="fa fa-circle"></i>
@@ -130,50 +133,102 @@ export const AboutPage = () => {
                 you to write your own stories
               </li>
             </ul> */}
-            <button className="btn btn-about">
-              Learn more
-              <i class="fa fa-chevron-circle-right"></i>
-            </button>
+              <button className="btn btn-about">
+                Learn more
+                <i class="fa fa-chevron-circle-right"></i>
+              </button>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>{" "}
+      </Fade>
 
-      <section className="about-reasons">
-        <div className="reason">
-          <div className="reason-image">
-            <img src={pic1} alt="" />
-          </div>
-          <div className="reason-text">
-            <h2>High appearance customization</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-              a diam eu augue interdum tincidunt non hendrerit est. Nulla
-              pharetra mauris dolor, vel pretium tellus luctus at. Nunc iaculis
-              ullamcorper ligula, at pharetra lorem suscipit eget. Vestibulum
-            </p>
-          </div>
-        </div>
-        <div className="reason">
-          <div className="reason-text">
-            <h2>Book state syncing across devices</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-              a diam eu augue interdum tincidunt non hendrerit est. Nulla
-              pharetra mauris dolor, vel pretium tellus luctus at. Nunc iaculis
-              ullamcorper ligula, at pharetra lorem suscipit eget. Vestibulum
-            </p>
-          </div>
+      <Fade>
+        <section className="about-intro-container">
+          <div className="about-intro sm">
+            <div className="about-intro-text">
+              <h3 id="spe">
+                <i class="fa fa-circle"></i>
 
-          <div className="reason-image">
-            <img src={pic2} alt="" />
+                <span style={{ margin: "0 3px" }}>HOW</span>
+
+                <i class="fa fa-circle"></i>
+              </h3>
+              <h1>How can you support or get a hold of us?</h1>
+              <p>
+                Librum-Reader is set to launch on August 1st and is currently in
+                the final stages of development. After that stage is done we
+                will start a round of testing to make sure there are'nt any bugs
+                . If the first phase of testing goes well, we will launch a beta
+                version of the application for our users to tryout. In the
+                meanwhile you can keep up to date with us on our social media
+                feeds to see whats new. Below our some of the features we plan
+                to include.
+              </p>
+
+              <button className="btn btn-about">
+                Our Twitter
+                <i class="fa fa-twitter"></i>
+              </button>
+            </div>
+            <div className="about-intro-image">
+              <img src={pic1} alt="" />
+            </div>
           </div>
-        </div>
-        <div className="reason">
-          <div className="reason-image">
-            <img src={pic3} alt="" />
+        </section>{" "}
+      </Fade>
+      <Fade up>
+        <section className="about-reasons">
+          <div className="reason">
+            <div className="reason-image">
+              <img src={pic1} alt="" />
+            </div>
+            <div className="reason-text">
+              <h2>High appearance customization</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Praesent a diam eu augue interdum tincidunt non hendrerit est.
+                Nulla pharetra mauris dolor, vel pretium tellus luctus at. Nunc
+                iaculis ullamcorper ligula, at pharetra lorem suscipit eget.
+                Vestibulum
+              </p>
+            </div>
           </div>
-          <div className="reason-text">
-            <h2>Note-taking functionality</h2>
+          <div className="reason">
+            <div className="reason-text">
+              <h2>Book state syncing across devices</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Praesent a diam eu augue interdum tincidunt non hendrerit est.
+                Nulla pharetra mauris dolor, vel pretium tellus luctus at. Nunc
+                iaculis ullamcorper ligula, at pharetra lorem suscipit eget.
+                Vestibulum
+              </p>
+            </div>
+
+            <div className="reason-image">
+              <img src={pic2} alt="" />
+            </div>
+          </div>
+          <div className="reason">
+            <div className="reason-image">
+              <img src={pic3} alt="" />
+            </div>
+            <div className="reason-text">
+              <h2>Note-taking functionality</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Praesent a diam eu augue interdum tincidunt non hendrerit est.
+                Nulla pharetra mauris dolor, vel pretium tellus luctus at. Nunc
+                iaculis ullamcorper ligula, at pharetra lorem suscipit eget.
+                Vestibulum
+              </p>
+            </div>
+          </div>
+          <div
+            className="reason-text"
+            style={{ width: "100%", maxWidth: "500px" }}
+          >
+            <h2>Have ideas for more features?</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
               a diam eu augue interdum tincidunt non hendrerit est. Nulla
@@ -181,20 +236,8 @@ export const AboutPage = () => {
               ullamcorper ligula, at pharetra lorem suscipit eget. Vestibulum
             </p>
           </div>
-        </div>
-        <div
-          className="reason-text"
-          style={{ width: "100%", maxWidth: "500px" }}
-        >
-          <h2>Have ideas for more features?</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a
-            diam eu augue interdum tincidunt non hendrerit est. Nulla pharetra
-            mauris dolor, vel pretium tellus luctus at. Nunc iaculis ullamcorper
-            ligula, at pharetra lorem suscipit eget. Vestibulum
-          </p>
-        </div>
-      </section>
+        </section>
+      </Fade>
     </div>
   );
 };

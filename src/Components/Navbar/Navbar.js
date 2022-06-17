@@ -116,7 +116,8 @@ export const Navbar = () => {
           </div>
           <div style={{ color: "black" }}>
             <i
-              className="fas fa-bars fa-2x"
+              className="fas fa-bars"
+              style={{ fontSize: "20px" }}
               onClick={() => {
                 setShow(true);
               }}
