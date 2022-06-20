@@ -102,7 +102,7 @@ export const SupportPage = () => {
           </Fade>
         </div>
       </section>
-      <Fade left>
+      <Fade>
         <section className="support-reasons">
           <div className="support-image" ref={container}></div>
           <div className="support-text">

@@ -43,11 +43,12 @@ html {
   --container-width-lg: 75%;
   --container-width-md: 86%;
   --container-width-ms: 90%;
+  --max-width: 1300px;
 }
 
 .container {
   width: 100%;
-  max-width: 1300px;
+  max-width: var(--max-width);
   margin: 0 auto;
 }
 
