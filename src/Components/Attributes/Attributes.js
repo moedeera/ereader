@@ -28,7 +28,7 @@ export const Attributes = () => {
           <div className="service">
             <i class="fas fa-asterisk"></i>
             <h3>Light and Secure</h3>
-            <p>Small file-size, quick downloads</p>
+            <p>Small file-size, quick Updates</p>
           </div>
         </div>
       </div>
