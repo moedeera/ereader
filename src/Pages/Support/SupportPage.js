@@ -140,6 +140,50 @@ export const SupportPage = () => {
           </div>
         </section>
       </Fade>
+      <div class="container-2">
+        <div class="wrapper card">
+          <div class="border">
+            <h2>Lorem ipsum</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel,
+              porro.
+            </p>
+            <div class="icons">
+              <i className="fa fa-instagram fa-2x" aria-hidden="true"></i>.
+              <i class="fa fa-twitter fa-2x" aria-hidden="true"></i>.
+              <i class="fa fa-facebook fa-2x" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+        <div class="wrapper card">
+          <div class="border">
+            <h2>Lorem ipsum</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel,
+              porro.
+            </p>
+            <div class="icons">
+              <i className="fa fa-instagram fa-2x" aria-hidden="true"></i>.
+              <i class="fa fa-twitter fa-2x" aria-hidden="true"></i>.
+              <i class="fa fa-facebook fa-2x" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+        <div class="wrapper card">
+          <div class="border">
+            <h2>Lorem ipsum</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel,
+              porro.
+            </p>
+            <div class="icons">
+              <i className="fa fa-instagram fa-2x" aria-hidden="true"></i>.
+              <i class="fa fa-twitter fa-2x" aria-hidden="true"></i>.
+              <i class="fa fa-facebook fa-2x" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

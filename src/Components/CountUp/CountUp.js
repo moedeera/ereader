@@ -8,7 +8,7 @@ export const CountUP = () => {
       <div className="count-up-container">
         <div className="count">
           <div className="count-number">
-            <CountUp delay={0} start={0} end={1605} duration={2.75}>
+            <CountUp delay={0} start={1000} end={1605} duration={1.75}>
               {({ countUpRef, start }) => <h1 ref={countUpRef}>180</h1>}
             </CountUp>
 
@@ -18,7 +18,7 @@ export const CountUP = () => {
         </div>
         <div className="count">
           <div className="count-number">
-            <CountUp delay={0} start={0} end={1215} duration={2.75}>
+            <CountUp delay={0} start={1000} end={1215} duration={1.75}>
               {({ countUpRef, start }) => <h1 ref={countUpRef}>180</h1>}
             </CountUp>
             <i className="fa fa-plus"></i>
@@ -27,7 +27,7 @@ export const CountUP = () => {
         </div>
         <div className="count">
           <div className="count-number">
-            <CountUp delay={0} start={120} end={45} duration={2.75}>
+            <CountUp delay={0} start={120} end={45} duration={1.75}>
               {({ countUpRef, start }) => <h1 ref={countUpRef}>180</h1>}
             </CountUp>
             <i className="fa fa-calendar"></i>

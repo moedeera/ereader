@@ -94,11 +94,12 @@
   flex-direction: column;
   gap: 20px;
   border: 1px solid var(--color-primary);
+
   margin: 10px auto;
   width: 40%;
   min-width: 300px;
   border-radius: 10px;
-  box-shadow: 0px 5px 10px rgba(46, 104, 229, 0.4);
+  box-shadow: 0px 8px 15px rgba(46, 104, 229, 0.4);
 }
 .support-ways-text p {
   color: rgba(0, 0, 0, 0.864);
@@ -116,6 +117,99 @@
 .extended {
   display: none;
 }
+
+.container-2 {
+  height: fit-content;
+  padding: 20px 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.border {
+  position: relative;
+  height: 380px;
+  width: 240px;
+  background: transparent;
+  border-radius: 10px;
+  transition: all 1s;
+  cursor: pointer;
+}
+.border:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: #256eff67;
+}
+.wrapper {
+  height: 600px;
+  width: 400px;
+  background: grey;
+  border-radius: 10px;
+  transition: all 1.2s ease-in-out;
+  overflow: hidden;
+  background: black;
+  box-shadow: 0 7px 6px -6px #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.card {
+  background: url("https://api.wpmet.com/auth/wp-content/uploads/2021/06/about-us_img-1.png")
+    no-repeat center center/cover;
+  border: 1px solid var(--color-primary);
+}
+.card:hover {
+  background: url("https://api.wpmet.com/auth/wp-content/uploads/2021/06/about-us_img-1.png")
+    left no-repeat;
+}
+.card:hover h2 {
+  opacity: 1;
+}
+.card:hover .fa-brands {
+  opacity: 1;
+}
+.card h2 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
+  margin: 20px;
+  opacity: 0;
+  transition: opacity 1s;
+}
+.card p {
+  max-width: 150px;
+  margin-left: 20px;
+  opacity: 0;
+  transition: opacity 1s;
+}
+.card:hover p {
+  opacity: 1;
+}
+.card p::after {
+  content: "";
+  width: 150px;
+  height: 1px;
+  display: block;
+  margin-top: 20px;
+  background: #ccc;
+}
+.fa-brands {
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.icons {
+  position: absolute;
+  fill: #333;
+  height: 130px;
+  top: 226px;
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
+}
+
 @media only screen and (min-width: 900px) {
   .header {
     display: grid;
