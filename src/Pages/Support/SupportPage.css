@@ -43,16 +43,19 @@
 .support-reasons {
   border-radius: 4px;
 
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  height: 600px;
+  display: flex;
+  flex-direction: column;
+  height: auto;
   width: 100%;
   max-width: 1300px;
   margin: 0 auto;
+  padding: 5px;
 }
 
 .support-image {
   height: 300px;
+
+  overflow-y: hidden;
   overflow-y: hidden;
 }
 
@@ -66,13 +69,14 @@
   align-items: center;
 }
 .support-text h2 {
-  color: var(--color-secondary);
+  color: crimson !important;
   margin: 20px 0;
 }
 .support-text p {
   letter-spacing: 1px;
   line-height: 1.6em;
   padding: 0 10px;
+  color: var(--color-text);
 }
 .support-ways {
   max-width: 1300px;
@@ -210,6 +214,57 @@
   cursor: pointer;
 }
 
+.support-dates {
+  border: none;
+
+  padding: 5px;
+}
+.support-date {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px;
+  align-items: center;
+  gap: 0px;
+  margin: 10px 0;
+  background-color: aliceblue;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+.support-date-date {
+  border: 1px solid rgba(0, 0, 0, 0.329);
+  background-color: wheat;
+  padding: 20px;
+  border-radius: 4px;
+  color: var(--color-text);
+}
+
+.support-date-info {
+  width: 100%;
+  max-width: 400px;
+  letter-spacing: 1px;
+  text-align: left;
+  color: var(--color-text);
+  padding: 10px;
+}
+.support-date-add {
+  background-color: var(--color-primary1);
+  color: white;
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  border-radius: 4px;
+  color: var(--color-background);
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+@media only screen and (min-width: 600px) {
+  .support-reasons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-height: 1200px;
+  }
+}
+
 @media only screen and (min-width: 900px) {
   .header {
     display: grid;
@@ -218,7 +273,7 @@
 
   .support-reasons {
     grid-template-columns: 1fr 1fr;
-    height: 800px;
+    max-height: 1200px;
   }
   .support {
     display: grid;
@@ -226,16 +281,18 @@
     height: 400px;
     overflow-y: hidden;
   }
+
   .support-text {
     display: grid;
     grid-template-rows: 1fr 2fr 1fr;
 
-    background-color: var(--color-primary);
+    background-color: aliceblue;
     box-shadow: 0px 5px 10px rgba(46, 104, 229, 0.4);
     color: white;
     text-align: left;
     padding: 20px;
     overflow-y: hidden;
+    height: 100%;
   }
   .support-text h2 {
     text-align: left;
@@ -263,7 +320,7 @@
     transition: transform 500ms ease-in-out;
   }
   .support-ways-unit img:hover {
-    transform: rotateY(180deg);
+    /* transform: rotateY(180deg); */
   }
 
   .sw-image:hover {

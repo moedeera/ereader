@@ -7,6 +7,7 @@ body {
   font-family: "Lato", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: white;
 }
 
 /* code {
@@ -31,6 +32,8 @@ html {
 } */
 
 :root {
+  --color-text: black;
+  --color-background: white;
   --bg-light: #fcfcfc;
   --bg-dark: black;
   --color-primary1: #256eff;

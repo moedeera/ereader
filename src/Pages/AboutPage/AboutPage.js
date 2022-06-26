@@ -176,7 +176,7 @@ export const AboutPage = () => {
           </div>
         </section>{" "}
       </Fade>
-      <Fade up>
+      {/* <Fade up>
         <section className="about-reasons">
           <div className="reason">
             <div className="reason-image">
@@ -237,7 +237,7 @@ export const AboutPage = () => {
             </p>
           </div>
         </section>
-      </Fade>
+      </Fade> */}
     </div>
   );
 };

@@ -30,7 +30,7 @@ export const Showcase = ({ image1 }) => {
           </p>
         </div>
         <div className="info-section-button">
-          <button className="btn btn-primary">Download </button>
+          <button className="btn btn-primary">Learn More </button>
         </div>
       </div>
       <div className="image lg" ref={container}>

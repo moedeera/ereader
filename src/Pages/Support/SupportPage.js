@@ -115,32 +115,74 @@ export const SupportPage = () => {
                 use technology to instill the love of reading back.
               </p>
               <br />
-              <p className="extended">
+              {/* <p className="extended">
                 The Librum Reader will create an easy way to get the fun back
                 into reading, Whether it be on the tablets, desktops or laptops.
                 The Librum Reader Offers a fun and rewarding experience.
-              </p>
-              <p className="extended">
-                This design will be an easy way to get into reading, Whether it
-                be for informational, curiosity or amusement reasons. The Librum
-                Reader Offers a fun and rewarding experience.
-              </p>
+              </p> */}
+
               <br />
-              <p className="extended">
+              {/* <p className="extended">
                 This design will be an easy way to get into reading, Whether it
                 be for informational, curiosity or amusement reasons. The Librum
                 Reader Offers a fun and rewarding experience.
-              </p>
+              </p> */}
             </div>
 
-            <div className="extended">
-              {" "}
-              <button className="btn btn-secondary">Sign up</button>
+            <div className="support-dates">
+              <div className="support-date">
+                <div className="support-date-date">
+                  <p>May</p>
+                  <h1>5th</h1>
+                </div>
+                <div className="support-date-info">
+                  <h3>Software Inauguration</h3>
+                  This software will be showcased in the beta version at the
+                  Bergen start-up festival in Norway. The event starts on May
+                  5th and goes all the way to June 19th
+                </div>
+                <div className="support-date-add">
+                  <i className="fa fa-plus" aria-hidden="true"></i>
+                  Add to calendar
+                </div>
+              </div>
+              <div className="support-date">
+                <div className="support-date-date">
+                  <p>June</p>
+                  <h1>9th</h1>
+                </div>
+                <div className="support-date-info">
+                  <h3>Beta version launch</h3>
+                  This software will be showcased in the beta version at the
+                  Bergen start-up festival in Norway. The event starts on May
+                  5th and goes all the way to June 19th
+                </div>
+                <div className="support-date-add">
+                  <i className="fa fa-plus" aria-hidden="true"></i>
+                  Add to calendar
+                </div>
+              </div>
+              <div className="support-date">
+                <div className="support-date-date">
+                  <p>June</p>
+                  <h1>9th</h1>
+                </div>
+                <div className="support-date-info">
+                  <h3>Beta version launch</h3>
+                  This software will be showcased in the beta version at the
+                  Bergen start-up festival in Norway. The event starts on May
+                  5th and goes all the way to June 19th
+                </div>
+                <div className="support-date-add">
+                  <i className="fa fa-plus" aria-hidden="true"></i>
+                  Add to calendar
+                </div>
+              </div>
             </div>
           </div>
         </section>
       </Fade>
-      <div class="container-2">
+      {/* <div class="container-2">
         <div class="wrapper card">
           <div class="border">
             <h2>Lorem ipsum</h2>
@@ -183,7 +225,7 @@ export const SupportPage = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -7,6 +7,7 @@ import { About } from "../../Components/About/About";
 import { Support } from "../../Components/Support/Support";
 import { Attributes } from "../../Components/Attributes/Attributes";
 import { CountUP } from "../../Components/CountUp/CountUp";
+import { Circles } from "../../Components/CirclePercent/Circles";
 // import Example from "../../Components/Tabs/Tabs";
 
 export const Homepage = () => {
@@ -15,7 +16,9 @@ export const Homepage = () => {
       <Showcase image1={image1} />
       <CountUP />
       <Attributes />
+
       <Features />
+      <Circles />
       <About />
       <Support />
       {/* <Example /> */}
