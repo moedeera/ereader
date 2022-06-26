@@ -130,18 +130,19 @@ export const SupportPage = () => {
             </div>
 
             <div className="support-dates">
+              <h1>Events</h1>
               <div className="support-date">
                 <div className="support-date-date">
-                  <p>May</p>
-                  <h1>5th</h1>
+                  <p>July</p>
+                  <h1>15th</h1>
                 </div>
                 <div className="support-date-info">
-                  <h3>Software Inauguration</h3>
+                  <h3>Software Reveal</h3>
                   This software will be showcased in the beta version at the
                   Bergen start-up festival in Norway. The event starts on May
                   5th and goes all the way to June 19th
                 </div>
-                <div className="support-date-add">
+                <div className="support-date-add btn-small">
                   <i className="fa fa-plus" aria-hidden="true"></i>
                   Add to calendar
                 </div>
@@ -157,7 +158,7 @@ export const SupportPage = () => {
                   Bergen start-up festival in Norway. The event starts on May
                   5th and goes all the way to June 19th
                 </div>
-                <div className="support-date-add">
+                <div className="support-date-add btn-small">
                   <i className="fa fa-plus" aria-hidden="true"></i>
                   Add to calendar
                 </div>
@@ -165,15 +166,15 @@ export const SupportPage = () => {
               <div className="support-date">
                 <div className="support-date-date">
                   <p>June</p>
-                  <h1>9th</h1>
+                  <h1>19th</h1>
                 </div>
                 <div className="support-date-info">
-                  <h3>Beta version launch</h3>
+                  <h3>Forum live</h3>
                   This software will be showcased in the beta version at the
                   Bergen start-up festival in Norway. The event starts on May
                   5th and goes all the way to June 19th
                 </div>
-                <div className="support-date-add">
+                <div className="support-date-add btn-small">
                   <i className="fa fa-plus" aria-hidden="true"></i>
                   Add to calendar
                 </div>

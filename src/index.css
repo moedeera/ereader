@@ -121,6 +121,12 @@ html {
     color: var(--color-primary1);
     transform: translateY(-7px);
   }
+  .btn-small:hover {
+    background-color: var(--color-primary);
+    box-shadow: 0px 15px 20px rgba(46, 104, 229, 0.4);
+    color: #fff;
+    transform: translateY(-5px);
+  }
 }
 @keyframes fade-in-down {
   0% {
