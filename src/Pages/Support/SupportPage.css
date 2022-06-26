@@ -230,12 +230,13 @@
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
 }
 .support-date-date {
-  border: 1px solid rgba(0, 0, 0, 0.329);
+  border: none;
   background-color: wheat;
   padding: 20px;
   border-radius: 4px;
   color: var(--color-text);
   width: 6rem;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 }
 
 .support-date-info {
