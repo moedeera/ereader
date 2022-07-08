@@ -16,7 +16,6 @@ export const Homepage = () => {
       <Showcase image1={image1} />
       <CountUP />
       <Attributes />
-
       <Features />
       <Circles />
       <About />

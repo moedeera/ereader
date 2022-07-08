@@ -39,7 +39,7 @@ export const Navbar = () => {
           : { backgroundColor: "white" }
       }
     >
-      <div className="container">
+      <div className="nav-contain">
         <div className="navbar-container">
           <div className="logo">
             <img src={icon} alt="" />

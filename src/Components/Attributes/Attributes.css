@@ -29,13 +29,14 @@
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: all 200ms ease-in-out;
+  background-color: transparent;
 }
 .service i {
   font-size: 38px;
   color: var(--color-primary1);
 }
 .service h3 {
-  color: var(--color-secondary);
+  color: var(--color-alternate);
 }
 .service p {
   letter-spacing: 1px;

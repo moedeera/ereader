@@ -1,5 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;300;400;500;600;700&display=swap");
 
+.nav-contain {
+  margin: 0 auto;
+
+  background-color: #343047;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+}
 .navbar-container {
   display: flex;
 
@@ -8,6 +16,8 @@
   width: 100%;
   max-width: 1300px;
   padding: 15px;
+  background-color: #343047;
+  background-color: transparent;
 }
 .logo {
   display: flex;
@@ -45,7 +55,8 @@
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 0.15em;
-  color: black;
+  color: var(--color-text);
+
   font-weight: 700;
   display: inline-block;
   padding: 15px 20px;
@@ -60,7 +71,7 @@
   height: 2px;
   left: 50%;
   position: absolute;
-  background: black;
+  background: var(--color-text);
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
 }

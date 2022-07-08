@@ -8,6 +8,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: white;
+  background-color: #343047;
+  background-color: white;
+  color: white;
+  color: black;
 }
 
 /* code {
@@ -32,8 +36,15 @@ html {
 } */
 
 :root {
-  --color-text: black;
+  --color-text: white;
+  --color-text-alt: #343047;
+
   --color-background: white;
+  --color-background: #343047;
+
+  --color-background: white;
+  --color-text: black;
+
   --bg-light: #fcfcfc;
   --bg-dark: black;
   --color-primary1: #256eff;
@@ -53,6 +64,7 @@ html {
   width: 100%;
   max-width: var(--max-width);
   margin: 0 auto;
+  background-color: transparent;
 }
 
 .btn {

@@ -7,6 +7,7 @@
 .header-container {
   padding-top: 50px;
   background-color: #2892d7;
+  background-color: white;
 }
 .header {
   color: var(--color-primary);
@@ -23,7 +24,7 @@
   width: 300px;
   margin: 0 auto;
   line-height: 1.8em;
-  color: black;
+  color: var(--color-text);
   font-weight: 700;
   letter-spacing: 1px;
 }
@@ -76,7 +77,7 @@
   letter-spacing: 1px;
   line-height: 1.6em;
   padding: 0 10px;
-  color: var(--color-text);
+  color: var(--color-text-alt);
 }
 .support-ways {
   max-width: 1300px;
@@ -107,6 +108,7 @@
 }
 .support-ways-text p {
   color: rgba(0, 0, 0, 0.864);
+  color: var(--color-text);
 }
 .sw-image {
   /* border: 1px solid crimson; */
@@ -178,6 +180,7 @@
   margin: 20px;
   opacity: 0;
   transition: opacity 1s;
+  color: var(--color-text);
 }
 .card p {
   max-width: 150px;
@@ -237,6 +240,7 @@
   color: var(--color-text);
   width: 6rem;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  color: var(--color-primary1);
 }
 
 .support-date-info {
@@ -244,12 +248,12 @@
   max-width: 400px;
   letter-spacing: 1px;
   text-align: left;
-  color: var(--color-text);
+  color: var(--color-text-alt);
   padding: 10px;
 }
 .support-date-add {
   background-color: var(--color-primary1);
-  color: white;
+  color: var(--color-text-alt);
   padding: 10px;
   display: flex;
   gap: 10px;
@@ -299,10 +303,12 @@
     overflow-y: hidden;
     height: 100%;
   }
+
   .support-text h2 {
     text-align: left;
     padding: 0px 10px;
     color: white;
+    color: var(--color-text-alt);
   }
   .support-ways {
   }
