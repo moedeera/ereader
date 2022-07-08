@@ -35,7 +35,7 @@ export const Navbar = () => {
         selected === 3 ||
         window.location.href === "http://localhost:3000/about" ||
         window.location.href === "https://librumreader.netlify.app/about"
-          ? { backgroundColor: "#2892D7" }
+          ? { backgroundColor: "white" }
           : { backgroundColor: "white" }
       }
     >
