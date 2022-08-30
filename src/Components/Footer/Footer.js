@@ -8,9 +8,11 @@ export const Footer = ({ image }) => {
       <div className="container">
         <div className="footer-container">
           <div className="footer-upper">
-            <h3>Stay up to date with what we are doing</h3>
+            <h2>Have any questions or concerns?</h2>
+
             <input placeholder="Enter your email address" type="text" />
-            <button className="btn btn-secondary">Contact Us</button>
+            <textarea placeholder="Message" type="text" />
+            <button className="btn btn-secondary">Send</button>
           </div>
         </div>
       </div>

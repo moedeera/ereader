@@ -9,28 +9,7 @@ import { Fade } from "react-reveal";
 export const AboutPage = () => {
   return (
     <div className="aboutPage-container">
-      <div className="header-container-2">
-        <section className="header-2">
-          <div className="header-info-2">
-            <div>
-              {" "}
-              <h1>About </h1>
-              <p>
-                Home{" "}
-                <i
-                  className="fa fa-circle"
-                  style={{ fontSize: "12px", color: "purple" }}
-                ></i>{" "}
-                About
-              </p>
-            </div>
-          </div>
-          <div className="header-image-2">
-            <img src={pic2} alt="" />
-          </div>
-        </section>
-      </div>
-      <section className="header" style={{ marginBottom: "30px" }}>
+      <section className="header">
         <h1>About librum-Reader </h1>
       </section>
 

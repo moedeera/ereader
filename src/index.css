@@ -47,7 +47,8 @@ html {
 
   --bg-light: #fcfcfc;
   --bg-dark: black;
-  --color-primary1: #256eff;
+  --color-primary0: #256eff;
+  --color-primary1: #946bde;
   --color-primary: #946bde;
   --color-alternate: #bb342f;
   --color-secondary: #46237a;
@@ -89,7 +90,7 @@ html {
   color: #fcfcfc;
 }
 .btn-secondary {
-  background-color: var(--color-primary1);
+  background-color: var(--color-primary0);
   color: #fcfcfc;
 }
 .btn-alternate {
@@ -97,7 +98,7 @@ html {
   color: #fcfcfc;
 }
 .btn-alternate2 {
-  background-color: var(--color-primary1);
+  background-color: var(--color-primary0);
   color: #fcfcfc;
 }
 @media screen and (max-width: 900px) {

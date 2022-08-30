@@ -15,7 +15,6 @@ export const Menu = ({ setShow }) => {
           >
             <i className="fa fa-close fa-2x"></i>
           </li>
-
           <Link
             to={"./"}
             onClick={() => {
@@ -31,6 +30,14 @@ export const Menu = ({ setShow }) => {
             }}
           >
             <li>Support</li>
+          </Link>{" "}
+          <Link
+            to={"./blog"}
+            onClick={() => {
+              setShow(false);
+            }}
+          >
+            <li>Blog</li>
           </Link>
           <Link
             to={"./about"}

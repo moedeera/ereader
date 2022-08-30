@@ -25,3 +25,8 @@
   max-width: 600px;
   justify-content: space-evenly;
 }
+
+.support-links a {
+  /* border: 1px solid rgba(128, 128, 128, 0.589); */
+  padding: 15px;
+}

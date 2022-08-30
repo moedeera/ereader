@@ -8,24 +8,6 @@ export const Navbar = () => {
   const [show, setShow] = useState(false);
   const [selected, setSelected] = useState(1);
 
-  // useEffect(() => {
-  //   if (
-  //     window.location.href === "http://localhost:3000/support" ||
-  //     window.location.href === "https://librumreader.netlify.app/support"
-  //   ) {
-  //     console.log("support page");
-  //     return;
-  //   } else if (
-  //     window.location.href === "http://localhost:3000/about" ||
-  //     window.location.href === "https://librumreader.netlify.app/about"
-  //   ) {
-  //     console.log("about page");
-  //     return;
-  //   } else {
-  //     console.log("home or login", window.location.href);
-  //   }
-  // }, [selected]);
-
   return (
     <div
       style={
@@ -69,7 +51,16 @@ export const Navbar = () => {
                   </p>
                 </Link>
               </li>
-
+              <li>
+                <Link
+                  to={"./blog"}
+                  onClick={() => {
+                    setSelected(1);
+                  }}
+                >
+                  <p style={selected === 1 ? { color: "crimson" } : {}}>Blog</p>
+                </Link>
+              </li>
               <li>
                 <Link
                   to={"./about"}
@@ -96,20 +87,7 @@ export const Navbar = () => {
             </ul>
           </div>
         </div>
-        <div
-          className="navbar-container-sm"
-          style={
-            selected === 2 ||
-            window.location.href === "http://localhost:3000/support" ||
-            window.location.href ===
-              "https://librumreader.netlify.app/support" ||
-            selected === 3 ||
-            window.location.href === "http://localhost:3000/about" ||
-            window.location.href === "https://librumreader.netlify.app/about"
-              ? { backgroundColor: "#2892D7" }
-              : { backgroundColor: "white" }
-          }
-        >
+        <div className="navbar-container-sm">
           <div className="logo">
             <img src={icon} alt="" />
             <h2>Librum-Reader</h2>

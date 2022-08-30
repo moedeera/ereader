@@ -16,7 +16,7 @@
   width: 100%;
   max-width: 1300px;
   padding: 15px;
-  background-color: #343047;
+
   background-color: transparent;
 }
 .logo {
@@ -92,6 +92,8 @@ a:hover:after,
     display: flex;
     justify-content: space-between;
     padding: 15px;
+    /* border: 1px solid green; */
+    width: 100%;
   }
   .logo h2 {
     font-weight: 700;

@@ -11,7 +11,8 @@
   font-size: larger;
   letter-spacing: 1px;
   animation: menu-show 800ms ease-in-out;
-  transition: 800ms ease-in-out;
+  transition: 600ms ease-in-out;
+  /* border: 2px solid green; */
 }
 .menu-modal {
   height: 80%;
@@ -37,7 +38,6 @@
 @keyframes menu-show {
   0% {
     opacity: 0;
-    transform: translateX(10%);
   }
   100% {
     opacity: 1;
