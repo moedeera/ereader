@@ -9,7 +9,7 @@ import { Fade } from "react-reveal";
 import Lottie from "lottie-web";
 import banner from "./stars.svg";
 
-export const SupportPage = () => {
+export const SupportPage = ({ message, anchor, cards }) => {
   console.log(window.location.href);
   const container = useRef(null);
   useEffect(() => {
@@ -30,55 +30,56 @@ export const SupportPage = () => {
         <div className="support-way-container">
           <div className="support-ways-header">
             <h1 className="larger-Header" style={{ color: "purple" }}>
-              SUPPORTING THE COMMUNITY
+              {message}
             </h1>
-            <h1 style={{ margin: "50px" }}>Ways to support us</h1>
+            <h1 style={{ margin: "50px" }}>{anchor}</h1>
           </div>
-
-          <Fade right>
-            <div className="support-ways-text">
-              <div className="support-ways-unit sd1" id="sd-1">
-                <div className="sw-image">
-                  {" "}
-                  <img src={reason3} alt="" className="im1" />
-                </div>
-                <h2>Support us on Patreon</h2>
-                <p>
-                  Check out our Patreon support page and support us for as
-                  little as 3$ a month.
-                </p>
-              </div>
-
-              <div className="support-ways-unit">
-                <div className="sw-image">
-                  {" "}
-                  <img src={reason1} alt="" />
-                </div>
-                <h2>Contribute</h2>
-                <p>
-                  If you have experience, feel free to contribute to our code
-                  which is open source. We are always looking for ways to
-                  improve the application and any suggestions are welcome. if
-                  you want to take it a step further donate to us on payPal.
-                </p>
-              </div>
-
-              <div className="support-ways-unit">
-                <div className="sw-image">
-                  {" "}
-                  <img src={reason2} alt="" />
+          {cards && (
+            <Fade right>
+              <div className="support-ways-text">
+                <div className="support-ways-unit sd1" id="sd-1">
+                  <div className="sw-image">
+                    {" "}
+                    <img src={reason3} alt="" className="im1" />
+                  </div>
+                  <h2>Support us on Patreon</h2>
+                  <p>
+                    Check out our Patreon support page and support us for as
+                    little as 3$ a month.
+                  </p>
                 </div>
 
-                <h2>Join the Community</h2>
-                <p>
-                  Get involved by posting on the forum, reporting any bugs, and
-                  liking our facebook and social media posts.If you have any
-                  experience with marketing feel free to spread our message
-                  across.
-                </p>
+                <div className="support-ways-unit">
+                  <div className="sw-image">
+                    {" "}
+                    <img src={reason1} alt="" />
+                  </div>
+                  <h2>Contribute</h2>
+                  <p>
+                    If you have experience, feel free to contribute to our code
+                    which is open source. We are always looking for ways to
+                    improve the application and any suggestions are welcome. if
+                    you want to take it a step further donate to us on payPal.
+                  </p>
+                </div>
+
+                <div className="support-ways-unit">
+                  <div className="sw-image">
+                    {" "}
+                    <img src={reason2} alt="" />
+                  </div>
+
+                  <h2>Join the Community</h2>
+                  <p>
+                    Get involved by posting on the forum, reporting any bugs,
+                    and liking our facebook and social media posts.If you have
+                    any experience with marketing feel free to spread our
+                    message across.
+                  </p>
+                </div>
               </div>
-            </div>
-          </Fade>
+            </Fade>
+          )}
         </div>
       </section>
       <Fade>

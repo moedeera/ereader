@@ -3,6 +3,7 @@
 .supportPage-container {
   font-family: "Fira Sans", sans-serif;
   margin-top: 0px;
+  min-height: 75vh;
 }
 .header-container {
   padding-top: 50px;
