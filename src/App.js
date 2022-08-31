@@ -21,7 +21,7 @@ function App() {
             element={
               <SupportPage
                 message={" SUPPORTING THE COMMUNITY"}
-                anchor={"Ways to support us<"}
+                anchor={"Ways to support us"}
                 cards={true}
               />
             }

@@ -14,7 +14,7 @@ export const CountUP = () => {
 
             <i className="fa fa-plus"></i>
           </div>
-          <p>Downloads</p>
+          <p>Coding hours </p>
         </div>
         <div className="count">
           <div className="count-number">
@@ -27,7 +27,7 @@ export const CountUP = () => {
         </div>
         <div className="count">
           <div className="count-number">
-            <CountUp delay={0} start={120} end={45} duration={1.75}>
+            <CountUp delay={0} start={120} end={40} duration={1.75}>
               {({ countUpRef, start }) => <h1 ref={countUpRef}>180</h1>}
             </CountUp>
             <i className="fa fa-calendar"></i>
