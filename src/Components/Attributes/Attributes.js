@@ -10,7 +10,7 @@ export const Attributes = () => {
           <div className="service">
             <i class="fab fa-instalod"></i>
             <h3>Quick Installation</h3>
-            <p>Download the beta version 1.0.X on August 20th</p>
+            <p>Download the beta version 1.0.X on October 20th</p>
           </div>
 
           <div className="service">
