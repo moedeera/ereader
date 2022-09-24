@@ -13,7 +13,7 @@ export const Features = () => {
   return (
     <div className="container" id="features">
       <div className="features-sm-container">
-        <h2>Features</h2>
+        <h2>What we will Offer </h2>
 
         <p>
           Our Aim is to make it easier for you to read and keep track of books
@@ -39,7 +39,7 @@ export const Features = () => {
       </div>
 
       <div className="features-lg-container">
-        <h2>Features</h2>
+        <h2>What we will Offer</h2>
 
         <p>
           Our Aim is to make it easier for you to read and keep track of books

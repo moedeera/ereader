@@ -6,8 +6,8 @@
 }
 .features-sm-container h2,
 .features-lg-container h2 {
-  color: var(--color-primary);
-  font-weight: 700;
+  color: goldenrod;
+  font-weight: 900;
   letter-spacing: 1.5px;
 }
 .features-sm-container p,
