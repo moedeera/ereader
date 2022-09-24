@@ -5,6 +5,7 @@ import reason1 from "./reasons1.png";
 import reason2 from "./reasons2.png";
 import reason3 from "./reasons3.png";
 import { Fade } from "react-reveal";
+import pic4 from "./pic4.svg";
 
 import Lottie from "lottie-web";
 import banner from "./stars.svg";
@@ -81,74 +82,21 @@ export const SupportPage = ({ message, anchor, cards }) => {
         </div>
       </section>
       <Fade>
-        {/* <section className="support-reasons">
-          <div className="support-image" ref={container}></div>
-          <div className="support-text">
+        <div className="support-page-contact">
+          <div className="support-page-contact-form">
+            <h2>Got Questions ?</h2>
+            <p>Just Send us a Message today</p>
+            <input type="text" placeholder="Name" />
+            <input type="text" placeholder="Email" />
+            <textarea type="text" placeholder="Enter Message" />
             <div>
-              <h2>We aim to help a generation expand its knowledge</h2>
-              <p>
-                There was a time where reading was the norm. There were'nt as
-                much options to watch on television and the internet was not
-                something people had access to. Those days went away but we can
-                use technology to instill the love of reading back.
-              </p>
-              <br />
-
-            </div>
-
-            <div className="support-dates">
-              <h1>Events</h1>
-              <div className="support-date">
-                <div className="support-date-date">
-                  <p>July</p>
-                  <h1>15th</h1>
-                </div>
-                <div className="support-date-info">
-                  <h3>Software Reveal</h3>
-                  This software will be showcased in the beta version at the
-                  Bergen start-up festival in Norway. The event starts on May
-                  5th and goes all the way to June 19th
-                </div>
-                <div className="support-date-add btn-small">
-                  <i className="fa fa-plus" aria-hidden="true"></i>
-                  Add to calendar
-                </div>
-              </div>
-              <div className="support-date">
-                <div className="support-date-date">
-                  <p>June</p>
-                  <h1>9th</h1>
-                </div>
-                <div className="support-date-info">
-                  <h3>Beta version launch</h3>
-                  This software will be showcased in the beta version at the
-                  Bergen start-up festival in Norway. The event starts on May
-                  5th and goes all the way to June 19th
-                </div>
-                <div className="support-date-add btn-small">
-                  <i className="fa fa-plus" aria-hidden="true"></i>
-                  Add to calendar
-                </div>
-              </div>
-              <div className="support-date">
-                <div className="support-date-date">
-                  <p>June</p>
-                  <h1>19th</h1>
-                </div>
-                <div className="support-date-info">
-                  <h3>Forum live</h3>
-                  This software will be showcased in the beta version at the
-                  Bergen start-up festival in Norway. The event starts on May
-                  5th and goes all the way to June 19th
-                </div>
-                <div className="support-date-add btn-small">
-                  <i className="fa fa-plus" aria-hidden="true"></i>
-                  Add to calendar
-                </div>
-              </div>
+              <button className="btn btn-secondary">Submit </button>
             </div>
           </div>
-        </section> */}
+          <div className="support-page-contact-image">
+            <img src={pic4} alt="" />
+          </div>
+        </div>
       </Fade>
     </div>
   );
