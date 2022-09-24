@@ -27,7 +27,7 @@
   width: 300px;
   margin: 0 auto;
   line-height: 1.8em;
-  color: black;
+
   font-weight: 700;
   letter-spacing: 1px;
 }
@@ -58,7 +58,7 @@
   width: 300px;
   margin: 0 auto;
   line-height: 1.8em;
-  color: black;
+
   font-weight: 700;
   letter-spacing: 1px;
 }
@@ -152,7 +152,6 @@
   padding: 0 5px;
 }
 .about-intro p {
-  color: rgba(0, 0, 0, 0.726);
   letter-spacing: 1px;
   line-height: 1.6em;
   padding: 0 5px;
@@ -172,6 +171,7 @@
 }
 .about-intro i {
   color: var(--color-secondary);
+  color: goldenrod;
   margin-right: 5px;
   font-size: 8px;
 }
@@ -190,10 +190,13 @@
 }
 .about-intro-image {
   height: 100%;
-  max-width: 400px;
+  /* max-width: 400px; */
   display: flex;
   justify-content: center;
   padding: 15px;
+  background-color: rgba(240, 248, 255, 0.308);
+  border-radius: 5px;
+  border: 1px solid white;
 }
 .about-intro-image img {
   width: 100%;
@@ -240,5 +243,8 @@
     letter-spacing: 1.25px;
     line-height: 1.8em;
     gap: 30px;
+  }
+  .about-intro-image img {
+    padding: 25px;
   }
 }

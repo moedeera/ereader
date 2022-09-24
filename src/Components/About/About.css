@@ -24,13 +24,11 @@
   display: none;
 }
 .about-info p {
-  color: white !important;
   line-height: 1.8em !important;
   letter-spacing: 1px !important;
   padding: 25px;
 }
 .about-container p {
-  color: rgba(0, 0, 0, 0.773);
   letter-spacing: 1px;
   line-height: 1.6em;
 }

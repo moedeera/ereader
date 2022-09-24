@@ -330,7 +330,7 @@
     padding: 30px 40px;
     line-height: 1.8em;
     letter-spacing: 1px;
-    cursor: pointer;
+
     transition: transform 1100ms ease-in-out;
     max-width: 400px;
     margin: 0 auto;
