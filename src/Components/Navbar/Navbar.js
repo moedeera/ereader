@@ -9,18 +9,7 @@ export const Navbar = () => {
   const [selected, setSelected] = useState(1);
 
   return (
-    <div
-      style={
-        selected === 2 ||
-        window.location.href === "http://localhost:3000/support" ||
-        window.location.href === "https://librumreader.netlify.app/support" ||
-        selected === 3 ||
-        window.location.href === "http://localhost:3000/about" ||
-        window.location.href === "https://librumreader.netlify.app/about"
-          ? { backgroundColor: "white" }
-          : { backgroundColor: "white" }
-      }
-    >
+    <div>
       <div className="nav-contain">
         <div className="navbar-container">
           <div className="logo">
@@ -36,7 +25,9 @@ export const Navbar = () => {
                     setSelected(1);
                   }}
                 >
-                  <p style={selected === 1 ? { color: "crimson" } : {}}>Home</p>
+                  <p style={selected === 1 ? { color: "goldenrod" } : {}}>
+                    Home
+                  </p>
                 </Link>
               </li>
               <li>
@@ -46,7 +37,7 @@ export const Navbar = () => {
                     setSelected(2);
                   }}
                 >
-                  <p style={selected === 2 ? { color: "crimson" } : {}}>
+                  <p style={selected === 2 ? { color: "goldenrod" } : {}}>
                     Support
                   </p>
                 </Link>
@@ -55,20 +46,22 @@ export const Navbar = () => {
                 <Link
                   to={"./blog"}
                   onClick={() => {
-                    setSelected(1);
+                    setSelected(3);
                   }}
                 >
-                  <p style={selected === 1 ? { color: "crimson" } : {}}>Blog</p>
+                  <p style={selected === 3 ? { color: "goldenrod" } : {}}>
+                    Blog
+                  </p>
                 </Link>
               </li>
               <li>
                 <Link
                   to={"./about"}
                   onClick={() => {
-                    setSelected(3);
+                    setSelected(4);
                   }}
                 >
-                  <p style={selected === 3 ? { color: "crimson" } : {}}>
+                  <p style={selected === 4 ? { color: "goldenrod" } : {}}>
                     About
                   </p>
                 </Link>

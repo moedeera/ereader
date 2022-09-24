@@ -2,8 +2,7 @@
 
 .nav-contain {
   margin: 0 auto;
-
-  background-color: #343047;
+  border: 1px solid crimson;
   background-color: transparent;
   display: flex;
   justify-content: center;
@@ -16,8 +15,6 @@
   width: 100%;
   max-width: 1300px;
   padding: 15px;
-
-  background-color: transparent;
 }
 .logo {
   display: flex;
@@ -43,7 +40,7 @@
   gap: 20px;
   align-items: center;
   text-align: center;
-  color: black;
+  color: white;
 }
 .navbar-menu li {
   display: table-cell;
@@ -55,7 +52,7 @@
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 0.15em;
-  color: var(--color-text);
+  color: white;
 
   font-weight: 700;
   display: inline-block;
@@ -71,7 +68,7 @@
   height: 2px;
   left: 50%;
   position: absolute;
-  background: var(--color-text);
+  background: white;
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
 }
