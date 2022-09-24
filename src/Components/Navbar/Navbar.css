@@ -2,7 +2,7 @@
 
 .nav-contain {
   margin: 0 auto;
-  border: 1px solid crimson;
+
   background-color: transparent;
   display: flex;
   justify-content: center;
@@ -40,7 +40,6 @@
   gap: 20px;
   align-items: center;
   text-align: center;
-  color: white;
 }
 .navbar-menu li {
   display: table-cell;
