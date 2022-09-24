@@ -29,9 +29,7 @@ export const SupportPage = ({ message, anchor, cards }) => {
       <section className="support-ways">
         <div className="support-way-container">
           <div className="support-ways-header">
-            <h1 className="larger-Header" style={{ color: "purple" }}>
-              {message}
-            </h1>
+            <h1 className="larger-Header">{message}</h1>
             <h1 style={{ margin: "50px" }}>{anchor}</h1>
           </div>
           {cards && (
