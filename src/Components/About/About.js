@@ -5,7 +5,7 @@ import { Fade } from "react-reveal";
 export const About = () => {
   return (
     <div className="container" id="about">
-      <Fade right>
+      <Fade>
         <div className="about-container">
           <h1
             style={{
