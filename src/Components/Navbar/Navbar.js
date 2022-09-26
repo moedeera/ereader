@@ -88,7 +88,7 @@ export const Navbar = () => {
           <div style={{ color: "black" }}>
             <i
               className="fas fa-bars"
-              style={{ fontSize: "20px" }}
+              style={{ fontSize: "20px", color: "white" }}
               onClick={() => {
                 setShow(true);
               }}
