@@ -7,7 +7,7 @@ import { Menu } from "../Menu/Menu";
 export const Navbar = () => {
   const [show, setShow] = useState(false);
   const [selected, setSelected] = useState(1);
-
+  const color = "#b18cf7";
   return (
     <div>
       <div className="nav-contain">
@@ -25,9 +25,7 @@ export const Navbar = () => {
                     setSelected(1);
                   }}
                 >
-                  <p style={selected === 1 ? { color: "goldenrod" } : {}}>
-                    Home
-                  </p>
+                  <p style={selected === 1 ? { color: color } : {}}>Home</p>
                 </Link>
               </li>
               <li>
@@ -37,9 +35,7 @@ export const Navbar = () => {
                     setSelected(2);
                   }}
                 >
-                  <p style={selected === 2 ? { color: "goldenrod" } : {}}>
-                    Support
-                  </p>
+                  <p style={selected === 2 ? { color: color } : {}}>Support</p>
                 </Link>
               </li>
               <li>
@@ -49,9 +45,7 @@ export const Navbar = () => {
                     setSelected(3);
                   }}
                 >
-                  <p style={selected === 3 ? { color: "goldenrod" } : {}}>
-                    Blog
-                  </p>
+                  <p style={selected === 3 ? { color: color } : {}}>Blog</p>
                 </Link>
               </li>
               <li>
@@ -61,9 +55,7 @@ export const Navbar = () => {
                     setSelected(4);
                   }}
                 >
-                  <p style={selected === 4 ? { color: "goldenrod" } : {}}>
-                    About
-                  </p>
+                  <p style={selected === 4 ? { color: color } : {}}>About</p>
                 </Link>
               </li>
 
