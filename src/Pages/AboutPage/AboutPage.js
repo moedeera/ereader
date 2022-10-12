@@ -3,8 +3,10 @@ import "./AboutPage.css";
 import pic1 from "./pic1.svg";
 import pic2 from "./pic2.svg";
 import pic3 from "./pic3.svg";
-import about1 from "./about-intro-image.svg";
-import about2 from "./about-intro-image2.svg";
+import about1 from "./about1.png";
+import about2 from "./about2.png";
+import about3 from "./about3.png";
+
 import { Fade } from "react-reveal";
 export const AboutPage = () => {
   return (
@@ -37,7 +39,7 @@ export const AboutPage = () => {
           </div>
         </section>{" "}
       </Fade>
-      <Fade left>
+      <Fade>
         <section className="about-intro-container">
           <div className="about-intro sm2">
             <div className="about-intro-image">
@@ -112,7 +114,7 @@ export const AboutPage = () => {
               </button>
             </div>
             <div className="about-intro-image">
-              <img src={pic1} alt="" />
+              <img src={about3} alt="" />
             </div>
           </div>
         </section>{" "}

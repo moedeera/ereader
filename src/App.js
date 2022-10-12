@@ -20,7 +20,7 @@ function App() {
             path="/support"
             element={
               <SupportPage
-                message={" SUPPORTING THE COMMUNITY"}
+                message={" NEED HELP?"}
                 anchor={"Ways to support us"}
                 cards={true}
               />

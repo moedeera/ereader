@@ -13,7 +13,7 @@
   width: 100%;
   max-width: 1300px;
   margin: 0 auto;
-  color: goldenrod;
+  color: var(--color-primary);
 }
 .header h1 {
   font-size: 38px;
@@ -216,19 +216,9 @@
 
   padding: 5px;
 }
-.support-date {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 5px;
-  align-items: center;
-  gap: 0px;
-  margin: 10px 0;
-  background-color: aliceblue;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
-}
 
 .larger-Header {
-  color: goldenrod;
+  color: var(--color-primary);
 }
 
 .sw-image h2 {
@@ -240,10 +230,10 @@
   max-width: 600px;
 }
 .support-page-contact-image {
-  border: 1px solid var(--color-primary);
-  box-shadow: 0px 8px 15px rgba(46, 104, 229, 0.4);
+  /* border: 1px solid var(--color-primary); */
+  /* box-shadow: 0px 8px 15px rgba(46, 104, 229, 0.4); */
   padding: 20px;
-  background-color: azure;
+  /* background-color: azure; */
 }
 .support-page-contact {
   width: 95%;
@@ -256,18 +246,20 @@
   gap: 20px;
 
   text-align: left;
-  border: 1px solid var(--color-primary);
-  box-shadow: 0px 8px 15px rgba(46, 104, 229, 0.4);
+  /* border: 1px solid var(--color-primary); */
+  /* box-shadow: 0px 8px 15px rgba(46, 104, 229, 0.4); */
   padding: 20px;
 }
 .support-page-contact-form input {
   padding: 10px 15px;
   max-width: 500px;
+  background-color: grey;
 }
 .support-page-contact-form textarea {
   padding: 10px 15px;
   min-height: 200px;
   max-width: 500px;
+  background-color: grey;
 }
 .support-page-contact-form button {
   width: 100%;
@@ -307,7 +299,7 @@
     display: flex;
     flex-direction: column;
 
-    background-color: aliceblue;
+    /* background-color: aliceblue; */
     box-shadow: 0px 5px 10px rgba(46, 104, 229, 0.4);
     color: black;
     text-align: left;
