@@ -253,13 +253,25 @@
 .support-page-contact-form input {
   padding: 10px 15px;
   max-width: 500px;
-  background-color: grey;
+  background-color: rgba(128, 128, 128, 0.281);
+  border: 1px solid grey;
+  letter-spacing: 1px;
+  color: white;
 }
 .support-page-contact-form textarea {
   padding: 10px 15px;
   min-height: 200px;
   max-width: 500px;
-  background-color: rgba(128, 128, 128, 0.781);
+  background-color: rgba(128, 128, 128, 0.281);
+}
+.p-form {
+  margin: 10px 0;
+}
+.form-div {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
 }
 .support-page-contact-form button {
   width: 100%;
