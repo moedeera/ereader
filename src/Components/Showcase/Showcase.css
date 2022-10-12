@@ -37,6 +37,8 @@
 }
 .info-section-button {
   display: flex;
+  flex-direction: column;
+  gap: 30px;
   justify-content: flex-start;
   width: 100%;
   margin: 0 auto;
