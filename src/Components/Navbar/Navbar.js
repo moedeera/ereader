@@ -66,7 +66,7 @@ export const Navbar = () => {
                     setSelected(0);
                   }}
                 >
-                  <button className="btn btn-primary">Login</button>
+                  <button className="btn btn-primary">Download</button>
                 </Link>
               </li>
             </ul>

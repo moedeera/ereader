@@ -84,10 +84,12 @@
   }
   .footer-lower img {
     width: 50px;
-    background-color: var(--color-secondary);
+    /* background-color: var(--color-secondary); */
     height: 50px;
     border-radius: 50%;
     padding: 5px;
+
+    background-color: transparent;
   }
   .footer-lower ul {
     display: flex;

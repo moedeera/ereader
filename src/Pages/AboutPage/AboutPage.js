@@ -108,10 +108,10 @@ export const AboutPage = () => {
                 </li>
               </ul>
 
-              <button className="btn btn-about">
+              {/* <button className="btn btn-about">
                 Our Twitter
                 <i class="fa fa-twitter"></i>
-              </button>
+              </button> */}
             </div>
             <div className="about-intro-image">
               <img src={about3} alt="" />

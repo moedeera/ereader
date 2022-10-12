@@ -1,6 +1,7 @@
 import React from "react";
 import "./Footer.css";
-import image1 from "./ereader1.png";
+import image1 from "../Navbar/ereader1.png";
+import { Link } from "react-router-dom";
 
 export const Footer = ({ image }) => {
   return (
@@ -24,9 +25,16 @@ export const Footer = ({ image }) => {
         </div>
 
         <ul>
-          <li>Features</li>
-          <li>Blog</li>
-          <li>Contact</li>
+          <Link style={{ color: "white" }} to={"/support"}>
+            <li>Support</li>
+          </Link>
+          <Link style={{ color: "white" }} to={"/blog"}>
+            <li>Blog</li>
+          </Link>
+          <Link style={{ color: "white" }} to={"/about"}>
+            {" "}
+            <li>About</li>
+          </Link>
         </ul>
         <div className="footer-social">
           <i className="fa fa-facebook" aria-hidden="true"></i>
