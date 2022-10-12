@@ -9,7 +9,7 @@ export const About = () => {
         <div className="about-container">
           <h1
             style={{
-              color: "white",
+              color: "#bb342f",
             }}
           >
             A little info about ourselves
@@ -17,8 +17,8 @@ export const About = () => {
           <div className="about-top">
             <div className="about-quote">
               <h1>
-                "The more that you read, the more things you will know. The more
-                that you learn, the more places you’ll go.”
+                "Reading is essential for those who seek to rise above the
+                ordinary.” - Jim Rohn
               </h1>
             </div>
             <div className="about-info">

@@ -259,7 +259,7 @@
   padding: 10px 15px;
   min-height: 200px;
   max-width: 500px;
-  background-color: grey;
+  background-color: rgba(128, 128, 128, 0.781);
 }
 .support-page-contact-form button {
   width: 100%;

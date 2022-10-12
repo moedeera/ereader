@@ -95,8 +95,8 @@ export const Features = () => {
             {slide === 3 && (
               <div className="slide-image">
                 <p>
-                  No need for constant updates or a live connection. While you
-                  have to ability to cross synchronize online, its not required.
+                  No need for constant updates or a live connection, you can use
+                  Librum without an internet connection as well
                 </p>
                 <img src={svg3} alt="" />
               </div>
