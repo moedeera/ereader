@@ -5,37 +5,51 @@ import { Navbar } from "./Components/Navbar/Navbar";
 import { Footer } from "./Components/Footer/Footer";
 import { SupportPage } from "./Pages/Support/SupportPage";
 import { LoginPage } from "./Pages/LoginPage/LoginPage";
-
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { SiteContext, SiteContextProvider } from "./Context/Context";
+import { useContext } from "react";
 function App() {
+  // const { mode } = useContext(SiteContext);
   return (
-    <div className="App">
-      <Router>
-        <Navbar />
+    <SiteContextProvider>
+      <div
+        // style={
+        //   mode
+        //     ? { backgroundColor: "white", color: "var(--color-primary)" }
+        //     : {
+        //         backgroundColor: "#282c34",
+        //         color: "var(--color-primary)",
+        //       }
+        // }
+        className="App"
+      >
+        <Router>
+          <Navbar />
 
-        <Routes>
-          <Route path="/" element={<Homepage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route
-            path="/support"
-            element={
-              <SupportPage
-                message={" NEED HELP?"}
-                anchor={"Ways to support us"}
-                cards={true}
-              />
-            }
-          />
-          <Route
-            path="/blog"
-            element={<SupportPage message={"OFFICIAL BLOG LAUNCHING SOON"} />}
-          />
-          <Route path="/login" element={<LoginPage />} />
-        </Routes>
+          <Routes>
+            <Route path="/" element={<Homepage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route
+              path="/support"
+              element={
+                <SupportPage
+                  message={" NEED HELP?"}
+                  anchor={"Ways to support us"}
+                  cards={true}
+                />
+              }
+            />
+            <Route
+              path="/blog"
+              element={<SupportPage message={"OFFICIAL BLOG LAUNCHING SOON"} />}
+            />
+            <Route path="/login" element={<LoginPage />} />
+          </Routes>
 
-        <Footer />
-      </Router>
-    </div>
+          <Footer />
+        </Router>
+      </div>
+    </SiteContextProvider>
   );
 }
 

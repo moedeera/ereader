@@ -1,15 +1,20 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./Navbar.css";
 import icon from "./ereader1.png";
 import { Link } from "react-router-dom";
 import { Menu } from "../Menu/Menu";
+import { SiteContext } from "../../Context/Context";
 
 export const Navbar = () => {
+  const { mode, setMode } = useContext(SiteContext);
   const [show, setShow] = useState(false);
   const [selected, setSelected] = useState(1);
   const color = "#b18cf7";
+  const { user, setUser, logout } = useContext(SiteContext);
   return (
-    <div>
+    <div
+    // style={{ backgroundColor: "white", color: "var(--color-primary)" }}
+    >
       <div className="nav-contain">
         <div className="navbar-container">
           <div className="logo">
@@ -25,7 +30,17 @@ export const Navbar = () => {
                     setSelected(1);
                   }}
                 >
-                  <p style={selected === 1 ? { color: color } : {}}>Home</p>
+                  <p
+                    style={
+                      selected === 1
+                        ? { color: color }
+                        : mode
+                        ? { color: "white" }
+                        : { color: "crimson" }
+                    }
+                  >
+                    Home
+                  </p>
                 </Link>
               </li>
               <li>
@@ -35,7 +50,17 @@ export const Navbar = () => {
                     setSelected(2);
                   }}
                 >
-                  <p style={selected === 2 ? { color: color } : {}}>Support</p>
+                  <p
+                    style={
+                      selected === 2
+                        ? { color: color }
+                        : mode
+                        ? { color: "white" }
+                        : { color: "crimson" }
+                    }
+                  >
+                    Support
+                  </p>
                 </Link>
               </li>
               <li>
@@ -45,7 +70,17 @@ export const Navbar = () => {
                     setSelected(3);
                   }}
                 >
-                  <p style={selected === 3 ? { color: color } : {}}>Blog</p>
+                  <p
+                    style={
+                      selected === 3
+                        ? { color: color }
+                        : mode
+                        ? { color: "white" }
+                        : { color: "crimson" }
+                    }
+                  >
+                    Blog
+                  </p>
                 </Link>
               </li>
               <li>
@@ -55,19 +90,57 @@ export const Navbar = () => {
                     setSelected(4);
                   }}
                 >
-                  <p style={selected === 4 ? { color: color } : {}}>About</p>
+                  <p
+                    style={
+                      selected === 4
+                        ? { color: color }
+                        : mode
+                        ? { color: "white" }
+                        : { color: "crimson" }
+                    }
+                  >
+                    About
+                  </p>
                 </Link>
               </li>
+              {!user ? (
+                <li>
+                  <Link
+                    to={"./login"}
+                    onClick={() => {
+                      setSelected(0);
+                    }}
+                  >
+                    <button className="btn btn-primary">Login</button>
+                  </Link>
+                </li>
+              ) : (
+                <li>
+                  <button
+                    onClick={() => {
+                      logout();
+                    }}
+                    className="btn btn-secondary"
+                  >
+                    Logout
+                  </button>
+                </li>
+              )}
 
+              {/* 
               <li>
-                <Link
-                  to={"./login"}
-                  onClick={() => {
-                    setSelected(0);
-                  }}
-                >
-                  <button className="btn btn-primary">Login</button>
-                </Link>
+                <i class="fas fa-moon fa-2x"></i>{" "}
+              </li> */}
+              <li
+                onClick={() => {
+                  setMode(!mode);
+                  console.log(mode);
+                }}
+              >
+                <i
+                  style={{ color: "goldenrod", cursor: "pointer" }}
+                  class="far fa-sun fa-2x"
+                ></i>
               </li>
             </ul>
           </div>

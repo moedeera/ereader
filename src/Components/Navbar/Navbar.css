@@ -67,7 +67,7 @@
   height: 2px;
   left: 50%;
   position: absolute;
-  background: white;
+  background: crimson;
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
 }

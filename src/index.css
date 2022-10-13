@@ -33,6 +33,7 @@ html {
 
 :root {
   --color-text: white;
+  /* --color-text: crimson; */
   --color-text-alt: #343047;
 
   --color-background: white;
