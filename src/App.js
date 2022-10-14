@@ -6,10 +6,9 @@ import { Footer } from "./Components/Footer/Footer";
 import { SupportPage } from "./Pages/Support/SupportPage";
 import { LoginPage } from "./Pages/LoginPage/LoginPage";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { SiteContext, SiteContextProvider } from "./Context/Context";
-import { useContext } from "react";
+import { SiteContextProvider } from "./Context/Context";
+
 function App() {
-  // const { mode } = useContext(SiteContext);
   return (
     <SiteContextProvider>
       <div

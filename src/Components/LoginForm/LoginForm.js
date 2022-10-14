@@ -150,7 +150,7 @@ export const LoginForm = () => {
             </button>
           </div>
         )}
-        Hello {user?.email}
+        {/* Hello {user?.email}
         <button
           onClick={() => {
             logout();
@@ -158,7 +158,7 @@ export const LoginForm = () => {
           className="btn btn-alternate2"
         >
           LogOut
-        </button>
+        </button> */}
       </div>
     </div>
   );

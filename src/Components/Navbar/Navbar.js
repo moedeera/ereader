@@ -6,11 +6,10 @@ import { Menu } from "../Menu/Menu";
 import { SiteContext } from "../../Context/Context";
 
 export const Navbar = () => {
-  const { mode, setMode } = useContext(SiteContext);
   const [show, setShow] = useState(false);
   const [selected, setSelected] = useState(1);
   const color = "#b18cf7";
-  const { user, setUser, logout } = useContext(SiteContext);
+  const { user, setUser, logout, mode, setMode } = useContext(SiteContext);
   return (
     <div
     // style={{ backgroundColor: "white", color: "var(--color-primary)" }}
@@ -133,7 +132,7 @@ export const Navbar = () => {
               </li> */}
               <li
                 onClick={() => {
-                  setMode(!mode);
+                  setMode(false);
                   console.log(mode);
                 }}
               >
