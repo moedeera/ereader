@@ -31,7 +31,8 @@ export const Navbar = () => {
                 >
                   <p
                     style={
-                      selected === 1
+                      window.location.href === "http://localhost:3000" ||
+                      window.location.href === "https://librum-reader.com"
                         ? { color: color }
                         : mode
                         ? { color: "white" }
@@ -51,7 +52,10 @@ export const Navbar = () => {
                 >
                   <p
                     style={
-                      selected === 2
+                      window.location.href ===
+                        "http://localhost:3000/support" ||
+                      window.location.href ===
+                        "https://librum-reader.com/support"
                         ? { color: color }
                         : mode
                         ? { color: "white" }
@@ -71,7 +75,8 @@ export const Navbar = () => {
                 >
                   <p
                     style={
-                      selected === 3
+                      window.location.href === "http://localhost:3000/blog" ||
+                      window.location.href === "https://librum-reader.com/blog"
                         ? { color: color }
                         : mode
                         ? { color: "white" }
@@ -91,7 +96,8 @@ export const Navbar = () => {
                 >
                   <p
                     style={
-                      selected === 4
+                      window.location.href === "http://localhost:3000/about" ||
+                      window.location.href === "https://librum-reader.com/about"
                         ? { color: color }
                         : mode
                         ? { color: "white" }
@@ -132,8 +138,8 @@ export const Navbar = () => {
               </li> */}
               <li
                 onClick={() => {
-                  setMode(false);
-                  console.log(mode);
+                  // setMode(false);
+                  // console.log(mode);
                 }}
               >
                 <i

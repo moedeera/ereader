@@ -7,6 +7,7 @@ import { SupportPage } from "./Pages/Support/SupportPage";
 import { LoginPage } from "./Pages/LoginPage/LoginPage";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { SiteContextProvider } from "./Context/Context";
+import { News } from "./Pages/News/News";
 
 function App() {
   return (
@@ -38,10 +39,7 @@ function App() {
                 />
               }
             />
-            <Route
-              path="/blog"
-              element={<SupportPage message={"OFFICIAL BLOG LAUNCHING SOON"} />}
-            />
+            <Route path="/blog" element={<News />} />
             <Route path="/login" element={<LoginPage />} />
           </Routes>
 

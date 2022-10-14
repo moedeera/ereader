@@ -4,6 +4,7 @@
   font-family: "Fira Sans", sans-serif;
   margin-top: 0px;
   min-height: 85vh;
+  animation: fade-in 600ms ease-in-out;
 }
 .header-container {
   background-color: #2892d7;
@@ -102,6 +103,7 @@
   min-width: 300px;
   border-radius: 10px;
   box-shadow: 0px 8px 15px rgba(46, 104, 229, 0.4);
+  transition: all 0.5s ease-in-out;
 }
 .support-ways-text p {
 }
@@ -114,6 +116,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.5s ease-in-out;
 }
 .extended {
   display: none;
@@ -248,7 +251,7 @@
   text-align: left;
   /* border: 1px solid var(--color-primary); */
   /* box-shadow: 0px 8px 15px rgba(46, 104, 229, 0.4); */
-  padding: 20px;
+  padding: 20px 0px;
 }
 .support-page-contact-form input {
   padding: 10px 15px;
@@ -371,17 +374,5 @@
   }
   .support-page-contact-form {
     background-color: transparent;
-  }
-}
-
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-    transform: translateX(10%);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
   }
 }
