@@ -14,31 +14,27 @@ export const AboutPage = () => {
       <section className="header">
         <h1>About librum-Reader </h1>
       </section>
-
-      <Fade right>
-        <section className="about-intro-container">
-          <div className="about-intro sm">
-            <div className="about-intro-text">
-              <h1>What is Librum-Reader?</h1>
-              <p>
-                An application designed to make reading as enjoyable and as
-                straightforward as possible. Librum offers a wide range of
-                options and features bolstered by a modern and intuitive
-                interface. This will allows you to create and manage your own
-                library of books and documents. You can access your library from
-                any device. You can also read books, highlight sections, and
-                bookmark pages that you wish to return to. Other features of
-                Librum include taking notes directly from the app. The Librum
-                ecosystem will also include a free in-app bookstore, amazing
-                plugins, and much more.
-              </p>
-            </div>
-            <div className="about-intro-image">
-              <img src={about1} alt="" />
-            </div>
+      <section className="about-intro-container">
+        <div className="about-intro sm">
+          <div className="about-intro-text">
+            <h1>What is Librum-Reader?</h1>
+            <p>
+              An application designed to make reading as enjoyable and as
+              straightforward as possible. Librum offers a wide range of options
+              and features bolstered by a modern and intuitive interface. This
+              will allows you to create and manage your own library of books and
+              documents. You can access your library from any device. You can
+              also read books, highlight sections, and bookmark pages that you
+              wish to return to. Other features of Librum include taking notes
+              directly from the app. The Librum ecosystem will also include a
+              free in-app bookstore, amazing plugins, and much more.
+            </p>
           </div>
-        </section>{" "}
-      </Fade>
+          <div className="about-intro-image">
+            <img src={about1} alt="" />
+          </div>
+        </div>
+      </section>{" "}
       <Fade>
         <section className="about-intro-container">
           <div className="about-intro sm2">
@@ -67,7 +63,6 @@ export const AboutPage = () => {
           </div>
         </section>{" "}
       </Fade>
-
       <Fade>
         <section className="about-intro-container">
           <div className="about-intro sm">
