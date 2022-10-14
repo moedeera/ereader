@@ -16,14 +16,14 @@ export const Homepage = () => {
   const { mode } = useContext(SiteContext);
   return (
     <div
-      // style={
-      //   mode
-      //     ? { backgroundColor: "white", color: "var(--color-primary)" }
-      //     : {
-      //         backgroundColor: "#282c34",
-      //         color: "var(--color-primary)",
-      //       }
-      // }
+      style={
+        mode
+          ? { backgroundColor: "white", color: "var(--color-primary)" }
+          : {
+              backgroundColor: "#282c34",
+              color: "var(--color-primary)",
+            }
+      }
       className="container"
     >
       {/* Hello {auth.currentUser.email} */}
@@ -34,7 +34,6 @@ export const Homepage = () => {
       <Circles />
       <About />
       <Support />
-      {/* <Example /> */}
     </div>
   );
 };

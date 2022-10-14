@@ -9,10 +9,24 @@ export const Navbar = () => {
   const [show, setShow] = useState(false);
   const [selected, setSelected] = useState(1);
   const color = "#b18cf7";
+  const colorA = "white";
+  const colorB = "crimson";
   const { user, setUser, logout, mode, setMode } = useContext(SiteContext);
+  const [bg, setBg] = useState(false);
   return (
     <div
-    // style={{ backgroundColor: "white", color: "var(--color-primary)" }}
+      // style={{ backgroundColor: "white", color: "var(--color-primary)" }}
+      style={
+        bg
+          ? {
+              backgroundColor: "white",
+              color: "var(--color-primary)",
+            }
+          : {
+              backgroundColor: "#282c34",
+              color: "white",
+            }
+      }
     >
       <div className="nav-contain">
         <div className="navbar-container">
@@ -35,8 +49,8 @@ export const Navbar = () => {
                       window.location.href === "https://librum-reader.com"
                         ? { color: color }
                         : mode
-                        ? { color: "white" }
-                        : { color: "crimson" }
+                        ? { color: colorB }
+                        : { color: colorA }
                     }
                   >
                     Home
@@ -58,8 +72,8 @@ export const Navbar = () => {
                         "https://librum-reader.com/support"
                         ? { color: color }
                         : mode
-                        ? { color: "white" }
-                        : { color: "crimson" }
+                        ? { color: colorB }
+                        : { color: colorA }
                     }
                   >
                     Support
@@ -79,8 +93,8 @@ export const Navbar = () => {
                       window.location.href === "https://librum-reader.com/blog"
                         ? { color: color }
                         : mode
-                        ? { color: "white" }
-                        : { color: "crimson" }
+                        ? { color: colorB }
+                        : { color: colorA }
                     }
                   >
                     Blog
@@ -100,8 +114,8 @@ export const Navbar = () => {
                       window.location.href === "https://librum-reader.com/about"
                         ? { color: color }
                         : mode
-                        ? { color: "white" }
-                        : { color: "crimson" }
+                        ? { color: colorB }
+                        : { color: colorA }
                     }
                   >
                     About
@@ -138,8 +152,8 @@ export const Navbar = () => {
               </li> */}
               <li
                 onClick={() => {
-                  // setMode(false);
-                  // console.log(mode);
+                  setBg(!bg);
+                  console.log(mode);
                 }}
               >
                 <i

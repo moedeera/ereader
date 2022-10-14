@@ -5,7 +5,7 @@ import { auth } from "../firebase-config";
 export const SiteContext = createContext({});
 
 export const SiteContextProvider = ({ children }) => {
-  const [mode, setMode] = useState(true);
+  const [mode, setMode] = useState(false);
   const [user, setUser] = useState("");
   onAuthStateChanged(auth, (currentUser) => {
     setUser(currentUser);

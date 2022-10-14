@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
+import { SiteContext } from "../../Context/Context";
 import "./Support.css";
 
 export const Support = () => {
+  const { mode } = useContext(SiteContext);
+
   return (
-    <div className="container">
+    <div className="container" style={{ margin: "150px auto 0px" }}>
       <div className="support-container">
         <h2>Free and Open Source</h2>
 

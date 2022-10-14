@@ -1,12 +1,28 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import pic4 from "./pic4.svg";
 import "./News.css";
 import newslogo from "./newslogo.svg";
 import bloglogo2 from "./newslogo2.svg";
+import { SiteContext } from "../../Context/Context";
 export const News = () => {
+  const { mode } = useContext(SiteContext);
+
   return (
-    <>
+    <div
+      style={
+        mode
+          ? {
+              backgroundColor: "white",
+              color: "var(--color-primary)",
+            }
+          : {
+              backgroundColor: "#282c34",
+              color: "var(--color-primary)",
+            }
+      }
+      className="container"
+    >
       <div className="news-page">
         <div className="news-container">
           <h1>Librum Blog</h1>
@@ -89,6 +105,6 @@ export const News = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };

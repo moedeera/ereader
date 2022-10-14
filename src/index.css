@@ -59,11 +59,15 @@ html {
 
 .container {
   width: 100%;
-  max-width: var(--max-width);
+  /* max-width: var(--max-width); */
   margin: 0 auto;
   background-color: transparent;
 }
-
+.container > div {
+  max-width: 1300px;
+  margin: 0 auto;
+  /* min-height: 100vh; */
+}
 .btn {
   border: none;
   width: 100%;
