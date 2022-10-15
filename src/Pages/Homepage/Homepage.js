@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./Homepage.css";
 import image1 from "./image1.svg";
 import { Showcase } from "../../Components/Showcase/Showcase";
@@ -13,11 +13,28 @@ import { auth } from "../../firebase-config";
 // import Example from "../../Components/Tabs/Tabs";
 
 export const Homepage = () => {
-  const { mode } = useContext(SiteContext);
+  useEffect(() => {
+    if (localStorage.getItem("Theme")) {
+      let theme = JSON.parse(localStorage.getItem("Theme"));
+
+      console.log(theme);
+
+      setBg(theme);
+
+      return;
+    }
+
+    // const theme = "light";
+
+    // localStorage.setItem("Theme", JSON.stringify(theme));
+    // console.log(theme);
+  }, []);
+
+  const { mode, bg, setBg } = useContext(SiteContext);
   return (
     <div
       style={
-        mode
+        bg === "light"
           ? { backgroundColor: "white", color: "var(--color-primary)" }
           : {
               backgroundColor: "#282c34",

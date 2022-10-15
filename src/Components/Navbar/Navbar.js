@@ -9,15 +9,15 @@ export const Navbar = () => {
   const [show, setShow] = useState(false);
   const [selected, setSelected] = useState(1);
   const color = "#b18cf7";
-  const colorA = "white";
+  const colorA = "#946bde";
   const colorB = "crimson";
-  const { user, setUser, logout, mode, setMode } = useContext(SiteContext);
-  const [bg, setBg] = useState(false);
+  const { user, setUser, logout, mode, bg, setBg } = useContext(SiteContext);
+  // const [bg, setBg] = useState("dark");
   return (
     <div
       // style={{ backgroundColor: "white", color: "var(--color-primary)" }}
       style={
-        bg
+        bg === "light"
           ? {
               backgroundColor: "white",
               color: "var(--color-primary)",
@@ -27,6 +27,7 @@ export const Navbar = () => {
               color: "white",
             }
       }
+      className="nav-box"
     >
       <div className="nav-contain">
         <div className="navbar-container">
@@ -48,7 +49,7 @@ export const Navbar = () => {
                       window.location.href === "http://localhost:3000" ||
                       window.location.href === "https://librum-reader.com"
                         ? { color: color }
-                        : mode
+                        : bg === "light"
                         ? { color: colorB }
                         : { color: colorA }
                     }
@@ -71,7 +72,7 @@ export const Navbar = () => {
                       window.location.href ===
                         "https://librum-reader.com/support"
                         ? { color: color }
-                        : mode
+                        : bg === "light"
                         ? { color: colorB }
                         : { color: colorA }
                     }
@@ -92,7 +93,7 @@ export const Navbar = () => {
                       window.location.href === "http://localhost:3000/blog" ||
                       window.location.href === "https://librum-reader.com/blog"
                         ? { color: color }
-                        : mode
+                        : bg === "light"
                         ? { color: colorB }
                         : { color: colorA }
                     }
@@ -113,7 +114,7 @@ export const Navbar = () => {
                       window.location.href === "http://localhost:3000/about" ||
                       window.location.href === "https://librum-reader.com/about"
                         ? { color: color }
-                        : mode
+                        : bg === "light"
                         ? { color: colorB }
                         : { color: colorA }
                     }
@@ -152,8 +153,12 @@ export const Navbar = () => {
               </li> */}
               <li
                 onClick={() => {
-                  setBg(!bg);
-                  console.log(mode);
+                  if (bg === "light") {
+                    setBg("dark");
+                  }
+                  if (bg === "dark") {
+                    setBg("light");
+                  }
                 }}
               >
                 <i

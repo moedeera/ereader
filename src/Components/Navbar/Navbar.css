@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;300;400;500;600;700&display=swap");
-
+.nav-box {
+  transition: all 0.5s ease-in-out;
+}
 .nav-contain {
   margin: 0 auto;
 
@@ -15,6 +17,7 @@
   width: 100%;
   max-width: 1300px;
   padding: 15px;
+  transition: all 0.5s ease-in-out;
 }
 .logo {
   display: flex;
