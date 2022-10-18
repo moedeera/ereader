@@ -13,7 +13,20 @@ import { Link } from "react-router-dom";
 import { SiteContext } from "../../Context/Context";
 
 export const SupportPage = ({ message, anchor, cards }) => {
-  const { mode } = useContext(SiteContext);
+  const { bg, setBg } = useContext(SiteContext);
+
+  useEffect(() => {
+    if (localStorage.getItem("Theme")) {
+      let theme = JSON.parse(localStorage.getItem("Theme"));
+
+      console.log(theme);
+
+      setBg(theme);
+
+      return;
+    }
+  }, []);
+
   // console.log(window.location.href);
   const container = useRef(null);
   useEffect(() => {
@@ -29,7 +42,7 @@ export const SupportPage = ({ message, anchor, cards }) => {
   return (
     <div
       style={
-        mode
+        bg === "light"
           ? {
               backgroundColor: "white",
               color: "var(--color-primary)",

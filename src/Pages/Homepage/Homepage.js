@@ -9,10 +9,12 @@ import { Attributes } from "../../Components/Attributes/Attributes";
 import { CountUP } from "../../Components/CountUp/CountUp";
 import { Circles } from "../../Components/CirclePercent/Circles";
 import { SiteContext } from "../../Context/Context";
-import { auth } from "../../firebase-config";
+// import { auth } from "../../firebase-config";
 // import Example from "../../Components/Tabs/Tabs";
 
 export const Homepage = () => {
+  const { bg, setBg } = useContext(SiteContext);
+
   useEffect(() => {
     if (localStorage.getItem("Theme")) {
       let theme = JSON.parse(localStorage.getItem("Theme"));
@@ -23,14 +25,8 @@ export const Homepage = () => {
 
       return;
     }
-
-    // const theme = "light";
-
-    // localStorage.setItem("Theme", JSON.stringify(theme));
-    // console.log(theme);
   }, []);
 
-  const { mode, bg, setBg } = useContext(SiteContext);
   return (
     <div
       style={

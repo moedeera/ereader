@@ -1,15 +1,27 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import "./LoginPage.css";
 import { LoginForm } from "../../Components/LoginForm/LoginForm";
 import { SiteContext } from "../../Context/Context";
 
 export const LoginPage = () => {
-  const { mode } = useContext(SiteContext);
+  const { bg, setBg } = useContext(SiteContext);
+
+  useEffect(() => {
+    if (localStorage.getItem("Theme")) {
+      let theme = JSON.parse(localStorage.getItem("Theme"));
+
+      console.log(theme);
+
+      setBg(theme);
+
+      return;
+    }
+  }, []);
 
   return (
     <div
       style={
-        mode
+        bg === "light"
           ? {
               backgroundColor: "white",
               color: "var(--color-primary)",

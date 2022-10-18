@@ -55,6 +55,7 @@ html {
   --container-width-md: 86%;
   --container-width-ms: 90%;
   --max-width: 1300px;
+  --transition: all 0.5s ease-in-out;
 }
 
 .container {
@@ -62,6 +63,7 @@ html {
   /* max-width: var(--max-width); */
   margin: 0 auto;
   background-color: transparent;
+  transition: var(--transition);
 }
 .container > div {
   max-width: 1300px;

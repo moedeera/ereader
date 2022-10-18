@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import pic4 from "./pic4.svg";
 import "./News.css";
@@ -6,12 +6,24 @@ import newslogo from "./newslogo.svg";
 import bloglogo2 from "./newslogo2.svg";
 import { SiteContext } from "../../Context/Context";
 export const News = () => {
-  const { mode } = useContext(SiteContext);
+  const { bg, setBg } = useContext(SiteContext);
+
+  useEffect(() => {
+    if (localStorage.getItem("Theme")) {
+      let theme = JSON.parse(localStorage.getItem("Theme"));
+
+      console.log(theme);
+
+      setBg(theme);
+
+      return;
+    }
+  }, []);
 
   return (
     <div
       style={
-        mode
+        bg === "light"
           ? {
               backgroundColor: "white",
               color: "var(--color-primary)",

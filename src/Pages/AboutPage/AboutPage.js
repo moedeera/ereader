@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import "./AboutPage.css";
 import pic1 from "./pic1.svg";
 import pic2 from "./pic2.svg";
@@ -10,12 +10,23 @@ import about3 from "./about3.png";
 import { Fade } from "react-reveal";
 import { SiteContext } from "../../Context/Context";
 export const AboutPage = () => {
-  const { mode } = useContext(SiteContext);
+  const { mode, bg, setBg } = useContext(SiteContext);
+  useEffect(() => {
+    if (localStorage.getItem("Theme")) {
+      let theme = JSON.parse(localStorage.getItem("Theme"));
+
+      console.log(theme);
+
+      setBg(theme);
+
+      return;
+    }
+  }, []);
 
   return (
     <div
       style={
-        mode
+        bg === "light"
           ? {
               backgroundColor: "white",
               color: "var(--color-primary)",

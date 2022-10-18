@@ -151,21 +151,40 @@ export const Navbar = () => {
               <li>
                 <i class="fas fa-moon fa-2x"></i>{" "}
               </li> */}
-              <li
-                onClick={() => {
-                  if (bg === "light") {
-                    setBg("dark");
-                  }
-                  if (bg === "dark") {
-                    setBg("light");
-                  }
-                }}
-              >
-                <i
-                  style={{ color: "goldenrod", cursor: "pointer" }}
-                  class="far fa-sun fa-2x"
-                ></i>
-              </li>
+
+              {bg === "light" ? (
+                <li
+                  onClick={() => {
+                    if (bg === "light") {
+                      setBg("dark");
+                    }
+                    if (bg === "dark") {
+                      setBg("light");
+                    }
+                  }}
+                >
+                  <i
+                    style={{ color: "purple", cursor: "pointer" }}
+                    class="far fa-moon fa-2x"
+                  ></i>
+                </li>
+              ) : (
+                <li
+                  onClick={() => {
+                    if (bg === "light") {
+                      setBg("dark");
+                    }
+                    if (bg === "dark") {
+                      setBg("light");
+                    }
+                  }}
+                >
+                  <i
+                    style={{ color: "goldenrod", cursor: "pointer" }}
+                    class="far fa-sun fa-2x"
+                  ></i>
+                </li>
+              )}
             </ul>
           </div>
         </div>
