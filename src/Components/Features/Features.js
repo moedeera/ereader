@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import "./Features.css";
 import { Fade } from "react-reveal";
 import icon1 from "./icon1.png";
@@ -10,7 +10,19 @@ import svg3 from "./svg03.svg";
 import { SiteContext } from "../../Context/Context";
 
 export const Features = () => {
-  const { mode } = useContext(SiteContext);
+  const { bg, setBg } = useContext(SiteContext);
+  useEffect(() => {
+    if (localStorage.getItem("Theme")) {
+      let theme = JSON.parse(localStorage.getItem("Theme"));
+
+      console.log(theme);
+
+      setBg(theme);
+
+      return;
+    }
+  }, []);
+
   const [slide, setSLide] = useState(1);
   return (
     <div className="container" id="features">
@@ -20,7 +32,7 @@ export const Features = () => {
       >
         <h2>What we will Offer </h2>
 
-        <p style={!mode ? { color: "white" } : { color: " #bb342f" }}>
+        <p style={bg === "dark" ? { color: "white" } : { color: " #bb342f" }}>
           Our Aim is to make it easier for you to read and keep track of books
           you are interested in. Librum reader allows you to sync all the books
           you are interested in in one application for more convenient reads.
@@ -28,7 +40,7 @@ export const Features = () => {
         <Fade>
           <div
             className="feature-icons"
-            style={mode ? { color: "white" } : { color: " #bb342f" }}
+            style={bg === "dark" ? { color: "white" } : { color: " #bb342f" }}
           >
             <div className="feature-icon">
               <img src={icon1} alt="" />
@@ -49,7 +61,7 @@ export const Features = () => {
       <div className="features-lg-container">
         <h2>What we will Offer</h2>
 
-        <p style={!mode ? { color: "white" } : { color: " #bb342f" }}>
+        <p style={bg === "dark" ? { color: "white" } : { color: " #bb342f" }}>
           Our Aim is to make it easier for you to read and keep track of books
           you are interested in. Librum reader allows you to sync all the books
           you are interested in in one application for more convenient reads.
@@ -82,7 +94,11 @@ export const Features = () => {
 
             {slide === 1 && (
               <div className="slide-image">
-                <p style={!mode ? { color: "white" } : { color: " #bb342f" }}>
+                <p
+                  style={
+                    bg === "dark" ? { color: "white" } : { color: " #bb342f" }
+                  }
+                >
                   Whether its on your Laptop, Tablet or Cellphone. This app is
                   always ready to facilitating a good read. Start
                   cross-synchronization today once you download and install.
@@ -92,7 +108,11 @@ export const Features = () => {
             )}
             {slide === 2 && (
               <div className="slide-image">
-                <p style={!mode ? { color: "white" } : { color: " #bb342f" }}>
+                <p
+                  style={
+                    bg === "dark" ? { color: "white" } : { color: " #bb342f" }
+                  }
+                >
                   Design for all Operating Systems, you don't have to worry
                   about what system you are on. We have a support network for
                   Windows 10, Apple, Android and Linux.
@@ -102,7 +122,11 @@ export const Features = () => {
             )}
             {slide === 3 && (
               <div className="slide-image">
-                <p style={!mode ? { color: "white" } : { color: " #bb342f" }}>
+                <p
+                  style={
+                    bg === "dark" ? { color: "white" } : { color: " #bb342f" }
+                  }
+                >
                   No need for constant updates or a live connection, you can use
                   Librum without an internet connection as well
                 </p>
