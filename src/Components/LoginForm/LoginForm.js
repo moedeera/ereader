@@ -150,15 +150,6 @@ export const LoginForm = () => {
             </button>
           </div>
         )}
-        {/* Hello {user?.email}
-        <button
-          onClick={() => {
-            logout();
-          }}
-          className="btn btn-alternate2"
-        >
-          LogOut
-        </button> */}
       </div>
     </div>
   );
