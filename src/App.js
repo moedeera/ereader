@@ -8,6 +8,7 @@ import { LoginPage } from "./Pages/LoginPage/LoginPage";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { SiteContextProvider } from "./Context/Context";
 import { News } from "./Pages/News/News";
+import { Profile } from "./Pages/Profile/Profile";
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
             />
             <Route path="/blog" element={<News />} />
             <Route path="/login" element={<LoginPage />} />
+            <Route path="/profile" element={<Profile />} />
           </Routes>
 
           <Footer />

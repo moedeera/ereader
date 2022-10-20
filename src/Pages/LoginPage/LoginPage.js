@@ -2,9 +2,11 @@ import React, { useContext, useEffect } from "react";
 import "./LoginPage.css";
 import { LoginForm } from "../../Components/LoginForm/LoginForm";
 import { SiteContext } from "../../Context/Context";
+import { useNavigate } from "react-router-dom";
 
 export const LoginPage = () => {
-  const { bg, setBg } = useContext(SiteContext);
+  const { bg, setBg, user } = useContext(SiteContext);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (localStorage.getItem("Theme")) {
@@ -17,6 +19,10 @@ export const LoginPage = () => {
       return;
     }
   }, []);
+
+  if (user) {
+    navigate("/profile");
+  }
 
   return (
     <div
