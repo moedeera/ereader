@@ -1,3 +1,28 @@
 .profile-page {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  text-align: left;
+}
+
+.profile-page input {
+  padding: 10px 15px;
+  width: 100%;
+  max-width: 300px;
+  margin: 20px 0;
+}
+.profile-page-avatar {
+  margin: 50px 0;
+}
+.profile-page-avatar img {
+  height: 75px;
+  width: 75px;
+  border-radius: 50%;
+}
+
+@media screen and (min-width: 900px) {
+  /* .profile-page {
+    width: 100%;
+  } */
 }

@@ -1,11 +1,29 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef } from "react";
 import { SiteContext } from "../../Context/Context";
 import "./Profile.css";
-
+import { getAuth, updateProfile } from "firebase/auth";
 export const Profile = () => {
+  const auth = getAuth();
+
+  const name = useRef("");
+  const photo = useRef("");
+
+  const onSubmit = async () => {
+    updateProfile(auth.currentUser, {
+      displayName: name.current.value,
+      photoURL: photo.current.value,
+    })
+      .then(() => {
+        console.log(auth.currentUser);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
   const { user, bg, setBg } = useContext(SiteContext);
 
-  console.log(user.email);
+  console.log(user);
 
   return (
     <div
@@ -22,7 +40,22 @@ export const Profile = () => {
       }
       className="container"
     >
-      <div className="profile-page">Profile Page for {user.email} </div>
+      <div className="profile-page">
+        Hello {user.displayName}
+        <div className="profile-page-avatar">
+          <img src={user.photoURL} alt="avatar" />
+        </div>
+        <input type={"/text"} ref={name} placeholder={"Enter name"} />
+        <input type={"/text"} ref={photo} placeholder={"Enter photo URL"} />
+        <button
+          onClick={() => {
+            onSubmit();
+          }}
+          className="btn btn-secondary"
+        >
+          Save
+        </button>
+      </div>
     </div>
   );
 };
