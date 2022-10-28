@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { SiteContextProvider } from "./Context/Context";
 import { News } from "./Pages/News/News";
 import { Profile } from "./Pages/Profile/Profile";
+import { Article } from "./Pages/Article/Article";
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
               }
             />
             <Route path="/blog" element={<News />} />
+            <Route path="/blog/:id" element={<Article />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/profile" element={<Profile />} />
           </Routes>

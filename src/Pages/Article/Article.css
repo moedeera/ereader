@@ -1,0 +1,39 @@
+.article-page {
+  min-height: 100vh;
+  background-color: aliceblue;
+  padding-top: calc(70px + 10vh);
+}
+
+.right,
+.left {
+  display: none;
+}
+
+@media only screen and (min-width: 1100px) {
+  .left {
+    display: block;
+    left: 0;
+    width: calc(160px + 5vw);
+  }
+}
+@media only screen and (min-width: 900px) {
+  .sidenav {
+    height: 100%;
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    /* Stay on top */
+    top: 140px; /* Stay at the top */
+
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+    border: 1px solid green;
+  }
+
+  .right {
+    display: block;
+    right: 0;
+    width: calc(160px + 10vw);
+  }
+}
+
+@media only screen and (min-width: 300px) {
+}
