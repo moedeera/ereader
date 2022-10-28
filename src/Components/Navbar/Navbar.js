@@ -9,7 +9,8 @@ export const Navbar = () => {
   const [show, setShow] = useState(false);
   const [selected, setSelected] = useState(1);
   const color = "#b18cf7";
-  const colorA = "#946bde";
+  const colorA = "white";
+
   const colorB = "crimson";
   const { user, setUser, logout, mode, bg, setBg } = useContext(SiteContext);
   // const [bg, setBg] = useState("dark");
@@ -165,7 +166,7 @@ export const Navbar = () => {
                 >
                   <i
                     style={{ color: "purple", cursor: "pointer" }}
-                    class="far fa-moon fa-2x"
+                    className="far fa-moon fa-2x"
                   ></i>
                 </li>
               ) : (
@@ -181,7 +182,7 @@ export const Navbar = () => {
                 >
                   <i
                     style={{ color: "goldenrod", cursor: "pointer" }}
-                    class="far fa-sun fa-2x"
+                    className="fas fa-sun fa-2x"
                   ></i>
                 </li>
               )}
