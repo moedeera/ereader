@@ -25,13 +25,112 @@
 
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 20px;
-    border: 1px solid green;
+    border: 1px solid grey;
+    z-index: 2;
+    padding-left: 10px;
+    padding-right: 10px;
+    /* border-top: none; */
+    border-radius: 5px;
   }
-
+  .sidenav::-webkit-scrollbar,
+  .article-page::-webkit-scrollbar {
+    display: none;
+  }
   .right {
     display: block;
     right: 0;
     width: calc(160px + 10vw);
+  }
+  .sr-header {
+    margin: 20px 0 40px;
+  }
+  .sr-search {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .search-input {
+    display: flex;
+    border: 1px solid grey;
+    width: 100%;
+    /* max-width: 300px; */
+
+    border-radius: 10px;
+    padding: 10px;
+    gap: 5px;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  .search-input input {
+    border: none;
+    background-color: transparent;
+  }
+
+  .sr-bio {
+    /* border: 1px solid green; */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 2vh;
+  }
+  .sr-bio-name {
+    height: 100px;
+    display: flex;
+    gap: 5px;
+  }
+  .sr-bio-text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  .sr-bio img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+  }
+  .sr-bio-links {
+    display: flex;
+    justify-content: space-between;
+    color: var(--secondary-color);
+  }
+  .sr-bio-links button {
+    padding: 10px 15px;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    border: 1px solid rgba(128, 128, 128, 0.5);
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: white;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .sr-bio-links button:hover {
+    transform: translateY(-5px);
+  }
+
+  .sr-suggestions {
+    text-align: left;
+  }
+  .sr-suggestion-text {
+    max-width: 250px;
+  }
+  .sr-suggestion {
+    display: flex;
+    justify-content: space-between;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+    gap: 5px;
+  }
+  .sr-suggestion small {
+    color: grey;
+  }
+  .suggestions-image {
+    height: 12vh;
+    width: 14vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid rgba(128, 128, 128, 0.5);
   }
 }
 
