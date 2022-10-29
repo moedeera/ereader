@@ -112,7 +112,7 @@
     text-align: left;
   }
   .sr-suggestion-text {
-    max-width: 250px;
+    max-width: 230px;
   }
   .sr-suggestion {
     display: flex;
@@ -125,8 +125,8 @@
     color: grey;
   }
   .suggestions-image {
-    height: 12vh;
-    width: 14vh;
+    height: 10vh;
+    width: 12vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
