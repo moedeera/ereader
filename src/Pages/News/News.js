@@ -5,6 +5,7 @@ import "./News.css";
 import newslogo from "./newslogo.svg";
 import bloglogo2 from "./newslogo2.svg";
 import { SiteContext } from "../../Context/Context";
+import { Form } from "../../Components/Form/Form";
 export const News = () => {
   const { bg, setBg } = useContext(SiteContext);
 
@@ -36,9 +37,18 @@ export const News = () => {
       className="container"
     >
       <div className="news-page">
-        <div className="news-container">
-          <h1>Librum Blog</h1>
+        <div
+          style={{
+            margin: "-50px auto 0",
+            textAlign: "center",
+            paddingBottom: "100px",
+          }}
+          className="support-ways-header"
+        >
+          <h1 className="larger-Header">News and Updates</h1>
+        </div>
 
+        <div className="news-container">
           <div className="news-list">
             <div className="news-unit">
               <div className="news-image">
@@ -48,8 +58,16 @@ export const News = () => {
                 <div>
                   {" "}
                   <h2>Welcome to the Librum-Reader Blog </h2>
-                  <small>October 15 2022</small>
-                  <p>
+                  <small>October 25 2022</small>
+                  <p
+                    style={
+                      bg === "light"
+                        ? { color: "var(--color-primary0)" }
+                        : {
+                            color: "white",
+                          }
+                    }
+                  >
                     Welcome to our blog page. Here you will find the latest news
                     and updates for Librum-Reader. If you would like to share an
                     article or announce an event you are organizing, feel free
@@ -70,8 +88,16 @@ export const News = () => {
                 <div>
                   {" "}
                   <h2>Launching of Librum Reader</h2>
-                  <small>October 13 2022</small>
-                  <p>
+                  <small>October 23 2022</small>
+                  <p
+                    style={
+                      bg === "light"
+                        ? { color: "var(--color-primary0)" }
+                        : {
+                            color: "white",
+                          }
+                    }
+                  >
                     So, as you can tell, the beta version of the website is
                     live. Many more features are to come for this iteration. In
                     the meanwhile, feel free to browse through our pages and
@@ -88,35 +114,7 @@ export const News = () => {
           </div>
         </div>
       </div>
-      <div className="supportPage-container">
-        <div className="support-page-contact">
-          <div className="support-page-contact-form">
-            <h2>Got Questions ?</h2>
-            <p>Just Send us a Message today</p>
-            <div className="form-div">
-              <p className="p-form">Name</p>
-              <input type="text" placeholder="Enter your Name" />
-            </div>
-            <div className="form-div">
-              {" "}
-              <p className="p-form">Email</p>
-              <input type="text" placeholder="Enter your email address" />
-            </div>
-            <div className="form-div">
-              {" "}
-              <p className="p-form">Message</p>
-              <textarea type="text" placeholder="Enter Message" />
-            </div>
-
-            <div>
-              <button className="btn btn-secondary">Submit </button>
-            </div>
-          </div>
-          <div className="support-page-contact-image">
-            <img src={pic4} alt="" />
-          </div>
-        </div>
-      </div>
+      <Form />
     </div>
   );
 };

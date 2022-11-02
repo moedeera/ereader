@@ -41,8 +41,8 @@ function App() {
                 />
               }
             />
-            <Route path="/blog" element={<News />} />
-            <Route path="/blog/:id" element={<Article />} />
+            <Route path="/News" element={<News />} />
+            <Route path="/News/:id" element={<Article />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/profile" element={<Profile />} />
           </Routes>

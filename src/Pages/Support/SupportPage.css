@@ -183,7 +183,7 @@
   max-width: 150px;
   margin-left: 20px;
   opacity: 0;
-  transition: opacity 1s;
+  transition: opacity 1s ease-in-out;
 }
 .card:hover p {
   opacity: 1;
@@ -222,6 +222,8 @@
 
 .larger-Header {
   color: var(--color-primary);
+  margin-bottom: 150px;
+  font-size: 30px;
 }
 
 .sw-image h2 {
@@ -328,6 +330,7 @@
     padding: 0px 10px;
   }
   .support-ways {
+    margin-bottom: 150px;
   }
   .support-ways-text {
     flex-direction: row;
@@ -338,7 +341,7 @@
     line-height: 1.8em;
     letter-spacing: 1px;
 
-    transition: transform 1100ms ease-in-out;
+    transition: all 600ms ease-in-out;
     max-width: 400px;
     margin: 0 auto;
   }
@@ -353,11 +356,11 @@
 
   .sw-image:hover {
     background-color: #256eff;
-    background-color: white;
+    background-color: rgba(128, 0, 128, 0.25);
   }
   .support-ways-unit:hover {
     background-color: #2892d7;
-    background-color: #256eff33;
+    background-color: #256eff11;
   }
   .support-image {
     height: 800px;

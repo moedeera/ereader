@@ -47,8 +47,8 @@ export const Navbar = () => {
                 >
                   <p
                     style={
-                      window.location.href === "http://localhost:3000" ||
-                      window.location.href === "https://librum-reader.com"
+                      window.location.href === "http://localhost:3000/" ||
+                      window.location.href === "https://librum-reader.com/"
                         ? { color: color }
                         : bg === "light"
                         ? { color: colorB }
@@ -84,22 +84,22 @@ export const Navbar = () => {
               </li>
               <li>
                 <Link
-                  to={"./blog"}
+                  to={"./news"}
                   onClick={() => {
                     setSelected(3);
                   }}
                 >
                   <p
                     style={
-                      window.location.href === "http://localhost:3000/blog" ||
-                      window.location.href === "https://librum-reader.com/blog"
+                      window.location.href === "http://localhost:3000/news" ||
+                      window.location.href === "https://librum-reader.com/news"
                         ? { color: color }
                         : bg === "light"
                         ? { color: colorB }
                         : { color: colorA }
                     }
                   >
-                    Blog
+                    News
                   </p>
                 </Link>
               </li>

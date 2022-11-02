@@ -32,7 +32,15 @@ export const Features = () => {
       >
         <h2>What we will Offer </h2>
 
-        <p style={bg === "dark" ? { color: "white" } : { color: " #bb342f" }}>
+        <p
+          style={
+            bg === "light"
+              ? { color: "var(--color-primary0)" }
+              : {
+                  color: "white",
+                }
+          }
+        >
           Our Aim is to make it easier for you to read and keep track of books
           you are interested in. Librum reader allows you to sync all the books
           you are interested in in one application for more convenient reads.
@@ -40,7 +48,13 @@ export const Features = () => {
         <Fade>
           <div
             className="feature-icons"
-            style={bg === "dark" ? { color: "white" } : { color: " #bb342f" }}
+            style={
+              bg === "light"
+                ? { color: "var(--color-primary0)" }
+                : {
+                    color: "white",
+                  }
+            }
           >
             <div className="feature-icon">
               <img src={icon1} alt="" />
@@ -61,7 +75,15 @@ export const Features = () => {
       <div className="features-lg-container">
         <h2>What we will Offer</h2>
 
-        <p style={bg === "dark" ? { color: "white" } : { color: " #bb342f" }}>
+        <p
+          style={
+            bg === "light"
+              ? { color: "var(--color-primary0)" }
+              : {
+                  color: "white",
+                }
+          }
+        >
           Our Aim is to make it easier for you to read and keep track of books
           you are interested in. Librum reader allows you to sync all the books
           you are interested in in one application for more convenient reads.
@@ -96,7 +118,11 @@ export const Features = () => {
               <div className="slide-image">
                 <p
                   style={
-                    bg === "dark" ? { color: "white" } : { color: " #bb342f" }
+                    bg === "light"
+                      ? { color: "var(--color-primary0)" }
+                      : {
+                          color: "white",
+                        }
                   }
                 >
                   Whether its on your Laptop, Tablet or Cellphone. This app is
@@ -110,7 +136,11 @@ export const Features = () => {
               <div className="slide-image">
                 <p
                   style={
-                    bg === "dark" ? { color: "white" } : { color: " #bb342f" }
+                    bg === "light"
+                      ? { color: "var(--color-primary0)" }
+                      : {
+                          color: "white",
+                        }
                   }
                 >
                   Design for all Operating Systems, you don't have to worry
@@ -124,7 +154,11 @@ export const Features = () => {
               <div className="slide-image">
                 <p
                   style={
-                    bg === "dark" ? { color: "white" } : { color: " #bb342f" }
+                    bg === "light"
+                      ? { color: "var(--color-primary0)" }
+                      : {
+                          color: "white",
+                        }
                   }
                 >
                   No need for constant updates or a live connection, you can use

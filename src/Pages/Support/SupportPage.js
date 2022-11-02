@@ -4,9 +4,8 @@ import "./SupportPage.css";
 import reason1 from "./reasons1.png";
 import reason2 from "./reasons2.png";
 import reason3 from "./reasons3.png";
-import { Fade } from "react-reveal";
-import pic4 from "./pic4.svg";
 
+import { Form } from "../../Components/Form/Form";
 import Lottie from "lottie-web";
 import banner from "./stars.svg";
 import { Link } from "react-router-dom";
@@ -46,22 +45,21 @@ export const SupportPage = ({ message, anchor, cards }) => {
           ? {
               backgroundColor: "white",
               color: "var(--color-primary)",
+              paddingBottom: "100px;",
             }
           : {
               backgroundColor: "#282c34",
               color: "var(--color-primary)",
+              paddingBottom: "100px",
             }
       }
       className="container"
     >
       <div className="supportPage-container">
-        <div className="header-container"></div>
-
         <section className="support-ways">
           <div className="support-way-container">
             <div className="support-ways-header">
-              <h1 className="larger-Header">{message}</h1>
-              <h1 style={{ margin: "50px" }}>{anchor}</h1>
+              <h1 className="larger-Header">Ways to Support Us</h1>
             </div>
             {cards && (
               <div className="support-ways-text">
@@ -78,7 +76,15 @@ export const SupportPage = ({ message, anchor, cards }) => {
                     </a>
                   </div>
                   <h2>Support us on Patreon</h2>
-                  <p>
+                  <p
+                    style={
+                      bg === "light"
+                        ? { color: "var(--color-primary0)" }
+                        : {
+                            color: "white",
+                          }
+                    }
+                  >
                     Check out our Patreon support page and support us for as
                     little as 3$ a month.
                   </p>
@@ -97,7 +103,15 @@ export const SupportPage = ({ message, anchor, cards }) => {
                     </a>
                   </div>
                   <h2>Contribute</h2>
-                  <p>
+                  <p
+                    style={
+                      bg === "light"
+                        ? { color: "var(--color-primary0)" }
+                        : {
+                            color: "white",
+                          }
+                    }
+                  >
                     If you have experience, feel free to contribute to our code
                     which is open source. We are always looking for ways to
                     improve the application and any suggestions are welcome. if
@@ -114,7 +128,15 @@ export const SupportPage = ({ message, anchor, cards }) => {
                   </div>
 
                   <h2>Join the Community</h2>
-                  <p>
+                  <p
+                    style={
+                      bg === "light"
+                        ? { color: "var(--color-primary0)" }
+                        : {
+                            color: "white",
+                          }
+                    }
+                  >
                     Get involved by posting on the forum, reporting any bugs,
                     and liking our facebook and social media posts.If you have
                     any experience with marketing feel free to spread our
@@ -126,33 +148,7 @@ export const SupportPage = ({ message, anchor, cards }) => {
           </div>
         </section>
 
-        <div className="support-page-contact">
-          <div className="support-page-contact-form">
-            <h2>Got Questions ?</h2>
-            <p>Just Send us a Message today</p>
-            <div className="form-div">
-              <p className="p-form">Name</p>
-              <input type="text" placeholder="Enter your Name" />
-            </div>
-            <div className="form-div">
-              {" "}
-              <p className="p-form">Email</p>
-              <input type="text" placeholder="Enter your email address" />
-            </div>
-            <div className="form-div">
-              {" "}
-              <p className="p-form">Message</p>
-              <textarea type="text" placeholder="Enter Message" />
-            </div>
-
-            <div>
-              <button className="btn btn-secondary">Submit </button>
-            </div>
-          </div>
-          <div className="support-page-contact-image">
-            <img src={pic4} alt="" />
-          </div>
-        </div>
+        <Form />
       </div>
     </div>
   );

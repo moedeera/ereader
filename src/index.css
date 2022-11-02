@@ -113,13 +113,13 @@ html {
 }
 @media screen and (min-width: 900px) {
   .btn-primary:hover {
-    background-color: var(--color-primary);
+    background-color: var(--color-primary0);
     box-shadow: 0px 15px 20px rgba(46, 104, 229, 0.4);
     color: #fff;
     transform: translateY(-7px);
   }
   .btn-secondary:hover {
-    background-color: var(--color-alternate);
+    background-color: var(--color-primary0);
     box-shadow: 0px 15px 20px rgba(46, 104, 229, 0.4);
     color: #fff;
     transform: translateY(-7px);

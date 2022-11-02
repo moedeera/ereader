@@ -46,7 +46,15 @@ export const AboutPage = () => {
           <div className="about-intro sm">
             <div className="about-intro-text">
               <h1>What is Librum-Reader?</h1>
-              <p>
+              <p
+                style={
+                  bg === "light"
+                    ? { color: "var(--color-primary0)" }
+                    : {
+                        color: "white",
+                      }
+                }
+              >
                 An application designed to make reading as enjoyable and as
                 straightforward as possible. Librum offers a wide range of
                 options and features bolstered by a modern and intuitive
@@ -74,14 +82,30 @@ export const AboutPage = () => {
               <div className="about-intro-text">
                 <h1>Why use Librum-Reader as oppose to similiar apps?</h1>
 
-                <p>
+                <p
+                  style={
+                    bg === "light"
+                      ? { color: "var(--color-primary0)" }
+                      : {
+                          color: "white",
+                        }
+                  }
+                >
                   Librum-Reader is convenient and easy to use. But ultimately
                   its the custom features and open source nature that will have
                   it stick out. The app is meant to be the go to place for
                   readers and writers alike. The purpose is the give the
                   experience a more interactive feel.
                 </p>
-                <p>
+                <p
+                  style={
+                    bg === "light"
+                      ? { color: "var(--color-primary0)" }
+                      : {
+                          color: "white",
+                        }
+                  }
+                >
                   Librum-Reader is convenient and easy to use. But ultimately
                   its the custom features and open source nature that will have
                   it stick out. The app is meant to be the go to place for
@@ -97,7 +121,15 @@ export const AboutPage = () => {
             <div className="about-intro sm">
               <div className="about-intro-text">
                 <h1>Some of the features on Librum</h1>
-                <ul>
+                <ul
+                  style={
+                    bg === "light"
+                      ? { color: "var(--color-primary0)" }
+                      : {
+                          color: "white",
+                        }
+                  }
+                >
                   <li>
                     {" "}
                     <i className="fa fa-circle"></i>

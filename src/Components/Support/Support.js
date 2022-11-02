@@ -3,14 +3,25 @@ import { SiteContext } from "../../Context/Context";
 import "./Support.css";
 
 export const Support = () => {
-  const { mode } = useContext(SiteContext);
+  const { mode, bg, setBg } = useContext(SiteContext);
 
   return (
-    <div className="container" style={{ margin: "150px auto 0px" }}>
+    <div
+      className="container"
+      style={{ margin: "150px auto 0", paddingBottom: "100px" }}
+    >
       <div className="support-container">
         <h2>Free and Open Source</h2>
 
-        <p>
+        <p
+          style={
+            bg === "light"
+              ? { color: "var(--color-primary0)" }
+              : {
+                  color: "white",
+                }
+          }
+        >
           Our code is open source so feel free to propose a new feature or
           improvement on it . Also check out our blog for latest updates and
           downloads.
