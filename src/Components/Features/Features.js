@@ -88,7 +88,7 @@ export const Features = () => {
           you are interested in. Librum reader allows you to sync all the books
           you are interested in in one application for more convenient reads.
         </p>
-        <Fade left>
+        <Fade>
           <div className="features-slide">
             <div className="slide-selection">
               <div className="slide-selection-menu">

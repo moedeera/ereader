@@ -7,7 +7,7 @@ import reason3 from "./reasons3.png";
 
 import { Form } from "../../Components/Form/Form";
 import Lottie from "lottie-web";
-import banner from "./stars.svg";
+
 import { Link } from "react-router-dom";
 import { SiteContext } from "../../Context/Context";
 
@@ -147,8 +147,6 @@ export const SupportPage = ({ message, anchor, cards }) => {
             )}
           </div>
         </section>
-
-        <Form />
       </div>
     </div>
   );

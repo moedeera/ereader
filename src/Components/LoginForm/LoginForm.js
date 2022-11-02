@@ -73,6 +73,7 @@ export const LoginForm = () => {
               {" "}
               <i className="fas fa-lock"></i>
               <input
+                className="input-psw"
                 type="password"
                 name="name"
                 value={registerPassword ? registerPassword : ""}
