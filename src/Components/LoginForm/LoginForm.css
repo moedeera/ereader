@@ -22,7 +22,7 @@
 }
 
 .login-form > div {
-  background-color: aliceblue;
+  background-color: white;
   padding: 5px;
   color: grey;
 
@@ -30,6 +30,7 @@
   max-width: 25rem;
   margin: 0 auto;
   border-radius: 5px;
+  /* border: 2px solid green; */
 }
 
 .login-form input {
@@ -39,6 +40,8 @@
   border: none;
   padding: 0 6px;
   font-size: 14px;
+  margin-left: 8px;
+  /* border: 2px solid crimson; */
 }
 input[type="password"] {
   font-family: Verdana;

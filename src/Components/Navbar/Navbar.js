@@ -34,7 +34,7 @@ export const Navbar = () => {
         <div className="navbar-container">
           <div className="logo">
             <img src={icon} alt="" />
-            <h2>Librum-Reader</h2>
+            <h2>Librum</h2>
           </div>
           <div className="navbar-menu">
             <ul>

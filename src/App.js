@@ -14,17 +14,7 @@ import { Article } from "./Pages/Article/Article";
 function App() {
   return (
     <SiteContextProvider>
-      <div
-        // style={
-        //   mode
-        //     ? { backgroundColor: "white", color: "var(--color-primary)" }
-        //     : {
-        //         backgroundColor: "#282c34",
-        //         color: "var(--color-primary)",
-        //       }
-        // }
-        className="App"
-      >
+      <div className="App">
         <Router>
           <Navbar />
 

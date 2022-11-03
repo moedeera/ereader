@@ -8,7 +8,7 @@ export const Attributes = () => {
 
   return (
     <Fade>
-      <div className="ft-services">
+      <div className="ft-services" id="ft-services">
         <div className="services-container">
           <div className="service">
             <i class="fab fa-instalod"></i>

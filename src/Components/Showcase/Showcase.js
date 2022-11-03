@@ -42,7 +42,11 @@ export const Showcase = ({ image1 }) => {
         </div>
         <div className="info-section-button">
           <button className="btn btn-secondary">Download </button>
-          <button className="btn btn-primary">Learn More </button>
+          <button className="btn btn-primary">
+            <a style={{ color: "white" }} href="#ft-services">
+              Learn More
+            </a>{" "}
+          </button>
         </div>
       </div>
       <div className="image lg" ref={container}>

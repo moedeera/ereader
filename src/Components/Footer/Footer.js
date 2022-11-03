@@ -63,7 +63,7 @@ export const Footer = ({ image }) => {
           <h3
             style={bg === "light" ? { color: "crimson" } : { color: "white" }}
           >
-            Librum-Reader
+            Librum
           </h3>
         </div>
 
