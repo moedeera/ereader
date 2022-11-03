@@ -152,6 +152,90 @@ export const LoginForm = () => {
           </div>
         )}
       </div>
+
+      {/* <div className="form-container">
+        <div className="log-form">
+          <div className="log-form-header">Welcome back</div>
+          <div className="form-input">
+            <div className="form-input-title">Email</div>
+            <div className="form-input-input">
+              <input />
+            </div>
+          </div>
+
+          <div className="form-input">
+            <div className="form-input-title">Password</div>
+            <div className="form-input-input">
+              <input />
+            </div>
+          </div>
+
+          <button>Log in</button>
+        </div>
+      </div>
+
+      <div className="form-container">
+        <div className="log-form">
+          <div className="log-form-header">
+            <h1>Welcome</h1>
+            <p>Your credentials will be stored in a secure database</p>
+          </div>
+
+          <div className="form-input reg">
+            <div className="reg-form-name">
+              {" "}
+              <div className="form-input-title">First Name</div>
+              <div className="form-input-input">
+                <input />
+              </div>
+            </div>
+
+            <div className="reg-form-name">
+              {" "}
+              <div className="form-input-title">Last name</div>
+              <div className="form-input-input">
+                <input />
+              </div>
+            </div>
+          </div>
+
+          <div className="form-input">
+            <div className="form-input-title">Email</div>
+            <div className="form-input-input">
+              <input />
+            </div>
+          </div>
+
+          <div className="form-input">
+            <div className="form-input-title">Password</div>
+            <div className="form-input-input">
+              <input />
+            </div>
+          </div>
+
+          <div className="form-input">
+            <div className="form-input-title">Confirm Password</div>
+            <div className="form-input-input">
+              <input />
+            </div>
+          </div>
+
+          <div className="form-checkbox">
+            <div className="checkbox-unit">
+              {" "}
+              <input type="checkbox" /> Keep e updated about improved features
+              and upcoming improvements.
+            </div>
+            <div className="checkbox-unit">
+              {" "}
+              <input type="checkbox" /> I accept the terms and conditions and
+              the privacy policy
+            </div>
+          </div>
+
+          <button>Lets get started</button>
+        </div>
+      </div> */}
     </div>
   );
 };
