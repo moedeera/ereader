@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./CountUp.css";
 import CountUp from "react-countup";
+import { SiteContext } from "../../Context/Context";
 
 export const CountUP = () => {
+  const { mode, bg, setBg } = useContext(SiteContext);
   return (
     <div className="count-up">
       <div className="count-up-container">
@@ -14,7 +16,17 @@ export const CountUP = () => {
 
             <i className="fa fa-plus"></i>
           </div>
-          <p>Hours of Code </p>
+          <p
+            style={
+              bg === "light"
+                ? { color: "var(--color-primary0)" }
+                : {
+                    color: "white",
+                  }
+            }
+          >
+            Hours of Code{" "}
+          </p>
         </div>
         <div className="count">
           <div className="count-number">
@@ -23,7 +35,17 @@ export const CountUP = () => {
             </CountUp>
             <i className="fa fa-plus"></i>
           </div>
-          <p>Lines of Code</p>
+          <p
+            style={
+              bg === "light"
+                ? { color: "var(--color-primary0)" }
+                : {
+                    color: "white",
+                  }
+            }
+          >
+            Lines of Code
+          </p>
         </div>
         <div className="count">
           <div className="count-number">
@@ -32,7 +54,17 @@ export const CountUP = () => {
             </CountUp>
             <i className="fa fa-calendar"></i>
           </div>
-          <p>Days left</p>
+          <p
+            style={
+              bg === "light"
+                ? { color: "var(--color-primary0)" }
+                : {
+                    color: "white",
+                  }
+            }
+          >
+            Days left
+          </p>
         </div>
       </div>
     </div>

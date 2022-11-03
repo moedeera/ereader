@@ -32,12 +32,12 @@ export const Menu = ({ setShow }) => {
             <li>Support</li>
           </Link>{" "}
           <Link
-            to={"./blog"}
+            to={"./news"}
             onClick={() => {
               setShow(false);
             }}
           >
-            <li>Blog</li>
+            <li>News</li>
           </Link>
           <Link
             to={"./about"}
