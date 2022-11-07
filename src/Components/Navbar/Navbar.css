@@ -83,6 +83,18 @@ a:hover:after,
   display: none;
 }
 
+.toggle-li {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  /* border: 2px solid green; */
+}
+.toggle-li small {
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
 @media only screen and (max-width: 900px) {
   .navbar-container {
     display: none;

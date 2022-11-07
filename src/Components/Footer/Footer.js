@@ -76,9 +76,9 @@ export const Footer = ({ image }) => {
           </Link>
           <Link
             style={bg === "light" ? { color: "crimson" } : { color: "white" }}
-            to={"/blog"}
+            to={"/news"}
           >
-            <li>Blog</li>
+            <li>News</li>
           </Link>
           <Link
             style={bg === "light" ? { color: "crimson" } : { color: "white" }}

@@ -148,13 +148,9 @@ export const Navbar = () => {
                 </li>
               )}
 
-              {/* 
-              <li>
-                <i class="fas fa-moon fa-2x"></i>{" "}
-              </li> */}
-
               {bg === "light" ? (
                 <li
+                  className="toggle-li"
                   onClick={() => {
                     if (bg === "light") {
                       setBg("dark");
@@ -164,13 +160,17 @@ export const Navbar = () => {
                     }
                   }}
                 >
+                  <div>
+                    <small>Light</small>
+                  </div>
                   <i
                     style={{ color: "purple", cursor: "pointer" }}
-                    className="far fa-moon fa-2x"
+                    className="fas fa-toggle-on fa-2x"
                   ></i>
                 </li>
               ) : (
                 <li
+                  className="toggle-li"
                   onClick={() => {
                     if (bg === "light") {
                       setBg("dark");
@@ -180,9 +180,12 @@ export const Navbar = () => {
                     }
                   }}
                 >
+                  <div>
+                    <small>Dark</small>
+                  </div>
                   <i
-                    style={{ color: "goldenrod", cursor: "pointer" }}
-                    className="fas fa-sun fa-2x"
+                    style={{ color: "purple", cursor: "pointer" }}
+                    className="fas fa-toggle-off fa-2x"
                   ></i>
                 </li>
               )}

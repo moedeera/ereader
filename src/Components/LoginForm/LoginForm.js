@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import "./LoginForm.css";
+import logo from "../Navbar/ereader1.png";
 import {
   createUserWithEmailAndPassword,
   onAuthStateChanged,
@@ -14,7 +15,7 @@ export const LoginForm = () => {
   const [loginEmail, setloginEmail] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
   const [regLogState, setRegLogState] = useState(false);
-  const { user, setUser } = useContext(SiteContext);
+  const { user, setUser, bg } = useContext(SiteContext);
 
   const register = async () => {
     try {
@@ -153,9 +154,27 @@ export const LoginForm = () => {
         )}
       </div>
 
-      {/* <div className="form-container">
-        <div className="log-form">
-          <div className="log-form-header">Welcome back</div>
+      <div className="form-container">
+        <div
+          style={
+            bg === "dark"
+              ? { color: "var(--color-primary)", backgroundColor: "white" }
+              : {
+                  color: "white",
+                  backgroundColor: "var(--color-primary)",
+                }
+          }
+          className="log-form"
+        >
+          <img
+            src={logo}
+            alt="logo"
+            width={"80px"}
+            style={{ marginBottom: "20px" }}
+          />
+          <div className="log-form-header">
+            <h2>Login</h2>
+          </div>
           <div className="form-input">
             <div className="form-input-title">Email</div>
             <div className="form-input-input">
@@ -171,14 +190,41 @@ export const LoginForm = () => {
           </div>
 
           <button>Log in</button>
+
+          <div className="form-checkbox">
+            <div className="checkbox-unit">
+              {" "}
+              Not a member? Click <span style={{ color: "purple" }}>here </span>
+              to register
+            </div>
+          </div>
         </div>
       </div>
 
       <div className="form-container">
-        <div className="log-form">
+        <div
+          style={
+            bg === "dark"
+              ? { color: "var(--color-primary)", backgroundColor: "white" }
+              : {
+                  color: "white",
+                  backgroundColor: "var(--color-primary)",
+                }
+          }
+          className="log-form"
+        >
           <div className="log-form-header">
-            <h1>Welcome</h1>
-            <p>Your credentials will be stored in a secure database</p>
+            <img
+              src={logo}
+              alt="logo"
+              width={"80px"}
+              style={{ marginBottom: "20px" }}
+            />
+            <h2>Welcome</h2>
+            <p>
+              Your credentials are only used to authenticate yourself Your
+              credentials will be stored in a secure database
+            </p>
           </div>
 
           <div className="form-input reg">
@@ -231,11 +277,18 @@ export const LoginForm = () => {
               <input type="checkbox" /> I accept the terms and conditions and
               the privacy policy
             </div>
+
+            <div className="checkbox-unit">
+              {" "}
+              Already a member? Click{" "}
+              <span style={{ color: "purple" }}>here </span>
+              to login
+            </div>
           </div>
 
           <button>Lets get started</button>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 };

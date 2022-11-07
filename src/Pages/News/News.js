@@ -74,7 +74,7 @@ export const News = () => {
                     to contact us.
                   </p>
                 </div>
-                <Link to={"/"}>
+                <Link to={"/news/welcome"}>
                   <button className="btn btn-secondary">Read More</button>
                 </Link>
               </div>
@@ -106,7 +106,7 @@ export const News = () => {
                   </p>
                 </div>
 
-                <Link to={"/"}>
+                <Link to={"/news/launch"}>
                   <button className="btn btn-secondary">Read More</button>
                 </Link>
               </div>

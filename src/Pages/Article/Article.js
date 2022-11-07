@@ -1,8 +1,13 @@
 import React, { useContext, useEffect } from "react";
+import { Link, useParams } from "react-router-dom";
 import { SiteContext } from "../../Context/Context";
 import "./Article.css";
-import avatar from "./avatar.png";
+import launch from "./launch.svg";
+
 export const Article = () => {
+  let { title } = useParams();
+  console.log(title);
+
   const { bg, setBg } = useContext(SiteContext);
 
   useEffect(() => {
@@ -27,130 +32,97 @@ export const Article = () => {
               color: "var(--color-primary)",
             }
       }
-      className="article-page"
+      className="news-article-page"
     >
-      {/* <div className="sidenav left">
-        <ul>
-          <li>Option L1</li>
-          <li>Option L2</li>
-          <li>Option L3</li>
-          <li>Option L4</li>
-          <li>Option L5</li>
-        </ul>
-      </div> */}
-      <div className="main"></div>
-      <div
-        style={
-          bg === "light"
-            ? { backgroundColor: "white", color: "var(--color-primary)" }
-            : {
-                backgroundColor: "#282c34",
-                color: "var(--color-primary)",
+      <div className="news-article-container">
+        <div className="news-article-header">
+          <h1>
+            <Link
+              to={"../news"}
+              style={
+                bg === "light"
+                  ? { color: "white" }
+                  : { color: "var(--color-primary0)" }
               }
-        }
-        className="sidenav right"
-      >
-        <div className="sr-search">
-          <div className="sr-header">
-            <h1>
-              Librum
-              <span style={{ color: "purple" }}>Blog</span>
-            </h1>
-          </div>
-          <div className="search-input">
-            <i className="fas fa-search"></i>
-            <input placeholder="Search " />
-          </div>
-        </div>
-        <div className="sr-bio">
-          <div className="sr-bio-name">
-            <img src={avatar} alt="" />
-            <div className="sr-bio-text">
-              <h3> Jonas Smith</h3>
-              <p>Librum Software Developer</p>
-              <small>Co-founder</small>
-            </div>
-          </div>
-          <div className="sr-bio-links">
-            <button className="bio-links-btn">Message</button>
-            <i className="fa fa-twitter fa-2x"></i>
-            <i className="fa fa-github fa-2x"></i>
-            <i className="fa fa-medium fa-2x"></i>
-          </div>
-          <div></div>
-        </div>
-        <div className="sr-suggestions">
-          <h3>See Also</h3>
-          <div className="sr-suggestion">
-            <div className="sr-suggestion-text">
-              <small className="sr-suggestion-date"></small>
-              <h3>8 Must have CSS tricks</h3>
-              <small>
-                Lorem ipsum dolor sit amet. Et delectus ullam ab sunt
-                consequatur et eveniet maxime.
-              </small>
-            </div>
+            >
+              {" "}
+              News{" "}
+            </Link>
+            {">"} Article{" "}
+          </h1>
+          <div className="newspage-image">
             <div
-              style={{
-                backgroundImage:
-                  "url(https://images.pexels.com/photos/264905/pexels-photo-264905.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)",
-              }}
-              className="suggestions-image"
+              className="newspage-main-image"
+              style={
+                title === "welcome"
+                  ? {
+                      backgroundImage: `url(${launch})`,
+                    }
+                  : {
+                      backgroundImage: `url(${launch})`,
+                    }
+              }
             ></div>
+            <div className="newspage-links">
+              <h3>Latest</h3>
+              {title !== "welcome-newspage" ? (
+                <Link to={"../news/welcome"}>
+                  <h2>Welcome to CRM</h2>
+                </Link>
+              ) : (
+                <Link to={"../news/launching-crm"}>
+                  <h2>Launching of CRM</h2>{" "}
+                </Link>
+              )}
+            </div>
           </div>
+          <div className="newspage-content">
+            {title === "welcome-newspage" ? (
+              <h2>Welcome to Librum</h2>
+            ) : (
+              <h2>Launching of Librum</h2>
+            )}
 
-          <div className="sr-suggestion">
-            <div className="sr-suggestion-text">
-              <small className="sr-suggestion-date"></small>
-              <h3>3 Ways to Authenticate in react</h3>
-              <small>
-                Lorem ipsum dolor sit amet. Et delectus ullam ab sunt
-                consequatur et eveniet maxime.
-              </small>
-            </div>
-            <div
-              style={{
-                backgroundImage:
-                  "url(https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)",
-              }}
-              className="suggestions-image"
-            ></div>
-          </div>
-
-          <div className="sr-suggestion">
-            <div className="sr-suggestion-text">
-              <small className="sr-suggestion-date"></small>
-              <h3>Lessons from my first Interview</h3>
-              <small>
-                Lorem ipsum dolor sit amet. Et delectus ullam ab sunt
-                consequatur et eveniet maxime.
-              </small>
-            </div>
-            <div
-              style={{
-                backgroundImage:
-                  "url(https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)",
-              }}
-              className="suggestions-image"
-            ></div>
-          </div>
-
-          <div className="sr-suggestion">
-            <div className="sr-suggestion-text">
-              <small className="sr-suggestion-date"></small>
-              <h3>Lessons from my first Interview</h3>
-              <small>
-                Lorem ipsum dolor sit amet. Et delectus ullam ab sunt
-                consequatur et eveniet maxime.
-              </small>
-            </div>
-            <div
-              style={{
-                backgroundImage:
-                  "url(https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)",
-              }}
-              className="suggestions-image"
-            ></div>
+            {title === "welcome-newspage" ? (
+              <p
+                style={
+                  bg === "light"
+                    ? { color: "var(--color-primary0)" }
+                    : {
+                        color: "var( --color-primary0)",
+                      }
+                }
+              >
+                Welcome to our news page. Here you will find the latest news and
+                updates for Librum. If you would like to share an article or
+                announce an event you are organizing, feel free to contact us.
+                We are currently looking for volunteers to help us build content
+                for this website. So if you would like to spare some of your
+                free time to create, edit or review our articles, just give us a
+                message.
+              </p>
+            ) : (
+              <p
+                style={
+                  bg === "light"
+                    ? { color: "var(--color-primary0)" }
+                    : {
+                        color: "var( --color-primary0)",
+                      }
+                }
+              >
+                So, as you can tell, the beta version of the website is live.
+                Many more features are to come for this iteration. In the
+                meanwhile, feel free to browse through our catalog of cases and
+                articles. Report any bugs or issues to us via our contact page
+                which is up and running. The main purpose of this app is to
+                provide an easier way to read. However, we also want to build a
+                community and network as well. Our ultimate goal is to be a
+                resource hub for people who want to read more. If you have any
+                suggestions or would like to contribute to CRM, feel free to
+                contact us. Thanks.
+              </p>
+            )}
           </div>
         </div>
       </div>
