@@ -65,6 +65,7 @@ html {
   margin: 0 auto;
   background-color: transparent;
   transition: var(--transition);
+  color: #256eff;
 }
 .container > div {
   max-width: 1300px;
