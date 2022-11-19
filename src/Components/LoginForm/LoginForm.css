@@ -45,8 +45,8 @@
 }
 input[type="password"] {
   font-family: Verdana;
-  letter-spacing: 0.125em;
-  font-size: 16px;
+  /* letter-spacing: 0.125em;
+  font-size: 16px; */
 }
 .login-form button {
   margin: 0 auto;
@@ -54,7 +54,7 @@ input[type="password"] {
 
 .form-container {
   padding-bottom: 100px;
-  margin: 0 auto;
+  margin: 0px auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -70,6 +70,8 @@ input[type="password"] {
   padding: 30px 0;
   background-color: white;
   border-radius: 5px;
+  margin-top: 125px;
+  box-shadow: var(--box-shadow);
 }
 .form-input {
   width: 100%;

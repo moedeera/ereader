@@ -53,7 +53,7 @@ export const LoginForm = () => {
 
   return (
     <div className="container">
-      <div className="login-form-container">
+      {/* <div className="login-form-container">
         {regLogState ? (
           <div className="login-form">
             <h1>Register</h1>
@@ -152,13 +152,16 @@ export const LoginForm = () => {
             </button>
           </div>
         )}
-      </div>
+      </div> */}
 
       <div className="form-container">
         <div
           style={
             bg === "dark"
-              ? { color: "var(--color-primary)", backgroundColor: "white" }
+              ? {
+                  color: "white",
+                  backgroundColor: "var(--color-primary)",
+                }
               : {
                   color: "white",
                   backgroundColor: "var(--color-primary)",
@@ -176,20 +179,45 @@ export const LoginForm = () => {
             <h2>Login</h2>
           </div>
           <div className="form-input">
-            <div className="form-input-title">Email</div>
+            <div>Email</div>
             <div className="form-input-input">
-              <input />
+              <input
+                type="text"
+                name="name"
+                value={loginEmail ? loginEmail : ""}
+                placeholder="Enter Your Email"
+                onChange={(e) => {
+                  setloginEmail(e.target.value);
+                }}
+                className="form-input-title"
+              />
             </div>
           </div>
 
           <div className="form-input">
-            <div className="form-input-title">Password</div>
+            <div>Password</div>
             <div className="form-input-input">
-              <input />
+              <input
+                type="password"
+                name="password"
+                value={loginPassword ? loginPassword : ""}
+                placeholder="Enter Your Password"
+                onChange={(e) => {
+                  setLoginPassword(e.target.value);
+                }}
+                className="form-input-title"
+              />
             </div>
           </div>
 
-          <button>Log in</button>
+          <button
+            onClick={() => {
+              login();
+            }}
+            className="btn btn-login"
+          >
+            Log in
+          </button>
 
           <div className="form-checkbox">
             <div className="checkbox-unit">
