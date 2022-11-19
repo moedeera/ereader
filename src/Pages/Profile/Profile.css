@@ -112,7 +112,7 @@
   font-size: 32px;
   color: var(--color-primary);
   padding: 10px;
-  border: 1px solid rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(0, 0, 0, 0.15);
 }
 .profile-page-navigate-section:nth-child(1) {
   background-color: #6ea4bf;
@@ -124,14 +124,63 @@
   background-color: #fdca40;
 }
 
+.ticker {
+  /* border: 1px solid rgba(1, 1, 1, 0.05); */
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 58px;
+  border-radius: 5px;
+  font-weight: 900;
+  color: white;
+}
+
 /*Menu Header*/
 
 .profile-page-menu {
-  border: 1px solid white;
-  padding: 10px;
+  border: 1px solid rgba(128, 128, 128, 0.5);
+  padding: 5vh 0px;
+  width: 50vw;
+  min-width: 310px;
   height: 100vh;
-  background-color: grey;
+  background-color: aliceblue;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.profile-page-menu-list {
+  min-height: 500px;
+}
+.profile-page-menu-header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid grey;
+  background-color: transparent;
+}
+.profile-page-exit {
+  font-size: 28px;
+  border: 1px solid black;
+  padding: 20px;
+  color: #33a1fd;
+}
+
+.profile-page-menu-labels {
+  /* border: 1px solid green; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr 1fr;
+  border-bottom: 1px solid grey;
+  border-top: 1px solid grey;
+  background-color: #33a1fd;
   color: white;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+.profile-page-menu-labels > div {
+  border-left: 1px solid grey;
+  padding: 10px 5px;
 }
 
 @media screen and (min-width: 767px) {

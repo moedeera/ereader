@@ -90,6 +90,8 @@ export const Profile = () => {
             <div className="profile-page-navigate-icon">
               <i className="fas fa-bug"></i>
             </div>
+
+            <div className="ticker">6</div>
             <div className="profile-page-navigation-text">
               <h1>
                 Reports <i className="far fa-arrow-alt-circle-right"></i>
@@ -102,6 +104,7 @@ export const Profile = () => {
             <div className="profile-page-navigate-icon">
               <i className="fas fa-file"></i>
             </div>
+            <div className="ticker">0</div>
             <div className="profile-page-navigation-text">
               <h1>
                 Updates <i className="far fa-arrow-alt-circle-right"></i>
@@ -114,6 +117,7 @@ export const Profile = () => {
             <div className="profile-page-navigate-icon">
               <i className="fas fa-cog"></i>
             </div>
+            <div className="ticker">11</div>
             <div className="profile-page-navigation-text">
               <h1>
                 Settings <i className="far fa-arrow-alt-circle-right"></i>
@@ -124,14 +128,32 @@ export const Profile = () => {
         </div>
 
         <div className="profile-page-menu">
-          <div className="profile-page-menu-header"> Menu header</div>
-          <div className="profile-page-menu-list">
-            <div className="profile-page-menu-item">Item 1</div>
-            <div className="profile-page-menu-item">Item 2</div>
-            <div className="profile-page-menu-item">Item 3</div>
-            <div className="profile-page-menu-item">Item 4</div>
+          <div className="profile-page-menu-header">
+            <div className="profile=page-header-title">
+              <small>Current</small>
+              <h1>Bugs</h1>
+            </div>
+            <div className="profile-page-exit">
+              <i className="fa fa-trash" aria-hidden="true"></i>
+            </div>
           </div>
-          <div className="profile-page-menu-actions"></div>
+          <div className="profile-page-menu-list">
+            <div className="ppm-list"></div>
+            <div className="profile-page-menu-labels">
+              <div className="profile-page-list-item-id"> id </div>
+              <div className="profile-page-list-item-date"> Date issued </div>
+              <div className="profile-page-list-item-user"> user</div>
+              <div className="profile-page-list-item-flag">
+                status <i className="fa fa-flag" aria-hidden="true"></i>{" "}
+              </div>
+            </div>
+          </div>
+          <div className="profile-page-menu-actions">
+            <div className="buttons-section">
+              <button className="btn btn-secondary">Report Bug</button>
+              <button className="btn btn-alternate">See Updates</button>
+            </div>
+          </div>
         </div>
 
         {/* Hello {user.displayName}
