@@ -1,13 +1,42 @@
-import React, { useContext, useRef } from "react";
+import React, { useContext, useRef, useState } from "react";
 import { SiteContext } from "../../Context/Context";
 import "./Profile.css";
 import img1 from "../AboutPage/about2.png";
 import { getAuth, updateProfile } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
+
+import { addDoc, collection } from "firebase/firestore";
+import { db } from "../../firebase-config";
+
 export const Profile = () => {
   const auth = getAuth();
-
+  const navigate = useNavigate();
   const name = useRef("");
   const photo = useRef("");
+  const [text, setText] = useState("");
+  const [title, setTitle] = useState("");
+  const [show, setShow] = useState(true);
+  const bugCollectionRef = collection(db, "bugs");
+
+  console.log(auth.currentUser);
+  const createBugReport = async () => {
+    if (title === "" || text === "") {
+      alert("please enter both fields");
+      return;
+    }
+    try {
+      const newBug = await addDoc(bugCollectionRef, {
+        title,
+        text,
+        author: {
+          name: auth.currentUser.displayName,
+          id: auth.currentUser.uid,
+        },
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   const onSubmit = async () => {
     updateProfile(auth.currentUser, {
@@ -21,10 +50,12 @@ export const Profile = () => {
         console.log(error);
       });
   };
-
+  const num = [0, 1, 2, 3, 4, 5];
   const { user, bg, setBg } = useContext(SiteContext);
 
-  console.log(user);
+  if (!user) {
+    navigate("/");
+  }
 
   return (
     <div
@@ -86,7 +117,12 @@ export const Profile = () => {
         </div>
 
         <div className="profile-page-navigation">
-          <div className="profile-page-navigate-section">
+          <div
+            onClick={() => {
+              setShow(!show);
+            }}
+            className="profile-page-navigate-section"
+          >
             <div className="profile-page-navigate-icon">
               <i className="fas fa-bug"></i>
             </div>
@@ -100,7 +136,12 @@ export const Profile = () => {
             </div>
           </div>
 
-          <div className="profile-page-navigate-section">
+          <div
+            onClick={() => {
+              setShow(true);
+            }}
+            className="profile-page-navigate-section"
+          >
             <div className="profile-page-navigate-icon">
               <i className="fas fa-file"></i>
             </div>
@@ -113,7 +154,12 @@ export const Profile = () => {
             </div>
           </div>
 
-          <div className="profile-page-navigate-section">
+          <div
+            onClick={() => {
+              setShow(true);
+            }}
+            className="profile-page-navigate-section"
+          >
             <div className="profile-page-navigate-icon">
               <i className="fas fa-cog"></i>
             </div>
@@ -127,18 +173,29 @@ export const Profile = () => {
           </div>
         </div>
 
-        <div className="profile-page-menu">
+        <div
+          className="profile-page-menu"
+          style={
+            show
+              ? { transform: "translateX(0%)" }
+              : { transform: "translateX(-100%)" }
+          }
+        >
           <div className="profile-page-menu-header">
             <div className="profile=page-header-title">
               <small>Current</small>
               <h1>Bugs</h1>
             </div>
-            <div className="profile-page-exit">
-              <i className="fa fa-trash" aria-hidden="true"></i>
+            <div
+              onClick={() => {
+                setShow(false);
+              }}
+              className="profile-page-exit"
+            >
+              <i className="fa fa-arrow-left" aria-hidden="true"></i>
             </div>
           </div>
           <div className="profile-page-menu-list">
-            <div className="ppm-list"></div>
             <div className="profile-page-menu-labels">
               <div className="profile-page-list-item-id"> id </div>
               <div className="profile-page-list-item-date"> Date issued </div>
@@ -147,11 +204,67 @@ export const Profile = () => {
                 status <i className="fa fa-flag" aria-hidden="true"></i>{" "}
               </div>
             </div>
+            {num.map((unit) => (
+              <div className="ppm-list">
+                <div className="profile-page-list-item-id">
+                  {" "}
+                  cg6-{Math.floor(Math.random() * 10000)}{" "}
+                </div>
+                <div className="profile-page-list-item-date">
+                  {" "}
+                  1{unit}/09/07{" "}
+                </div>
+                <div className="profile-page-list-item-user">
+                  {" "}
+                  user{Math.floor(Math.random() * 1000)}
+                </div>
+                <div className="profile-page-list-item-flag">
+                  resolved <i className="fa fa-flag" aria-hidden="true"></i>{" "}
+                </div>
+              </div>
+            ))}
           </div>
+
+          <div className="profile-page-menu-form">
+            <h2>Report Bug</h2>
+            <input
+              type="text"
+              name="name"
+              value={title ? title : ""}
+              placeholder="Brief title/description"
+              onChange={(e) => {
+                setTitle(e.target.value);
+              }}
+            />
+            <textarea
+              type="text"
+              name="name"
+              value={text ? text : ""}
+              placeholder="Enter an Email"
+              onChange={(e) => {
+                setText(e.target.value);
+              }}
+            />
+          </div>
+
           <div className="profile-page-menu-actions">
             <div className="buttons-section">
-              <button className="btn btn-secondary">Report Bug</button>
-              <button className="btn btn-alternate">See Updates</button>
+              <button
+                onClick={() => {
+                  createBugReport();
+                }}
+                className="btn btn-secondary"
+              >
+                Submit
+              </button>
+              <button
+                onClick={() => {
+                  setShow(false);
+                }}
+                className="btn btn-alternate"
+              >
+                Close
+              </button>
             </div>
           </div>
         </div>

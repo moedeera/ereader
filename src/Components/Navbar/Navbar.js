@@ -4,10 +4,12 @@ import icon from "./ereader1.png";
 import { Link } from "react-router-dom";
 import { Menu } from "../Menu/Menu";
 import { SiteContext } from "../../Context/Context";
+import { getAuth } from "firebase/auth";
 
 export const Navbar = () => {
   const [show, setShow] = useState(false);
   const [selected, setSelected] = useState(1);
+  const auth = getAuth();
   const color = "#b18cf7";
   const colorA = "white";
 
@@ -124,6 +126,7 @@ export const Navbar = () => {
                   </p>
                 </Link>
               </li>
+
               {!user ? (
                 <li>
                   <Link
@@ -136,16 +139,41 @@ export const Navbar = () => {
                   </Link>
                 </li>
               ) : (
-                <li>
-                  <button
-                    onClick={() => {
-                      logout();
-                    }}
-                    className="btn btn-secondary"
-                  >
-                    Logout
-                  </button>
-                </li>
+                <>
+                  <li>
+                    <Link
+                      to={"./profile"}
+                      onClick={() => {
+                        setSelected(1);
+                      }}
+                    >
+                      <p
+                        style={
+                          window.location.href ===
+                            "http://localhost:3000/profile" ||
+                          window.location.href ===
+                            "https://librum-reader.com/profile"
+                            ? { color: color }
+                            : bg === "light"
+                            ? { color: colorB }
+                            : { color: colorA }
+                        }
+                      >
+                        Account
+                      </p>
+                    </Link>
+                  </li>
+                  <li>
+                    <button
+                      onClick={() => {
+                        logout();
+                      }}
+                      className="btn btn-secondary"
+                    >
+                      Logout
+                    </button>
+                  </li>
+                </>
               )}
 
               {bg === "light" ? (

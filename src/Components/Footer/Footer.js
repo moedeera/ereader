@@ -18,6 +18,14 @@ export const Footer = ({ image }) => {
       return;
     }
   }, []);
+
+  if (
+    window.location.href === "http://localhost:3000/profile" ||
+    window.location.href === "http://librum-reader/profile"
+  ) {
+    return null;
+  }
+
   return (
     <div
       style={

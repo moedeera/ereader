@@ -140,49 +140,102 @@
 
 .profile-page-menu {
   border: 1px solid rgba(128, 128, 128, 0.5);
-  padding: 5vh 0px;
-  width: 50vw;
-  min-width: 310px;
+  padding: 0px;
+
+  width: 100%;
+  max-width: 1300px;
   height: 100vh;
   background-color: aliceblue;
   color: black;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  transition: all 0.3s ease-in-out;
 }
 
 .profile-page-menu-list {
-  min-height: 500px;
+  /* height: 400px; */
+
+  padding: 10px;
+  overflow-y: scroll;
+  border: 1px solid grey;
 }
 .profile-page-menu-header {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid grey;
   background-color: transparent;
+  padding: 10px;
 }
 .profile-page-exit {
   font-size: 28px;
-  border: 1px solid black;
-  padding: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  padding: 20px 30px;
   color: #33a1fd;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
 }
 
-.profile-page-menu-labels {
+.profile-page-menu-labels,
+.ppm-list {
   /* border: 1px solid green; */
   display: grid;
   grid-template-columns: 1fr 1fr 2fr 1fr;
   border-bottom: 1px solid grey;
   border-top: 1px solid grey;
-  background-color: #33a1fd;
-  color: white;
+
   font-weight: 900;
   letter-spacing: 1px;
+
+  padding: 0px 0px;
 }
-.profile-page-menu-labels > div {
-  border-left: 1px solid grey;
-  padding: 10px 5px;
+.profile-page-menu-labels > div,
+.ppm-list > div {
+  border-left: 1px solid rgba(0, 0, 0, 0.15);
+  border-right: 1px solid rgba(0, 0, 0, 0.15);
+  padding: 15px 5px;
 }
 
+.profile-page-menu-labels:nth-child(1) {
+  background-color: #33a1fd;
+  color: white;
+  border-left: 1px solid grey;
+}
+
+.profile-page-menu-form {
+  border: 1px solid aliceblue;
+  /* height: 250px; */
+  padding: 0px 10px;
+  margin: 10px 0 0;
+  display: flex;
+  flex-direction: column;
+}
+.profile-page-menu-form input {
+  padding: 10px;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+.profile-page-menu-form textarea {
+  height: 250px;
+  width: 100%;
+  max-width: 900px;
+  border: 1px solid rgba(0, 0, 0, 0.45);
+  background-color: white;
+  margin: 10px 0 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 18px;
+  padding: 10px;
+  letter-spacing: 1px;
+}
+
+.profile-page-menu-actions {
+  padding: 10px;
+}
 @media screen and (min-width: 767px) {
   /* .profile-page {
     width: 100%;
@@ -200,5 +253,9 @@
   }
   .profile-page-navigate-section:hover {
     transform: translateY(-10px);
+  }
+  .profile-page-exit:hover {
+    background-color: #33a1fd;
+    color: white;
   }
 }
