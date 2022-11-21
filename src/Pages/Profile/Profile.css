@@ -143,13 +143,11 @@
   padding: 0px;
 
   width: 100%;
-  max-width: 1300px;
+  max-width: 1100px;
   height: 100vh;
   background-color: aliceblue;
   color: black;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+
   position: fixed;
   z-index: 2;
   top: 0;
@@ -184,15 +182,17 @@
 .ppm-list {
   /* border: 1px solid green; */
   display: grid;
-  grid-template-columns: 1fr 1fr 2fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   border-bottom: 1px solid grey;
   border-top: 1px solid grey;
-
   font-weight: 900;
   letter-spacing: 1px;
-
   padding: 0px 0px;
 }
+.profile-page-list-item-id {
+  display: none;
+}
+
 .profile-page-menu-labels > div,
 .ppm-list > div {
   border-left: 1px solid rgba(0, 0, 0, 0.15);
@@ -218,9 +218,11 @@
   padding: 10px;
   font-size: 18px;
   letter-spacing: 1px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 .profile-page-menu-form textarea {
-  height: 250px;
+  min-height: 200px;
   width: 100%;
   max-width: 900px;
   border: 1px solid rgba(0, 0, 0, 0.45);
@@ -257,5 +259,17 @@
   .profile-page-exit:hover {
     background-color: #33a1fd;
     color: white;
+  }
+
+  .profile-page-menu-labels,
+  .ppm-list {
+    /* border: 1px solid green; */
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 2fr 0.5fr;
+    max-width: 900px;
+  }
+
+  .profile-page-list-item-id {
+    display: block;
   }
 }

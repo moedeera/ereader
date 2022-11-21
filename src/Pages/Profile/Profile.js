@@ -1,13 +1,13 @@
-import React, { useContext, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import { SiteContext } from "../../Context/Context";
 import "./Profile.css";
 import img1 from "../AboutPage/about2.png";
 import { getAuth, updateProfile } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
-
-import { addDoc, collection } from "firebase/firestore";
+import { addDoc, collection, getDocs } from "firebase/firestore";
 import { db } from "../../firebase-config";
-
+import { async } from "@firebase/util";
+import { getDate } from "../../Assets/js/Functions";
 export const Profile = () => {
   const auth = getAuth();
   const navigate = useNavigate();
@@ -15,10 +15,22 @@ export const Profile = () => {
   const photo = useRef("");
   const [text, setText] = useState("");
   const [title, setTitle] = useState("");
+  const [number] = useState(Math.random());
   const [show, setShow] = useState(true);
+  const [bugList, setBugList] = useState([]);
+
   const bugCollectionRef = collection(db, "bugs");
 
-  console.log(auth.currentUser);
+  useEffect(() => {
+    const getBugs = async () => {
+      const data = await getDocs(bugCollectionRef);
+
+      setBugList(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+    };
+
+    getBugs();
+  }, []);
+
   const createBugReport = async () => {
     if (title === "" || text === "") {
       alert("please enter both fields");
@@ -28,11 +40,21 @@ export const Profile = () => {
       const newBug = await addDoc(bugCollectionRef, {
         title,
         text,
+        status: "in review",
+        date: getDate(),
         author: {
           name: auth.currentUser.displayName,
           id: auth.currentUser.uid,
         },
       });
+
+      const getBugs = async () => {
+        const data = await getDocs(bugCollectionRef);
+
+        setBugList(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+      };
+
+      getBugs();
     } catch (error) {
       console.log(error);
     }
@@ -50,7 +72,7 @@ export const Profile = () => {
         console.log(error);
       });
   };
-  const num = [0, 1, 2, 3, 4, 5];
+
   const { user, bg, setBg } = useContext(SiteContext);
 
   if (!user) {
@@ -199,30 +221,44 @@ export const Profile = () => {
             <div className="profile-page-menu-labels">
               <div className="profile-page-list-item-id"> id </div>
               <div className="profile-page-list-item-date"> Date issued </div>
-              <div className="profile-page-list-item-user"> user</div>
+              <div className="profile-page-list-item-user"> Title</div>
               <div className="profile-page-list-item-flag">
                 status <i className="fa fa-flag" aria-hidden="true"></i>{" "}
               </div>
             </div>
-            {num.map((unit) => (
-              <div className="ppm-list">
-                <div className="profile-page-list-item-id">
-                  {" "}
-                  cg6-{Math.floor(Math.random() * 10000)}{" "}
-                </div>
-                <div className="profile-page-list-item-date">
-                  {" "}
-                  1{unit}/09/07{" "}
-                </div>
-                <div className="profile-page-list-item-user">
-                  {" "}
-                  user{Math.floor(Math.random() * 1000)}
-                </div>
-                <div className="profile-page-list-item-flag">
-                  resolved <i className="fa fa-flag" aria-hidden="true"></i>{" "}
-                </div>
-              </div>
-            ))}
+            <div className="ppm-list">
+              {bugList?.map((bug) => (
+                <>
+                  <div className="profile-page-list-item-id">
+                    <small>{bug.id}</small>
+                  </div>
+                  <div className="profile-page-list-item-date">
+                    <small>{bug.date}</small>
+                  </div>
+                  <div className="profile-page-list-item-user">{bug.title}</div>
+                  <div className="profile-page-list-item-flag">
+                    {bug.status}
+                  </div>
+                </>
+                // <div className="ppm-list">
+                //   <div className="profile-page-list-item-id">
+                //     {" "}
+                //     cg6-{Math.floor(Math.random() * 10000)}{" "}
+                //   </div>
+                //   <div className="profile-page-list-item-date">
+                //     {" "}
+                //     1{unit}/09/07{" "}
+                //   </div>
+                //   <div className="profile-page-list-item-user">
+                //     {" "}
+                //     user{Math.floor(Math.random() * 1000)}
+                //   </div>
+                //   <div className="profile-page-list-item-flag">
+                //     resolved <i className="fa fa-flag" aria-hidden="true"></i>{" "}
+                //   </div>
+                // </div>
+              ))}
+            </div>
           </div>
 
           <div className="profile-page-menu-form">
@@ -240,7 +276,7 @@ export const Profile = () => {
               type="text"
               name="name"
               value={text ? text : ""}
-              placeholder="Enter an Email"
+              placeholder="Enter a report"
               onChange={(e) => {
                 setText(e.target.value);
               }}
