@@ -140,7 +140,7 @@
 
 .profile-page-menu {
   border: 1px solid rgba(128, 128, 128, 0.5);
-  padding: 0px;
+  padding: 0 0px 150px;
 
   width: 100%;
   max-width: 1100px;
@@ -161,6 +161,7 @@
   padding: 10px;
   overflow-y: scroll;
   border: 1px solid grey;
+  overflow-y: scroll;
 }
 .profile-page-menu-header {
   display: flex;
@@ -222,8 +223,8 @@
     "Lucida Sans", Arial, sans-serif;
 }
 .profile-page-menu-form textarea {
-  min-height: 200px;
-  width: 100%;
+  min-height: 150px;
+
   max-width: 900px;
   border: 1px solid rgba(0, 0, 0, 0.45);
   background-color: white;
