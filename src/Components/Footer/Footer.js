@@ -21,7 +21,7 @@ export const Footer = ({ image }) => {
 
   if (
     window.location.href === "http://localhost:3000/profile" ||
-    window.location.href === "http://librum-reader/profile"
+    window.location.href === "https://librum-reader/profile"
   ) {
     return null;
   }
