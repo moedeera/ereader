@@ -238,6 +238,12 @@
 .profile-page-menu-actions {
   padding: 10px;
 }
+
+.profile-page-settings {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
 @media screen and (min-width: 767px) {
   /* .profile-page {
     width: 100%;
