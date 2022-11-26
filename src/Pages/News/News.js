@@ -5,7 +5,7 @@ import "./News.css";
 import newslogo from "./newslogo.svg";
 import bloglogo2 from "./newslogo2.svg";
 import { SiteContext } from "../../Context/Context";
-import { Form } from "../../Components/Form/Form";
+
 export const News = () => {
   const { bg, setBg } = useContext(SiteContext);
 
@@ -114,7 +114,6 @@ export const News = () => {
           </div>
         </div>
       </div>
-      <Form />
     </div>
   );
 };

@@ -111,6 +111,11 @@ html {
   border: 1px solid grey;
   color: var(--color-primary);
 }
+.info-section-button a,
+.info-section-button a:visited {
+  color: white;
+}
+
 @media screen and (max-width: 900px) {
   .btn {
     font-size: 13px;
@@ -121,15 +126,15 @@ html {
 }
 @media screen and (min-width: 900px) {
   .btn-primary:hover {
-    background-color: var(--color-primary0);
+    background-color: #94b0da;
     box-shadow: 0px 15px 20px rgba(46, 104, 229, 0.4);
-    color: #fff;
+    color: var(--color-primary0) !important;
     transform: translateY(-7px);
   }
   .btn-secondary:hover {
-    background-color: var(--color-primary0);
+    background-color: #94b0da;
     box-shadow: 0px 15px 20px rgba(46, 104, 229, 0.4);
-    color: #fff;
+    color: var(--color-primary0);
     transform: translateY(-7px);
   }
   .btn-alternate:hover {
@@ -149,6 +154,11 @@ html {
     box-shadow: 0px 15px 20px rgba(46, 104, 229, 0.4);
     color: #fff;
     transform: translateY(-5px);
+  }
+
+  .info-section-button a:hover,
+  .info-section-button a:visited:hover {
+    color: var(--color-primary0);
   }
 }
 

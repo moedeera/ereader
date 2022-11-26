@@ -33,6 +33,50 @@ export const Navbar = () => {
       className="nav-box"
     >
       <div className="nav-contain">
+        <div className="nav-toggle-container">
+          {" "}
+          {bg === "light" ? (
+            <li
+              className="toggle-li"
+              onClick={() => {
+                if (bg === "light") {
+                  setBg("dark");
+                }
+                if (bg === "dark") {
+                  setBg("light");
+                }
+              }}
+            >
+              {/* <div>
+                <small>Light</small>
+              </div> */}
+              <i
+                style={{ color: "purple", cursor: "pointer" }}
+                className="fas fa-toggle-on fa-3x"
+              ></i>
+            </li>
+          ) : (
+            <li
+              className="toggle-li"
+              onClick={() => {
+                if (bg === "light") {
+                  setBg("dark");
+                }
+                if (bg === "dark") {
+                  setBg("light");
+                }
+              }}
+            >
+              {/* <div>
+                <small>Dark</small>
+              </div> */}
+              <i
+                style={{ color: "var(--color-primary)", cursor: "pointer" }}
+                className="fas fa-toggle-off fa-3x"
+              ></i>
+            </li>
+          )}
+        </div>
         <div className="navbar-container">
           <div className="logo">
             <img src={icon} alt="" />
@@ -175,48 +219,6 @@ export const Navbar = () => {
                   </li>
                 </>
               )}
-
-              {bg === "light" ? (
-                <li
-                  className="toggle-li"
-                  onClick={() => {
-                    if (bg === "light") {
-                      setBg("dark");
-                    }
-                    if (bg === "dark") {
-                      setBg("light");
-                    }
-                  }}
-                >
-                  <div>
-                    <small>Light</small>
-                  </div>
-                  <i
-                    style={{ color: "purple", cursor: "pointer" }}
-                    className="fas fa-toggle-on fa-2x"
-                  ></i>
-                </li>
-              ) : (
-                <li
-                  className="toggle-li"
-                  onClick={() => {
-                    if (bg === "light") {
-                      setBg("dark");
-                    }
-                    if (bg === "dark") {
-                      setBg("light");
-                    }
-                  }}
-                >
-                  <div>
-                    <small>Dark</small>
-                  </div>
-                  <i
-                    style={{ color: "purple", cursor: "pointer" }}
-                    className="fas fa-toggle-off fa-2x"
-                  ></i>
-                </li>
-              )}
             </ul>
           </div>
         </div>
@@ -228,7 +230,11 @@ export const Navbar = () => {
           <div style={{ color: "black" }}>
             <i
               className="fas fa-bars"
-              style={{ fontSize: "20px", color: "white" }}
+              style={
+                bg === "dark"
+                  ? { fontSize: "20px", color: "white" }
+                  : { fontSize: "20px", color: "purple" }
+              }
               onClick={() => {
                 setShow(true);
               }}

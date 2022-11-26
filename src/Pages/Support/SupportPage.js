@@ -148,6 +148,8 @@ export const SupportPage = ({ message, anchor, cards }) => {
           </div>
         </section>
       </div>
+
+      <Form />
     </div>
   );
 };
