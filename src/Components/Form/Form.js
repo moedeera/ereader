@@ -37,7 +37,11 @@ export const Form = () => {
           >
             Name
           </p>
-          <input type="text" placeholder="Enter your Name" />
+          <input
+            style={bg === "light" ? { color: "black" } : { color: "white" }}
+            type="text"
+            placeholder="Enter your Name"
+          />
         </div>
         <div className="form-div">
           {" "}
@@ -53,7 +57,11 @@ export const Form = () => {
           >
             Email
           </p>
-          <input type="text" placeholder="Enter your email address" />
+          <input
+            style={bg === "light" ? { color: "black" } : { color: "white" }}
+            type="text"
+            placeholder="Enter your email address"
+          />
         </div>
         <div className="form-div">
           {" "}
@@ -69,7 +77,11 @@ export const Form = () => {
           >
             Message
           </p>
-          <textarea type="text" placeholder="Enter Message" />
+          <textarea
+            style={bg === "light" ? { color: "black" } : { color: "white" }}
+            type="text"
+            placeholder="Enter Message"
+          />
         </div>
 
         <div>

@@ -1,11 +1,9 @@
 import React, { useContext, useEffect } from "react";
 import "./AboutPage.css";
-import pic1 from "./pic1.svg";
-import pic2 from "./pic2.svg";
-import pic3 from "./pic3.svg";
-import about1 from "./about1.png";
-import about2 from "./about2.png";
-import about3 from "./about3.png";
+
+import about1 from "./Image01.png";
+import about2 from "./image02.png";
+import about3 from "./image03.png";
 
 import { Fade } from "react-reveal";
 import { SiteContext } from "../../Context/Context";

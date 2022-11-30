@@ -322,7 +322,7 @@ export const Profile = () => {
           {view === "settings" && (
             <div className="profile-page-settings">
               {" "}
-              Hello {user.displayName}
+              Hello {user?.displayName}
               <div className="profile-page-avatar">
                 <img src={user.photoURL} alt="avatar" />
               </div>

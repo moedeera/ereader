@@ -6,7 +6,6 @@ import reason2 from "./reasons2.png";
 import reason3 from "./reasons3.png";
 
 import { Form } from "../../Components/Form/Form";
-import Lottie from "lottie-web";
 
 import { Link } from "react-router-dom";
 import { SiteContext } from "../../Context/Context";
@@ -28,15 +27,6 @@ export const SupportPage = ({ message, anchor, cards }) => {
 
   // console.log(window.location.href);
   const container = useRef(null);
-  useEffect(() => {
-    Lottie.loadAnimation({
-      container: container.current,
-      renderer: "svg",
-      loop: true,
-      autoplay: true,
-      animationData: require("./SL2.json"),
-    });
-  }, []);
 
   return (
     <div
@@ -148,6 +138,8 @@ export const SupportPage = ({ message, anchor, cards }) => {
           </div>
         </section>
       </div>
+
+      <Form />
     </div>
   );
 };

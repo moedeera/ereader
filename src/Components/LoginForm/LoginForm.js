@@ -12,6 +12,10 @@ import { SiteContext } from "../../Context/Context";
 export const LoginForm = () => {
   const [registerEmail, setRegisterEmail] = useState("");
   const [registerPassword, setRegisterPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [displayName, setdisplayName] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
   const [loginEmail, setloginEmail] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
   const [regLogState, setRegLogState] = useState(true);
@@ -22,7 +26,8 @@ export const LoginForm = () => {
       const user = await createUserWithEmailAndPassword(
         auth,
         registerEmail,
-        registerPassword
+        registerPassword,
+        displayName
       );
 
       console.log("successful login");
@@ -54,106 +59,6 @@ export const LoginForm = () => {
 
   return (
     <div className="container">
-      {/* <div className="login-form-container">
-        {regLogState ? (
-          <div className="login-form">
-            <h1>Register</h1>
-            <div>
-              {" "}
-              <i className="fas fa-user"></i>
-              <input
-                type="text"
-                name="name"
-                value={registerEmail ? registerEmail : ""}
-                placeholder="Enter an Email"
-                onChange={(e) => {
-                  setRegisterEmail(e.target.value);
-                }}
-              />
-            </div>
-            <div>
-              {" "}
-              <i className="fas fa-lock"></i>
-              <input
-                className="input-psw"
-                type="password"
-                name="name"
-                value={registerPassword ? registerPassword : ""}
-                placeholder="Enter Your Password"
-                onChange={(e) => {
-                  setRegisterPassword(e.target.value);
-                }}
-              />
-            </div>
-
-            <button
-              className="btn btn-alternate2"
-              onClick={() => {
-                register();
-              }}
-            >
-              Register
-            </button>
-            <h3>or</h3>
-            <button
-              onClick={() => {
-                setRegLogState(false);
-              }}
-              className="btn btn-alternate"
-            >
-              Login
-            </button>
-          </div>
-        ) : (
-          <div className="login-form">
-            <h1>Login</h1>
-            <div>
-              {" "}
-              <i className="fas fa-user"></i>
-              <input
-                type="text"
-                name="name"
-                value={loginEmail ? loginEmail : ""}
-                placeholder="Enter Your Email"
-                onChange={(e) => {
-                  setloginEmail(e.target.value);
-                }}
-              />
-            </div>
-            <div>
-              {" "}
-              <i className="fas fa-lock"></i>
-              <input
-                type="password"
-                name="name"
-                value={loginPassword ? loginPassword : ""}
-                placeholder="Enter Your Password"
-                onChange={(e) => {
-                  setLoginPassword(e.target.value);
-                }}
-              />
-            </div>
-
-            <button
-              onClick={() => {
-                login();
-              }}
-              className="btn btn-alternate"
-            >
-              Login
-            </button>
-            <h3>or</h3>
-            <button
-              onClick={() => {
-                setRegLogState(true);
-              }}
-              className="btn btn-alternate2"
-            >
-              Register
-            </button>
-          </div>
-        )}
-      </div> */}
       {regLogState ? (
         <div className="form-container">
           <div
@@ -177,7 +82,7 @@ export const LoginForm = () => {
               style={{ marginBottom: "20px" }}
             />
             <div className="log-form-header">
-              <h2>Login</h2>
+              <h2>Login?</h2>
             </div>
             <div className="form-input">
               <div>Email</div>
@@ -269,7 +174,15 @@ export const LoginForm = () => {
                 {" "}
                 <div className="form-input-title">First Name</div>
                 <div className="form-input-input">
-                  <input />
+                  <input
+                    type="text"
+                    name="first-name"
+                    value={displayName ? displayName : ""}
+                    placeholder="First Name"
+                    onChange={(e) => {
+                      setdisplayName(e.target.value);
+                    }}
+                  />
                 </div>
               </div>
 
@@ -277,7 +190,15 @@ export const LoginForm = () => {
                 {" "}
                 <div className="form-input-title">Last name</div>
                 <div className="form-input-input">
-                  <input />
+                  <input
+                    type="text"
+                    name="last-name"
+                    value={lastName ? lastName : ""}
+                    placeholder="Last Name"
+                    onChange={(e) => {
+                      setLastName(e.target.value);
+                    }}
+                  />
                 </div>
               </div>
             </div>
@@ -302,7 +223,7 @@ export const LoginForm = () => {
               <div className="form-input-input">
                 <input
                   type="password"
-                  name="name"
+                  name="password"
                   value={registerPassword ? registerPassword : ""}
                   placeholder="Enter Your Password"
                   onChange={(e) => {
@@ -316,14 +237,22 @@ export const LoginForm = () => {
             <div className="form-input">
               <div className="form-input-title">Confirm Password</div>
               <div className="form-input-input">
-                <input />
+                <input
+                  type="password"
+                  name="password-confirm"
+                  value={confirmPassword ? setConfirmPassword : ""}
+                  placeholder="Re-Enter Your Password"
+                  onChange={(e) => {
+                    setConfirmPassword(e.target.value);
+                  }}
+                />
               </div>
             </div>
 
             <div className="form-checkbox">
               <div className="checkbox-unit">
                 {" "}
-                <input type="checkbox" /> Keep e updated about improved features
+                <input type="checkbox" /> Keep updated about improved features
                 and upcoming improvements.
               </div>
               <div className="checkbox-unit">
