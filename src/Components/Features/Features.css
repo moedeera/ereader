@@ -9,12 +9,15 @@
   color: var(--color-primary);
   font-weight: 900;
   letter-spacing: 1.5px;
+  margin-bottom: 20px;
 }
 .features-sm-container p,
 .features-lg-container p {
   letter-spacing: 1px;
   line-height: 1.6em;
   color: white;
+  margin: 30px;
+  letter-spacing: 1px;
 }
 .feature-icons {
   display: flex;

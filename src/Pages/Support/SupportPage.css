@@ -261,13 +261,15 @@
   background-color: rgba(128, 128, 128, 0.281);
   border: 1px solid grey;
   letter-spacing: 1px;
-  color: white;
 }
 .support-page-contact-form textarea {
   padding: 10px 15px;
   min-height: 200px;
   max-width: 500px;
   background-color: rgba(128, 128, 128, 0.281);
+
+  letter-spacing: 2px;
+  font-size: 14px;
 }
 .p-form {
   margin: 10px 0;
@@ -341,14 +343,14 @@
     line-height: 1.8em;
     letter-spacing: 1px;
 
-    transition: all 600ms ease-in-out;
+    transition: all 200ms ease-in-out;
     max-width: 400px;
     margin: 0 auto;
   }
   .support-ways-unit img {
     height: 74px;
     width: 74px;
-    transition: transform 500ms ease-in-out;
+    transition: transform 300ms ease-in-out;
   }
   .support-ways-unit img:hover {
     /* transform: rotateY(180deg); */
@@ -361,6 +363,7 @@
   .support-ways-unit:hover {
     background-color: #2892d7;
     background-color: #256eff11;
+    transform: translateY(-5px);
   }
   .support-image {
     height: 800px;
