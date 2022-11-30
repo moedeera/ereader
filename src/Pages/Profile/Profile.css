@@ -223,7 +223,7 @@
     "Lucida Sans", Arial, sans-serif;
 }
 .profile-page-menu-form textarea {
-  min-height: 150px;
+  min-height: 100px;
 
   max-width: 900px;
   border: 1px solid rgba(0, 0, 0, 0.45);
