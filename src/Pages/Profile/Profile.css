@@ -24,11 +24,12 @@
 /**/
 .profile-page-landing {
   padding: 20px 10px;
-  margin-top: 50px;
+  margin-top: calc(50px + 2vw);
 }
 .profile-page-landing-text {
   line-height: 1.8em;
   padding: 0px 10px;
+  letter-spacing: 1px;
 }
 .profile-page-landing-text h1 {
   letter-spacing: 1.5px;
@@ -61,7 +62,7 @@
   flex-wrap: wrap;
   gap: 10px;
   margin-top: 40px;
-  margin: 10px auto;
+  margin: 120px auto 50px;
   justify-content: center;
 }
 
@@ -81,7 +82,7 @@
   margin-bottom: 20px;
   cursor: pointer;
   box-shadow: var(--box-shadow);
-  transition: all 0.35s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 .profile-page-navigation-text {
   height: 150px;
@@ -176,7 +177,7 @@
   padding: 20px 30px;
   color: #33a1fd;
   cursor: pointer;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .profile-page-menu-labels,
