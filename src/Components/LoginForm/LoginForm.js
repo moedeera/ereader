@@ -145,14 +145,10 @@ export const LoginForm = () => {
       ) : (
         <div className="form-container">
           <div
-            style={
-              bg === "dark"
-                ? { color: "var(--color-primary)", backgroundColor: "white" }
-                : {
-                    color: "white",
-                    backgroundColor: "var(--color-primary)",
-                  }
-            }
+            style={{
+              color: "white",
+              backgroundColor: "var(--color-primary)",
+            }}
             className="log-form"
           >
             <div className="log-form-header">
