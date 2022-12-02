@@ -79,18 +79,11 @@ export const Navbar = () => {
         </div>
 
         <div className="navbar-container">
-          <Link to={"/"}>
+          <Link to={"/"} className="logo-link">
             {" "}
             <div className="logo">
               <img src={icon} alt="" />
-              <h2
-                style={{
-                  fontFamily: '"Fira", sans-serif',
-                  color: "var(--color-primary)",
-                }}
-              >
-                Librum
-              </h2>
+              <h2>Librum</h2>
             </div>
           </Link>
 
@@ -235,10 +228,13 @@ export const Navbar = () => {
           </div>
         </div>
         <div className="navbar-container-sm">
-          <div className="logo">
-            <img src={icon} alt="" />
-            <h2>Librum-Reader</h2>
-          </div>
+          <Link to={"/"} className="logo-link">
+            {" "}
+            <div className="logo">
+              <img src={icon} alt="" />
+              <h2>Librum</h2>
+            </div>
+          </Link>
           <div style={{ color: "black" }}>
             <i
               className="fas fa-bars"

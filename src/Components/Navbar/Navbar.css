@@ -44,9 +44,10 @@
 }
 .logo h2,
 .logo a {
-  font-weight: 700;
+  font-weight: 900;
   font-family: "Fira Sans", sans-serif;
   font-size: auto;
+  color: var(--color-primary);
 }
 .logo img {
   width: 70px;
