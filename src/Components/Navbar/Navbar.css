@@ -42,7 +42,8 @@
   justify-content: flex-start;
   gap: -10px;
 }
-.logo h2 {
+.logo h2,
+.logo a {
   font-weight: 700;
   font-family: "Fira Sans", sans-serif;
   font-size: auto;

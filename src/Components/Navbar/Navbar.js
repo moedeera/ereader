@@ -77,11 +77,23 @@ export const Navbar = () => {
             </li>
           )}
         </div>
+
         <div className="navbar-container">
-          <div className="logo">
-            <img src={icon} alt="" />
-            <h2>Librum</h2>
-          </div>
+          <Link to={"/"}>
+            {" "}
+            <div className="logo">
+              <img src={icon} alt="" />
+              <h2
+                style={{
+                  fontFamily: '"Fira", sans-serif',
+                  color: "var(--color-primary)",
+                }}
+              >
+                Librum
+              </h2>
+            </div>
+          </Link>
+
           <div className="navbar-menu">
             <ul>
               <li>
