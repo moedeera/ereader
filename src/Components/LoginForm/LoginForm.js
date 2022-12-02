@@ -82,7 +82,7 @@ export const LoginForm = () => {
               style={{ marginBottom: "20px" }}
             />
             <div className="log-form-header">
-              <h2>Login?</h2>
+              <h2>Login</h2>
             </div>
             <div className="form-input">
               <div>Email</div>
