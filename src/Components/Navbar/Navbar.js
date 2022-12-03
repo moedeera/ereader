@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import { Menu } from "../Menu/Menu";
 import { SiteContext } from "../../Context/Context";
 import { getAuth } from "firebase/auth";
+import iconOff from "./switch-off-50.png";
+import iconOn from "./switch-on-50.png";
 
 export const Navbar = () => {
   const [show, setShow] = useState(false);
@@ -47,13 +49,7 @@ export const Navbar = () => {
                 }
               }}
             >
-              {/* <div>
-                <small>Light</small>
-              </div> */}
-              <i
-                style={{ color: "purple", cursor: "pointer" }}
-                className="fas fa-toggle-on fa-3x"
-              ></i>
+              <img src={iconOn} alt="toggle-icon" />
             </li>
           ) : (
             <li
@@ -70,16 +66,19 @@ export const Navbar = () => {
               {/* <div>
                 <small>Dark</small>
               </div> */}
-              <i
-                style={{ color: "var(--color-primary)", cursor: "pointer" }}
-                className="fas fa-toggle-off fa-3x"
-              ></i>
+              <img src={iconOff} alt="toggle-icon" />
             </li>
           )}
         </div>
 
         <div className="navbar-container">
-          <Link to={"/"} className="logo-link">
+          <Link
+            to={"/"}
+            onClick={() => {
+              setSelected(1);
+            }}
+            className="logo-link"
+          >
             {" "}
             <div className="logo">
               <img src={icon} alt="" />
@@ -228,7 +227,13 @@ export const Navbar = () => {
           </div>
         </div>
         <div className="navbar-container-sm">
-          <Link to={"/"} className="logo-link">
+          <Link
+            to={"/"}
+            onClick={() => {
+              setSelected(1);
+            }}
+            className="logo-link"
+          >
             {" "}
             <div className="logo">
               <img src={icon} alt="" />
