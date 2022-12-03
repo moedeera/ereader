@@ -36,7 +36,26 @@ export const Navbar = () => {
     >
       <div className="nav-contain">
         <div className="nav-toggle-container">
-          {" "}
+          {bg === "dark" ? (
+            <div className="nav-toggle-circle">
+              <i className="fa fa-moon" aria-hidden="true"></i>
+            </div>
+          ) : (
+            <div
+              style={{
+                backgroundColor: "var(--color-primary01)",
+              }}
+              className="nav-toggle-circle"
+            >
+              <i
+                style={{
+                  color: "white",
+                }}
+                className="fa fa-sun"
+                aria-hidden="true"
+              ></i>
+            </div>
+          )}{" "}
           {bg === "light" ? (
             <li
               className="toggle-li"
