@@ -15,7 +15,7 @@ export const Navbar = () => {
   const color = "#b18cf7";
   const colorA = "white";
 
-  const colorB = "crimson";
+  const colorB = "black";
   const { user, setUser, logout, mode, bg, setBg } = useContext(SiteContext);
   // const [bg, setBg] = useState("dark");
   return (
