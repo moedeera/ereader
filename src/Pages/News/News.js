@@ -58,7 +58,13 @@ export const News = () => {
                 <div>
                   {" "}
                   <h2>Welcome to the Librum-Reader Blog </h2>
-                  <small>October 25 2022</small>
+                  <small
+                    style={
+                      bg === "light" ? { color: "white" } : { color: "crimson" }
+                    }
+                  >
+                    October 25 2022
+                  </small>
                   <p
                     style={
                       bg === "light"
@@ -88,7 +94,13 @@ export const News = () => {
                 <div>
                   {" "}
                   <h2>Launching of Librum Reader</h2>
-                  <small>October 23 2022</small>
+                  <small
+                    style={
+                      bg === "light" ? { color: "white" } : { color: "crimson" }
+                    }
+                  >
+                    October 23 2022
+                  </small>
                   <p
                     style={
                       bg === "light"

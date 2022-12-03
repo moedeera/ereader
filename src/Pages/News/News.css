@@ -62,8 +62,13 @@
   max-width: 200px;
 }
 .news-text small {
-  color: var(--color-primary0);
+  color: crimson;
+  color: white;
   font-weight: 700;
+  background-color: grey;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 5px 0;
 }
 @media only screen and (min-width: 900px) {
   .news-container {
