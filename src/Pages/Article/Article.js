@@ -41,8 +41,8 @@ export const Article = () => {
               to={"../news"}
               style={
                 bg === "light"
-                  ? { color: "white" }
-                  : { color: "var(--color-primary0)" }
+                  ? { color: "var(--color-primary0)" }
+                  : { color: "white" }
               }
             >
               {" "}
