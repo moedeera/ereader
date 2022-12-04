@@ -36,20 +36,6 @@ export const Article = () => {
     >
       <div className="news-article-container">
         <div className="news-article-header">
-          <h1>
-            <Link
-              to={"../news"}
-              style={
-                bg === "light"
-                  ? { color: "var(--color-primary0)" }
-                  : { color: "white" }
-              }
-            >
-              {" "}
-              News{" "}
-            </Link>
-            {">"} Article{" "}
-          </h1>
           <div className="newspage-image">
             <div
               className="newspage-main-image"
@@ -65,13 +51,29 @@ export const Article = () => {
             ></div>
             <div className="newspage-links">
               <h3>Latest</h3>
-              {title !== "welcome-newspage" ? (
-                <Link to={"../news/welcome"}>
-                  <h2>Welcome to CRM</h2>
+              {title === "welcome" ? (
+                <Link to={"../news/launch"}>
+                  <h2
+                    style={
+                      bg === "light"
+                        ? { color: "var(--color-primary)" }
+                        : { color: "white" }
+                    }
+                  >
+                    Launching of CRM
+                  </h2>{" "}
                 </Link>
               ) : (
-                <Link to={"../news/launching-crm"}>
-                  <h2>Launching of CRM</h2>{" "}
+                <Link to={"../news/welcome"}>
+                  <h2
+                    style={
+                      bg === "light"
+                        ? { color: "var(--color-primary)" }
+                        : { color: "white" }
+                    }
+                  >
+                    Welcome to CRM
+                  </h2>
                 </Link>
               )}
             </div>
@@ -89,7 +91,7 @@ export const Article = () => {
                   bg === "light"
                     ? { color: "var(--color-primary0)" }
                     : {
-                        color: "var( --color-primary0)",
+                        color: "white",
                       }
                 }
               >
@@ -107,7 +109,7 @@ export const Article = () => {
                   bg === "light"
                     ? { color: "var(--color-primary0)" }
                     : {
-                        color: "var( --color-primary0)",
+                        color: "white",
                       }
                 }
               >
