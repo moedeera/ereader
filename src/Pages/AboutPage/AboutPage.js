@@ -38,12 +38,12 @@ export const AboutPage = () => {
     >
       <div className="aboutPage-container">
         <section className="header">
-          <h1>About librum-Reader </h1>
+          <h1>About Librum </h1>
         </section>
         <section className="about-intro-container">
           <div className="about-intro sm">
             <div className="about-intro-text">
-              <h1>What is Librum-Reader?</h1>
+              <h1>What is Librum?</h1>
               <p
                 style={
                   bg === "light"
@@ -53,16 +53,18 @@ export const AboutPage = () => {
                       }
                 }
               >
-                An application designed to make reading as enjoyable and as
-                straightforward as possible. Librum offers a wide range of
-                options and features bolstered by a modern and intuitive
-                interface. This will allows you to create and manage your own
-                library of books and documents. You can access your library from
-                any device. You can also read books, highlight sections, and
-                bookmark pages that you wish to return to. Other features of
-                Librum include taking notes directly from the app. The Librum
-                ecosystem will also include a free in-app bookstore, amazing
-                plugins, and much more.
+                Librum is an application, designed to make reading as enjoyable
+                and straightforward as possible for you. It is more than simply
+                an e-book reader, Librum makes it possible for you, to manage
+                your own library, which you can access from all of your devices
+                at any time. Librum provides a variety of features to make you
+                as productive as you can be, these features include being able
+                to take notes from within the app, book mark and highlight
+                important sections, while being able to customise the
+                application to look exactly how you want it to. Librum also
+                provides free access to over 60,000 books, custom plugins and
+                your reading statistics, while remaining free and 100% open
+                source."
               </p>
             </div>
             <div className="about-intro-image">
@@ -78,7 +80,7 @@ export const AboutPage = () => {
               </div>
 
               <div className="about-intro-text">
-                <h1>Why use Librum-Reader as oppose to similiar apps?</h1>
+                <h1>Why should you choose Librum over other readers?</h1>
 
                 <p
                   style={
@@ -89,26 +91,15 @@ export const AboutPage = () => {
                         }
                   }
                 >
-                  Librum-Reader is convenient and easy to use. But ultimately
-                  its the custom features and open source nature that will have
-                  it stick out. The app is meant to be the go to place for
-                  readers and writers alike. The purpose is the give the
-                  experience a more interactive feel.
-                </p>
-                <p
-                  style={
-                    bg === "light"
-                      ? { color: "var(--color-primary0)" }
-                      : {
-                          color: "white",
-                        }
-                  }
-                >
-                  Librum-Reader is convenient and easy to use. But ultimately
-                  its the custom features and open source nature that will have
-                  it stick out. The app is meant to be the go to place for
-                  readers and writers alike. The purpose is the give the
-                  experience a more interactive feel.
+                  Librum separates itself from any other reader by combining
+                  Power, Efficiency, and great Design. You are able to change
+                  the data of your books, write notes, or synchronize your
+                  library between your devices with no more than 2 clicks while
+                  using a beautiful and simple interface. We don't want you to
+                  waste your time navigating through a complex application or
+                  trying to manually synchronize your books across devices.
+                  Librum aims to make reading as frictionless as possible by
+                  doing all of this for you."
                 </p>
               </div>
             </div>
@@ -118,7 +109,7 @@ export const AboutPage = () => {
           <section className="about-intro-container">
             <div className="about-intro sm">
               <div className="about-intro-text">
-                <h1>Some of the features on Librum</h1>
+                <h1>Some of Librum's features are</h1>
                 <ul
                   style={
                     bg === "light"
@@ -135,14 +126,21 @@ export const AboutPage = () => {
                   </li>
                   <li>
                     <i className="fa fa-circle"></i>
-                    Book state syncing
+                    Creating your personalized library
                   </li>
                   <li>
-                    <i className="fa fa-circle"></i>Highlighting and bookmarks
+                    <i className="fa fa-circle"></i> Note taking
                   </li>
                   <li>
                     <i className="fa fa-circle"></i>
-                    Syncing with 3rd parties (Google drive, Dropbox, Nextcloud)
+                    Book syncing across all of your devices
+                  </li>
+                  <li>
+                    <i className="fa fa-circle"></i>- Highlighting and Bookmarks
+                  </li>
+                  <li>
+                    <i className="fa fa-circle"></i>
+                    Syncing with 3rd parties (Google drive, Dropbox, ...)
                   </li>
                   <li>
                     <i className="fa fa-circle"></i>
@@ -150,15 +148,23 @@ export const AboutPage = () => {
                   </li>
                   <li>
                     <i className="fa fa-circle"></i>
+                    Support of all major book formats (20+)
+                  </li>
+                  <li>
+                    <i className="fa fa-circle"></i>
+                    TTS (Text to Speech)
+                  </li>
+                  <li>
+                    <i className="fa fa-circle"></i>
                     Automated page scrolling
                   </li>
                   <li>
                     <i className="fa fa-circle"></i>
-                    Library management
+                    Reading statistics
                   </li>
                   <li>
                     <i className="fa fa-circle"></i>
-                    Custom plugins and much more
+                    Custom plugins
                   </li>
                 </ul>
 

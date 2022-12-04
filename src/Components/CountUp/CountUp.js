@@ -10,7 +10,7 @@ export const CountUP = () => {
       <div className="count-up-container">
         <div className="count">
           <div className="count-number">
-            <CountUp delay={0} start={1350} end={1605} duration={1.75}>
+            <CountUp delay={0} start={1350} end={1500} duration={1.75}>
               {({ countUpRef, start }) => <h1 ref={countUpRef}>180</h1>}
             </CountUp>
 
@@ -25,12 +25,12 @@ export const CountUP = () => {
                   }
             }
           >
-            Hours of Code{" "}
+            Hours of Work{" "}
           </p>
         </div>
         <div className="count">
           <div className="count-number">
-            <CountUp delay={0} start={1215} end={52015} duration={1.75}>
+            <CountUp delay={0} start={12015} end={52000} duration={1.75}>
               {({ countUpRef, start }) => <h1 ref={countUpRef}>180</h1>}
             </CountUp>
             <i className="fa fa-plus"></i>

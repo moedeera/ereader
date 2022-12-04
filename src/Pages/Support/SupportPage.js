@@ -75,8 +75,10 @@ export const SupportPage = ({ message, anchor, cards }) => {
                           }
                     }
                   >
-                    Check out our Patreon support page and support us for as
-                    little as 3$ a month.
+                    Consider supporting us on Patreon for as little as 2$ a
+                    month. As a team of opensource developers we rely on
+                    donations from the community to be able to continue working
+                    on projects like Librum.
                   </p>
                 </div>
 
@@ -102,10 +104,11 @@ export const SupportPage = ({ message, anchor, cards }) => {
                           }
                     }
                   >
-                    If you have experience, feel free to contribute to our code
-                    which is open source. We are always looking for ways to
-                    improve the application and any suggestions are welcome. if
-                    you want to take it a step further donate to us on payPal.
+                    If you like Librum and have some programming skills,
+                    consider contributing to our open source codebase. If you
+                    don't have any experience but still want to contribute, you
+                    can search for bugs and request features that you believe
+                    are missing in Librum."
                   </p>
                 </div>
 
@@ -127,10 +130,9 @@ export const SupportPage = ({ message, anchor, cards }) => {
                           }
                     }
                   >
-                    Get involved by posting on the forum, reporting any bugs,
-                    and liking our facebook and social media posts.If you have
-                    any experience with marketing feel free to spread our
-                    message across.
+                    Consider writing an article, sharing Librum on social media,
+                    or simply letting your friends know how much you enjoy
+                    Librum if you want to get more involved in the community."
                   </p>
                 </div>
               </div>

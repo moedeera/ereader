@@ -62,7 +62,7 @@
   line-height: 1.8em;
 
   font-weight: 700;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
 }
 .about-reasons {
   display: grid;
@@ -242,9 +242,11 @@
     grid-template-columns: 1fr 1fr;
   }
   .about-intro-text {
-    letter-spacing: 1.25px;
+    letter-spacing: 2px !important;
     line-height: 1.8em;
     gap: 30px;
+    /* border: 2px solid green; */
+    padding: 10px 0;
   }
   .about-intro-image img {
     padding: 25px;

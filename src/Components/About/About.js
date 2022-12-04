@@ -24,11 +24,9 @@ export const About = () => {
             <div className="about-info">
               {" "}
               <p>
-                A simple idea started by two self taught developers residing on
-                two ends of the world in Germany and Canada. We aim to create a
-                free-to-use product that encourages reading again by making it
-                more easier Librum-Reader is available on all of the following
-                platforms{" "}
+                We believe that software should be free and open source. All of
+                our software is publicly available for you, feel free to
+                contribute or suggest new features!"
               </p>
             </div>
           </div>

@@ -30,7 +30,7 @@ export const Features = () => {
         // style={{ color: "var(--color-primary)" }}
         className="features-sm-container"
       >
-        <h2>What we will Offer </h2>
+        <h2>Our Goals </h2>
 
         <p
           style={
@@ -41,9 +41,9 @@ export const Features = () => {
                 }
           }
         >
-          Our Aim is to make it easier for you to read and keep track of books
-          you are interested in. Librum reader allows you to sync all the books
-          you are interested in in one application for more convenient reads.
+          Our goal is to make reading as simple for you as possible. Librum
+          instantly syncs your books across all of your devices and allows you
+          to build your own private library
         </p>
         <Fade>
           <div
@@ -73,7 +73,7 @@ export const Features = () => {
       </div>
 
       <div className="features-lg-container">
-        <h2>What we will Offer</h2>
+        <h2>Our Goals</h2>
 
         <p
           style={
@@ -84,9 +84,9 @@ export const Features = () => {
                 }
           }
         >
-          Our Aim is to make it easier for you to read and keep track of books
-          you are interested in. Librum reader allows you to sync all the books
-          you are interested in in one application for more convenient reads.
+          Our goal is to make reading as simple for you as possible. Librum
+          instantly syncs your books across all of your devices and allows you
+          to build your own private library
         </p>
         <Fade>
           <div className="features-slide">
@@ -125,9 +125,9 @@ export const Features = () => {
                         }
                   }
                 >
-                  Whether its on your Laptop, Tablet or Cellphone. This app is
-                  always ready to facilitating a good read. Start
-                  cross-synchronization today once you download and install.
+                  Never worry about where you left off reading again. With
+                  Librum, all of your books will be readily available for you,
+                  not matter on which device you are on
                 </p>
                 <img src={svg1} alt="" />
               </div>
@@ -143,9 +143,9 @@ export const Features = () => {
                         }
                   }
                 >
-                  Design for all Operating Systems, you don't have to worry
-                  about what system you are on. We have a support network for
-                  Windows 10, Apple, Android and Linux.
+                  Librum is designed for all operating systems. You can always
+                  count on a great reading experience with Librum, whether
+                  you're on your phone, laptop, or tablet
                 </p>
                 <img src={svg2} alt="" style={{ height: "350px" }} />
               </div>

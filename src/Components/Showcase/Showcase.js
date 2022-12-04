@@ -3,6 +3,7 @@ import React, { useContext, useEffect, useRef } from "react";
 import Lottie from "lottie-web";
 import "./Showcase.css";
 import { SiteContext } from "../../Context/Context";
+import { CountUP } from "../CountUp/CountUp";
 
 export const Showcase = ({ image1 }) => {
   const { bg, setBg } = useContext(SiteContext);
@@ -26,7 +27,7 @@ export const Showcase = ({ image1 }) => {
       </div>
       <div className="info-section">
         <div className="info-section-text">
-          <h1>A Simple Cross-Platform Reader</h1>
+          <h1>A Simple and Free E-Book Reader</h1>
           <p
             style={
               bg === "light"
@@ -36,8 +37,8 @@ export const Showcase = ({ image1 }) => {
                   }
             }
           >
-            A clean and simple way to read ebooks on tablets, cellphones and
-            desktops without worrying about cross-platform synchronization
+            A clean and simple way to read your books on any device, without
+            worrying about cross-platform synchronization
           </p>
         </div>
         <div className="info-section-button">

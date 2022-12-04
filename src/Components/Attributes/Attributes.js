@@ -22,7 +22,7 @@ export const Attributes = () => {
                     }
               }
             >
-              Download the beta version 1.0.X on October 20th
+              Install Librum in just 2 clicks
             </p>
           </div>
 
@@ -38,13 +38,13 @@ export const Attributes = () => {
                     }
               }
             >
-              Use Google to sync all your different devices
+              Fully automatic synchronization
             </p>
           </div>
 
           <div className="service">
             <i class="fas fa-book-open"></i>
-            <h3>Thousands to read from</h3>
+            <h3>Thousands of free books</h3>
             <p
               style={
                 bg === "light"
@@ -54,7 +54,7 @@ export const Attributes = () => {
                     }
               }
             >
-              Librum library will host 1000s of high quality literature
+              Librum provides free access to over 60000 books
             </p>
           </div>
 
