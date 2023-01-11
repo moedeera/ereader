@@ -230,16 +230,6 @@ export const Navbar = () => {
                       </p>
                     </Link>
                   </li>
-                  <li>
-                    <button
-                      onClick={() => {
-                        logout();
-                      }}
-                      className="btn btn-secondary"
-                    >
-                      Logout
-                    </button>
-                  </li>
                 </>
               )}
             </ul>
