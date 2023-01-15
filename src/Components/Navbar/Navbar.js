@@ -7,7 +7,7 @@ import { SiteContext } from "../../Context/Context";
 import { getAuth } from "firebase/auth";
 import iconOff from "./switch-off-50.png";
 import iconOn from "./switch-on-50.png";
-
+import sunIcon from "./sunIcon.png";
 export const Navbar = () => {
   const [show, setShow] = useState(false);
   const [selected, setSelected] = useState(1);
@@ -47,13 +47,18 @@ export const Navbar = () => {
               }}
               className="nav-toggle-circle"
             >
-              <i
+              {/* <i
                 style={{
                   color: "white",
                 }}
                 className="fa fa-sun"
                 aria-hidden="true"
-              ></i>
+              ></i> */}
+              <img
+                src={sunIcon}
+                style={{ width: "100%", maxWidth: "22px", maxHeight: "22px" }}
+                alt=""
+              />
             </div>
           )}{" "}
           {bg === "light" ? (

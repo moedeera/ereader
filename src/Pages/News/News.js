@@ -60,7 +60,9 @@ export const News = () => {
                   <h2>Welcome to the Librum-Reader Blog </h2>
                   <small
                     style={
-                      bg === "light" ? { color: "white" } : { color: "crimson" }
+                      bg === "light"
+                        ? { color: "white" }
+                        : { color: "goldenrod" }
                     }
                   >
                     October 25 2022
@@ -96,7 +98,9 @@ export const News = () => {
                   <h2>Launching of Librum Reader</h2>
                   <small
                     style={
-                      bg === "light" ? { color: "white" } : { color: "crimson" }
+                      bg === "light"
+                        ? { color: "white" }
+                        : { color: "goldenrod" }
                     }
                   >
                     October 23 2022
