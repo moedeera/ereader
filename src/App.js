@@ -10,6 +10,7 @@ import { SiteContextProvider } from "./Context/Context";
 import { News } from "./Pages/News/News";
 import { Profile } from "./Pages/Profile/Profile";
 import { Article } from "./Pages/Article/Article";
+import ScrollToTop from "./Components/ScrollToTop/ScrollToTop";
 
 function App() {
   return (
@@ -17,26 +18,26 @@ function App() {
       <div className="App">
         <Router>
           <Navbar />
-
-          <Routes>
-            <Route path="/" element={<Homepage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route
-              path="/support"
-              element={
-                <SupportPage
-                  message={" NEED HELP?"}
-                  anchor={"Ways to support us"}
-                  cards={true}
-                />
-              }
-            />
-            <Route path="/News" element={<News />} />
-            <Route path="/News/:title" element={<Article />} />
-            <Route path="/login" element={<LoginPage />} />
-            <Route path="/profile" element={<Profile />} />
-          </Routes>
-
+          <ScrollToTop>
+            <Routes>
+              <Route path="/" element={<Homepage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route
+                path="/support"
+                element={
+                  <SupportPage
+                    message={" NEED HELP?"}
+                    anchor={"Ways to support us"}
+                    cards={true}
+                  />
+                }
+              />
+              <Route path="/News" element={<News />} />
+              <Route path="/News/:title" element={<Article />} />
+              <Route path="/login" element={<LoginPage />} />
+              <Route path="/profile" element={<Profile />} />
+            </Routes>
+          </ScrollToTop>
           <Footer />
         </Router>
       </div>
