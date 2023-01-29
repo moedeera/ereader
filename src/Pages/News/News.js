@@ -61,8 +61,8 @@ export const News = () => {
                   <small
                     style={
                       bg === "light"
-                        ? { color: "white" }
-                        : { color: "goldenrod" }
+                        ? { color: "crimson" }
+                        : { color: "crimson" }
                     }
                   >
                     October 25 2022
@@ -99,8 +99,8 @@ export const News = () => {
                   <small
                     style={
                       bg === "light"
-                        ? { color: "white" }
-                        : { color: "goldenrod" }
+                        ? { color: "crimson" }
+                        : { color: "crimson" }
                     }
                   >
                     October 23 2022
