@@ -12,7 +12,7 @@ export const Form = () => {
       className="support-page-contact"
     >
       <div className="support-page-contact-form">
-        <h2>Got Questions ?</h2>
+        <h2>Contact Us</h2>
         <p
           style={
             bg === "light"
@@ -22,7 +22,7 @@ export const Form = () => {
                 }
           }
         >
-          Just Send us a Message today
+          Send us a message today
         </p>
         <div className="form-div">
           <p

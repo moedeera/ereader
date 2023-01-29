@@ -134,6 +134,12 @@ a:hover:after,
 .toggle-li img {
   height: 39px;
 }
+
+.support-page-need-support {
+  padding: 20px 0px;
+  text-align: left;
+  color: white;
+}
 @media only screen and (min-width: 1176px) {
   .nav-toggle-container {
     display: flex;

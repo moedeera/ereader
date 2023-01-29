@@ -5,10 +5,14 @@ import reason1 from "./reasons1.png";
 import reason2 from "./reasons2.png";
 import reason3 from "./reasons3.png";
 
+import supportDark from "./supportDark.png";
+import supportLight from "./supportLight.png";
+
 import { Form } from "../../Components/Form/Form";
 
 import { Link } from "react-router-dom";
 import { SiteContext } from "../../Context/Context";
+import { SupportWays } from "../../Components/Support/SupportWays";
 
 export const SupportPage = ({ message, anchor, cards }) => {
   const { bg, setBg } = useContext(SiteContext);
@@ -24,9 +28,6 @@ export const SupportPage = ({ message, anchor, cards }) => {
       return;
     }
   }, []);
-
-  // console.log(window.location.href);
-  const container = useRef(null);
 
   return (
     <div
@@ -46,99 +47,35 @@ export const SupportPage = ({ message, anchor, cards }) => {
       className="container"
     >
       <div className="supportPage-container">
-        <section className="support-ways">
-          <div className="support-way-container">
-            <div className="support-ways-header">
-              <h1 className="larger-Header">Ways to Support Us</h1>
-            </div>
-            {cards && (
-              <div className="support-ways-text">
-                <div className="support-ways-unit sd1" id="sd-1">
-                  <div className="sw-image">
-                    {" "}
-                    <a
-                      href={"https://www.patreon.com/librum_reader"}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {" "}
-                      <img src={reason3} alt="" className="im1" />
-                    </a>
-                  </div>
-                  <h2>Support us on Patreon</h2>
-                  <p
-                    style={
-                      bg === "light"
-                        ? { color: "var(--color-primary0)" }
-                        : {
-                            color: "white",
-                          }
-                    }
-                  >
-                    Consider supporting us on Patreon for as little as 2$ a
-                    month. As a team of opensource developers we rely on
-                    donations from the community to be able to continue working
-                    on projects like Librum.
-                  </p>
-                </div>
+        <SupportWays pics={[reason3, reason1, reason2]} cards={cards} />
+      </div>
 
-                <div className="support-ways-unit">
-                  <div className="sw-image">
-                    {" "}
-                    <a
-                      href={"https://github.com/Librum-Reader/Librum"}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {" "}
-                      <img src={reason1} alt="" className="im1" />
-                    </a>
-                  </div>
-                  <h2>Contribute</h2>
-                  <p
-                    style={
-                      bg === "light"
-                        ? { color: "var(--color-primary0)" }
-                        : {
-                            color: "white",
-                          }
+      <div className="support-page-need-support">
+        <div>
+          <img src={bg === "dark" ? supportLight : supportDark} alt="" />
+          <div>
+            <h1 style={{ color: "var(--color-primary)" }}>Need Support?</h1>
+            <p
+              style={
+                bg === "light"
+                  ? {
+                      color: "var(--color-primary0)",
                     }
-                  >
-                    If you like Librum and have some programming skills,
-                    consider contributing to our open source codebase. If you
-                    don't have any experience but still want to contribute, you
-                    can search for bugs and request features that you believe
-                    are missing in Librum."
-                  </p>
-                </div>
-
-                <div className="support-ways-unit">
-                  <div className="sw-image">
-                    {" "}
-                    <Link to={"../login"}>
-                      <img src={reason2} alt="" />
-                    </Link>
-                  </div>
-
-                  <h2>Join the Community</h2>
-                  <p
-                    style={
-                      bg === "light"
-                        ? { color: "var(--color-primary0)" }
-                        : {
-                            color: "white",
-                          }
+                  : {
+                      color: "white",
                     }
-                  >
-                    Consider writing an article, sharing Librum on social media,
-                    or simply letting your friends know how much you enjoy
-                    Librum if you want to get more involved in the community."
-                  </p>
-                </div>
-              </div>
-            )}
+              }
+            >
+              Need Support with the software? Having issues with your login
+              account? Just send a message and we will get back to you as soon
+              as possible.
+              <span style={{ color: "var(--color-primary)" }}>
+                {" "}
+                Fill out our form below with the details of your concern
+              </span>
+            </p>
           </div>
-        </section>
+        </div>
       </div>
 
       <Form />

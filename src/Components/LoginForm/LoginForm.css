@@ -7,7 +7,7 @@
 }
 .login-form {
   width: 100%;
-  max-width: 900px;
+  max-width: 800px;
   margin: 0px auto;
   padding: 10px;
   border-radius: 5px;
@@ -15,24 +15,22 @@
   justify-content: space-evenly;
   flex-direction: column;
   height: 400px;
-  background-color: var(--color-primary);
+
   font-family: "Fira Sans", sans-serif;
   color: white;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
   animation: pop-down 800ms ease-in-out;
-  border: 1px solid white;
+  border: 1px solid crimson;
 }
 
 .login-form > div {
   background-color: white;
   padding: 5px;
   color: grey;
-
-  width: 100%;
+  width: 80%;
   max-width: 35rem;
   margin: 0 auto;
   border-radius: 5px;
-  /* border: 2px solid green; */
 }
 .form-input {
   text-align: left;
@@ -128,8 +126,6 @@ input[type="password"] {
   letter-spacing: 1px;
 }
 .form-container img {
-  border: 1px solid rgba(128, 0, 128, 0.25);
-  background-color: white;
   padding: 10px;
   border-radius: 5px;
 }
