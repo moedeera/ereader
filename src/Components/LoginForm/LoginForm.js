@@ -61,25 +61,12 @@ export const LoginForm = () => {
     <div className="container">
       {regLogState ? (
         <div className="form-container">
-          <div
-            style={
-              bg === "dark"
-                ? {
-                    color: "white",
-                    backgroundColor: "var(--color-primary)",
-                  }
-                : {
-                    color: "white",
-                    backgroundColor: "var(--color-primary)",
-                  }
-            }
-            className="log-form"
-          >
+          <div className="log-form">
             <img
               src={logo}
               alt="logo"
-              width={"80px"}
-              style={{ marginBottom: "20px" }}
+              width={"100px"}
+              style={{ marginBottom: "30px" }}
             />
             <div className="log-form-header">
               <h2>Login</h2>
@@ -133,7 +120,7 @@ export const LoginForm = () => {
                   onClick={() => {
                     setRegLogState(false);
                   }}
-                  style={{ color: "purple" }}
+                  style={{ textDecoration: "underline" }}
                 >
                   here{" "}
                 </span>
@@ -144,13 +131,7 @@ export const LoginForm = () => {
         </div>
       ) : (
         <div className="form-container">
-          <div
-            style={{
-              color: "white",
-              backgroundColor: "var(--color-primary)",
-            }}
-            className="log-form"
-          >
+          <div className="log-form">
             <div className="log-form-header">
               <img
                 src={logo}
@@ -264,7 +245,7 @@ export const LoginForm = () => {
                   onClick={() => {
                     setRegLogState(true);
                   }}
-                  style={{ color: "purple" }}
+                  style={{ textDecoration: "underline" }}
                 >
                   here{" "}
                 </span>
@@ -273,6 +254,7 @@ export const LoginForm = () => {
             </div>
 
             <button
+              className="btn btn-login"
               onClick={() => {
                 register();
               }}
