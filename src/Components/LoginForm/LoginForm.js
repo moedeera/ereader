@@ -74,7 +74,7 @@ export const LoginForm = () => {
 
   return (
     <div className="container">
-      {!regLogState ? (
+      {regLogState ? (
         <div className="form-container">
           <div className="log-form">
             <img
