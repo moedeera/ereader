@@ -256,25 +256,51 @@ export const Navbar = () => {
                 </Link>
               </li>
               <li>
-                <Link
-                  to={"./about"}
-                  onClick={() => {
-                    setSelected(4);
-                  }}
-                >
-                  <p
-                    style={
-                      window.location.href === "http://localhost:3000/about" ||
-                      window.location.href === "https://librum-reader.com/about"
-                        ? { color: color }
-                        : bg === "light"
-                        ? { color: colorB }
-                        : { color: colorA }
-                    }
+                {user ? (
+                  <Link
+                    to={"./profile"}
+                    onClick={() => {
+                      setSelected(1);
+                    }}
                   >
-                    About
-                  </p>
-                </Link>
+                    <p
+                      style={
+                        window.location.href ===
+                          "http://localhost:3000/profile" ||
+                        window.location.href ===
+                          "https://librum-reader.com/profile"
+                          ? { color: color }
+                          : bg === "light"
+                          ? { color: colorB }
+                          : { color: colorA }
+                      }
+                    >
+                      Account
+                    </p>
+                  </Link>
+                ) : (
+                  <Link
+                    to={"./about"}
+                    onClick={() => {
+                      setSelected(4);
+                    }}
+                  >
+                    <p
+                      style={
+                        window.location.href ===
+                          "http://localhost:3000/about" ||
+                        window.location.href ===
+                          "https://librum-reader.com/about"
+                          ? { color: color }
+                          : bg === "light"
+                          ? { color: colorB }
+                          : { color: colorA }
+                      }
+                    >
+                      About
+                    </p>
+                  </Link>
+                )}
               </li>
 
               {!user ? (
@@ -291,25 +317,27 @@ export const Navbar = () => {
               ) : (
                 <>
                   <li>
+                    {" "}
                     <Link
-                      to={"./profile"}
+                      to={"./login"}
                       onClick={() => {
-                        setSelected(1);
+                        setSelected(0);
+                        logout();
                       }}
                     >
                       <p
                         style={
                           window.location.href ===
-                            "http://localhost:3000/profile" ||
+                            "http://localhost:3000/about" ||
                           window.location.href ===
-                            "https://librum-reader.com/profile"
+                            "https://librum-reader.com/about"
                             ? { color: color }
                             : bg === "light"
                             ? { color: colorB }
                             : { color: colorA }
                         }
                       >
-                        Account
+                        <i className="fas fa-door-open"></i>
                       </p>
                     </Link>
                   </li>
