@@ -14,7 +14,7 @@ export const LoginForm = () => {
   const [registerPassword, setRegisterPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [displayName, setdisplayName] = useState("");
-  const [firstName, setFirstName] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
   const [lastName, setLastName] = useState("");
   const [loginEmail, setloginEmail] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
@@ -22,6 +22,20 @@ export const LoginForm = () => {
   const { user, setUser, bg } = useContext(SiteContext);
 
   const register = async () => {
+    if (displayName === "") {
+      setErrorMessage("Please Enter your name");
+      return;
+    }
+    if (registerEmail === "") {
+      setErrorMessage("Please Enter a valid Email Address");
+      return;
+    }
+
+    if (registerPassword !== confirmPassword) {
+      setErrorMessage("Passwords don't match");
+      return;
+    }
+
     try {
       const user = await createUserWithEmailAndPassword(
         auth,
@@ -33,6 +47,7 @@ export const LoginForm = () => {
       console.log("successful login");
     } catch (error) {
       console.log(error.message, auth, registerEmail, registerPassword);
+      setErrorMessage("Password should be at least 6 characters");
     }
     setRegisterEmail("");
     setRegisterPassword("");
@@ -59,7 +74,7 @@ export const LoginForm = () => {
 
   return (
     <div className="container">
-      {regLogState ? (
+      {!regLogState ? (
         <div className="form-container">
           <div className="log-form">
             <img
@@ -152,6 +167,13 @@ export const LoginForm = () => {
                 <div className="form-input-title">First Name</div>
                 <div className="form-input-input">
                   <input
+                    style={
+                      errorMessage === "Please Enter your name"
+                        ? {
+                            border: "2px solid crimson",
+                          }
+                        : { border: "none" }
+                    }
                     type="text"
                     name="first-name"
                     value={displayName ? displayName : ""}
@@ -184,6 +206,13 @@ export const LoginForm = () => {
               <div className="form-input-title">Email</div>
               <div className="form-input-input">
                 <input
+                  style={
+                    errorMessage === "Please Enter a valid Email Address"
+                      ? {
+                          border: "2px solid crimson",
+                        }
+                      : { border: "none" }
+                  }
                   type="text"
                   name="name"
                   value={registerEmail ? registerEmail : ""}
@@ -199,6 +228,13 @@ export const LoginForm = () => {
               <div className="form-input-title">Password </div>
               <div className="form-input-input">
                 <input
+                  style={
+                    errorMessage === "Passwords don't match"
+                      ? {
+                          border: "2px solid crimson",
+                        }
+                      : { border: "none" }
+                  }
                   type="password"
                   name="password"
                   value={registerPassword ? registerPassword : ""}
@@ -215,15 +251,24 @@ export const LoginForm = () => {
               <div className="form-input-title">Confirm Password</div>
               <div className="form-input-input">
                 <input
+                  style={
+                    errorMessage === "Passwords don't match"
+                      ? {
+                          border: "2px solid crimson",
+                        }
+                      : { border: "none" }
+                  }
                   type="password"
-                  name="password-confirm"
-                  value={confirmPassword ? setConfirmPassword : ""}
+                  name="password"
+                  value={confirmPassword ? confirmPassword : ""}
                   placeholder="Re-Enter Your Password"
                   onChange={(e) => {
                     setConfirmPassword(e.target.value);
                   }}
                 />
               </div>
+
+              <div className="form-error">{errorMessage}</div>
             </div>
 
             <div className="form-checkbox">
