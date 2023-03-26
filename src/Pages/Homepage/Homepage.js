@@ -41,7 +41,7 @@ export const Homepage = () => {
     >
       {/* Hello {auth.currentUser.email} */}
       <Showcase image1={image1} />
-      <CountUP />
+
       <Attributes />
       <Features />
       <Circles />
