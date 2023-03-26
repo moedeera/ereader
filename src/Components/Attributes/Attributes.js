@@ -22,7 +22,7 @@ export const Attributes = () => {
                     }
               }
             >
-              Install Librum in just 2 clicks
+              Install in just 2 clicks
             </p>
           </div>
 
@@ -38,7 +38,7 @@ export const Attributes = () => {
                     }
               }
             >
-              Fully automatic synchronization
+              Automatic synchronization
             </p>
           </div>
 
@@ -54,7 +54,7 @@ export const Attributes = () => {
                     }
               }
             >
-              Librum provides free access to over 60000 books
+              Access to over 60,000 books
             </p>
           </div>
 

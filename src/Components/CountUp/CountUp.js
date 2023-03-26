@@ -28,25 +28,7 @@ export const CountUP = () => {
             Hours of Work{" "}
           </p>
         </div>
-        <div className="count">
-          <div className="count-number">
-            <CountUp delay={0} start={12015} end={52000} duration={1.75}>
-              {({ countUpRef, start }) => <h1 ref={countUpRef}>180</h1>}
-            </CountUp>
-            <i className="fa fa-plus"></i>
-          </div>
-          <p
-            style={
-              bg === "light"
-                ? { color: "var(--color-primary0)" }
-                : {
-                    color: "white",
-                  }
-            }
-          >
-            Lines of Code
-          </p>
-        </div>
+
         <div className="count">
           <div className="count-number">
             <CountUp delay={0} start={220} end={38} duration={1.75}>

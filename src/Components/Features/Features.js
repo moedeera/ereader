@@ -7,6 +7,7 @@ import icon3 from "./icon3.png";
 import svg1 from "./svg01.svg";
 import svg2 from "./svg02.svg";
 import svg3 from "./svg03.svg";
+import svg4 from "./svg04.svg";
 import { SiteContext } from "../../Context/Context";
 
 export const Features = () => {
@@ -125,11 +126,11 @@ export const Features = () => {
                         }
                   }
                 >
-                  Never worry about where you left off reading again. With
-                  Librum, all of your books will be readily available for you,
-                  not matter on which device you are on
+                  Librum is designed for all operating systems. You can always
+                  count on a great reading experience with Librum, no matter if
+                  you are on Linux, Windows or Apple
                 </p>
-                <img src={svg1} alt="" />
+                <img src={svg4} alt="" />
               </div>
             )}
             {slide === 2 && (

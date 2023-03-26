@@ -61,10 +61,21 @@ export const AboutPage = () => {
                 as productive as you can be, these features include being able
                 to take notes from within the app, book mark and highlight
                 important sections, while being able to customise the
-                application to look exactly how you want it to. Librum also
-                provides free access to over 60,000 books, custom plugins and
-                your reading statistics, while remaining free and 100% open
-                source."
+                application to look exactly how you want it to.
+              </p>
+
+              <p
+                style={
+                  bg === "light"
+                    ? { color: "var(--color-primary0)" }
+                    : {
+                        color: "white",
+                      }
+                }
+              >
+                Librum also provides free access to over 60,000 books, custom
+                plugins and your reading statistics, while remaining free and
+                100% open source
               </p>
             </div>
             <div className="about-intro-image">
@@ -99,7 +110,7 @@ export const AboutPage = () => {
                   waste your time navigating through a complex application or
                   trying to manually synchronize your books across devices.
                   Librum aims to make reading as frictionless as possible by
-                  doing all of this for you."
+                  doing all of this for you.
                 </p>
               </div>
             </div>
@@ -129,14 +140,14 @@ export const AboutPage = () => {
                     Creating your personalized library
                   </li>
                   <li>
-                    <i className="fa fa-circle"></i> Note taking
+                    <i className="fa fa-circle"></i>Note taking
                   </li>
                   <li>
                     <i className="fa fa-circle"></i>
                     Book syncing across all of your devices
                   </li>
                   <li>
-                    <i className="fa fa-circle"></i>- Highlighting and Bookmarks
+                    <i className="fa fa-circle"></i>Highlighting and Bookmarks
                   </li>
                   <li>
                     <i className="fa fa-circle"></i>

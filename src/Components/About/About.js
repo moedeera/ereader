@@ -9,7 +9,9 @@ export const About = () => {
         <div className="about-container">
           <h1
             style={{
-              color: "#bb342f",
+              color: "#ffffff",
+              textTransform: "capitalize",
+              marginBottom: "-20px",
             }}
           >
             A little info about ourselves
