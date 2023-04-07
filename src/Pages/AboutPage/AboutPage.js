@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import "./AboutPage.css";
 
-import about1 from "./Image01.png";
+import about1 from "./Image01r.png";
 import about2 from "./image02.png";
 import about3 from "./image03.png";
 

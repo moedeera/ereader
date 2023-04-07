@@ -12,19 +12,20 @@ export const SupportWays = ({ pics, cards }) => {
         </div>
         {cards && (
           <div className="support-ways-text">
-            <div className="support-ways-unit sd1" id="sd-1">
+            <a
+              className="support-ways-unit sd1"
+              id="sd-1"
+              href={"https://www.patreon.com/librumreader"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <div className="sw-image">
                 {" "}
-                <a
-                  href={"https://www.patreon.com/librum_reader"}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {" "}
-                  <img src={pics[0]} alt="" className="im1" />
-                </a>
+                <img src={pics[0]} alt="" className="im1" />
               </div>
-              <h2>Support us on Patreon</h2>
+              <h2 style={{ color: "var(--color-primary)" }}>
+                Support us on Patreon
+              </h2>
               <p
                 style={
                   bg === "light"
@@ -39,21 +40,19 @@ export const SupportWays = ({ pics, cards }) => {
                 community to be able to continue working on projects like
                 Librum.
               </p>
-            </div>
+            </a>
 
-            <div className="support-ways-unit">
+            <a
+              className="support-ways-unit"
+              href={"https://github.com/Librum-Reader/Librum"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <div className="sw-image">
                 {" "}
-                <a
-                  href={"https://github.com/Librum-Reader/Librum"}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {" "}
-                  <img src={pics[1]} alt="" className="im1" />
-                </a>
+                <img src={pics[1]} alt="" className="im1" />
               </div>
-              <h2>Contribute</h2>
+              <h2 style={{ color: "var(--color-primary)" }}>Contribute</h2>
               <p
                 style={
                   bg === "light"
@@ -63,22 +62,22 @@ export const SupportWays = ({ pics, cards }) => {
                       }
                 }
               >
-                If you like Librum and have some programming skills, consider
-                contributing to our open source codebase. If you don't have any
-                experience but still want to contribute, you can search for bugs
-                and request features that you believe are missing in Librum."
+                If you like Librum and have some programming or designing
+                skills, consider contributing to our open source project. If you
+                don't have any experience but still want to contribute, you can
+                search for bugs or request new features.
               </p>
-            </div>
+            </a>
 
-            <div className="support-ways-unit">
+            <Link className="support-ways-unit" to={"../login"}>
               <div className="sw-image">
                 {" "}
-                <Link to={"../login"}>
-                  <img src={pics[2]} alt="" />
-                </Link>
+                <img src={pics[2]} alt="" />
               </div>
 
-              <h2>Join the Community</h2>
+              <h2 style={{ color: "var(--color-primary)" }}>
+                Join the Community
+              </h2>
               <p
                 style={
                   bg === "light"
@@ -90,9 +89,9 @@ export const SupportWays = ({ pics, cards }) => {
               >
                 Consider writing an article, sharing Librum on social media, or
                 simply letting your friends know how much you enjoy Librum if
-                you want to get more involved in the community."
+                you want to get more involved in the community.
               </p>
-            </div>
+            </Link>
           </div>
         )}
       </div>

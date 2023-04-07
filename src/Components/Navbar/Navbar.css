@@ -35,7 +35,7 @@
   display: flex;
   align-items: top;
   padding-top: 3px;
-  padding-left: 3px;
+  padding-left: 2px;
   background-color: grey;
 }
 .fas.fa-toggle-on.fa-3x,

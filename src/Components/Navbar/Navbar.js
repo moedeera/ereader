@@ -43,22 +43,10 @@ export const Navbar = () => {
           ) : (
             <div
               style={{
-                backgroundColor: "white",
+                backgroundColor: "lightgrey",
               }}
               className="nav-toggle-circle"
             >
-              {/* <i
-                style={{
-                  color: "white",
-                }}
-                className="fa fa-sun"
-                aria-hidden="true"
-              ></i> */}
-              {/* <img
-                src={sunIcon}
-                style={{ width: "100%", maxWidth: "22px", maxHeight: "22px" }}
-                alt=""
-              /> */}
               <svg
                 width="21"
                 height="21"
