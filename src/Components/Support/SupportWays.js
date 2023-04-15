@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { SiteContext } from "../../Context/Context";
 
 export const SupportWays = ({ pics, cards }) => {
-  const { bg, setBg } = useContext(SiteContext);
+  const { bg, setSelected } = useContext(SiteContext);
   return (
     <section className="support-ways">
       <div className="support-way-container">
@@ -69,7 +69,13 @@ export const SupportWays = ({ pics, cards }) => {
               </p>
             </a>
 
-            <Link className="support-ways-unit" to={"../login"}>
+            <Link
+              className="support-ways-unit"
+              onClick={() => {
+                setSelected("login");
+              }}
+              to={"../login"}
+            >
               <div className="sw-image">
                 {" "}
                 <img src={pics[2]} alt="" />

@@ -10,13 +10,14 @@ import iconOn from "./switch-on-50.png";
 import sunIcon from "./sunIcon.png";
 export const Navbar = () => {
   const [show, setShow] = useState(false);
-  const [selected, setSelected] = useState(1);
+
   const auth = getAuth();
   const color = "#b18cf7";
   const colorA = "white";
 
   const colorB = "black";
-  const { user, setUser, logout, mode, bg, setBg } = useContext(SiteContext);
+  const { user, setUser, logout, mode, bg, setBg, selected, setSelected } =
+    useContext(SiteContext);
   // const [bg, setBg] = useState("dark");
   return (
     <div

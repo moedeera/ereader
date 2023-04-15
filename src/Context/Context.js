@@ -5,6 +5,7 @@ import { auth } from "../firebase-config";
 export const SiteContext = createContext({});
 
 export const SiteContextProvider = ({ children }) => {
+  const [selected, setSelected] = useState(1);
   const [mode, setMode] = useState(false);
   const [user, setUser] = useState("");
 
@@ -36,7 +37,17 @@ export const SiteContextProvider = ({ children }) => {
 
   return (
     <SiteContext.Provider
-      value={{ mode, setMode, user, setUser, logout, bg, setBg }}
+      value={{
+        mode,
+        setMode,
+        user,
+        setUser,
+        logout,
+        bg,
+        setBg,
+        selected,
+        setSelected,
+      }}
     >
       {children}
     </SiteContext.Provider>
