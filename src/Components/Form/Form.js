@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { SiteContext } from "../../Context/Context";
 
 import pic4 from "../../Pages/Support/pic4.svg";
+import pic from "./message.svg";
 import "./Form.css";
 export const Form = () => {
   const { bg } = useContext(SiteContext);
@@ -89,7 +90,7 @@ export const Form = () => {
         </div>
       </div>
       <div className="support-page-contact-image">
-        <img src={pic4} alt="" />
+        <img src={pic} alt="" />
       </div>
     </div>
   );
