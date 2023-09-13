@@ -11,16 +11,17 @@ import { News } from "./Pages/News/News";
 import { Profile } from "./Pages/Profile/Profile";
 import { Article } from "./Pages/Article/Article";
 import ScrollToTop from "./Components/ScrollToTop/ScrollToTop";
+import { Enert } from "./Pages/Homepage/Enert";
 
 function App() {
   return (
     <SiteContextProvider>
       <div className="App">
         <Router>
-          <Navbar />
+          {/* <Navbar /> */}
           <ScrollToTop>
             <Routes>
-              <Route path="/" element={<Homepage />} />
+              <Route path="/" element={<Enert />} />
               <Route path="/about" element={<AboutPage />} />
               <Route
                 path="/support"
@@ -38,7 +39,7 @@ function App() {
               <Route path="/profile" element={<Profile />} />
             </Routes>
           </ScrollToTop>
-          <Footer />
+          {/* <Footer /> */}
         </Router>
       </div>
     </SiteContextProvider>
